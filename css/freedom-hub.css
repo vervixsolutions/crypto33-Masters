@@ -1,0 +1,1059 @@
+/* Freedom Hub Page Styles */
+
+/* Coin Radar Banner */
+.coin-radar-banner {
+    background-color: #09090b;
+    width: 100%;
+    padding: 7px 0;
+    border-bottom: 1px solid #1a1a1a;
+}
+
+.coin-radar-banner-container {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 182px;
+    text-align: center;
+}
+
+.coin-radar-title {
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 48px;
+    font-weight: 500;
+    margin: 0;
+    line-height: 1;
+}
+
+/* Daily Brief Section */
+.daily-brief-section {
+    width: 100%;
+    padding: 50px 0;
+    background-color: #000;
+}
+
+.daily-brief-container {
+    max-width: 1285px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 26px 38px;
+    background-color: #050507;
+    border: 0.5px solid #4a4b53;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.daily-brief-left {
+    flex: 1;
+    max-width: 483px;
+}
+
+.brief-label {
+    color: #8b8b8b;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin: 0 0 12px 0;
+    line-height: 1.71;
+}
+
+.brief-title {
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0 0 15px 0;
+    line-height: 1.71;
+}
+
+.brief-description {
+    color: #8b8b8b;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 1.3;
+    margin: 0 0 12px 0;
+}
+
+.brief-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.brief-features li {
+    color: #8b8b8b;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 8px;
+    font-weight: 500;
+    line-height: 1.3;
+    margin-bottom: 4px;
+}
+
+/* Freedom Meter Widget */
+.freedom-meter-widget {
+    flex-shrink: 0;
+}
+
+.freedom-meter-box {
+    width: 143px;
+    height: 143px;
+    background-color: #0d0b03;
+    border: 0.5px solid #8d7001;
+    border-radius: 12px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.freedom-meter-label {
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 1.3;
+    margin: 0;
+}
+
+.freedom-meter-score {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+}
+
+.freedom-percentage {
+    color: #f7931a;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.freedom-status {
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 1.71;
+}
+
+.freedom-meter-risk {
+    color: #8b8b8b;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 8px;
+    line-height: 1.31;
+    margin: 0;
+}
+
+.freedom-meter-risk .risk-label {
+    color: #8b8b8b;
+}
+
+.freedom-meter-risk .risk-text {
+    color: #f7931a;
+}
+
+/* Notification Section */
+.notification-section {
+    width: 100%;
+    padding: 40px 0;
+    background-color: #000;
+}
+
+.notification-container {
+    max-width: 1285px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 78px;
+}
+
+.notification-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.notification-tab-btn {
+    background-color: #191919;
+    border: 0.5px solid #4a4b53;
+    color: #8b8b8b;
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.notification-tab-btn:hover {
+    background-color: #252525;
+    border-color: #5a5b63;
+    color: #ffffff;
+}
+
+.notification-tab-btn.active {
+    background-color: #1f2b24;
+    color: #e0e0e0;
+    border-color: #2f4035;
+}
+
+.notice-card {
+    background-color: #050505;
+    border: 0.5px solid #2d2d2d;
+    border-radius: 16px;
+    padding: 24px;
+    display: flex;
+    gap: 20px;
+}
+
+.icon-col {
+    flex-shrink: 0;
+    padding-top: 5px;
+}
+
+.icon-box {
+    width: 36px;
+    height: 36px;
+    background: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-image {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+    display: block;
+}
+
+.content-col {
+    flex-grow: 1;
+}
+
+.header-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+}
+
+.notice-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0;
+}
+
+.badge {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    padding: 4px 10px;
+    border-radius: 14px;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.badge.strike {
+    background-color: #1a1a1a;
+    color: #8b8b8b;
+    border: 0.5px solid #4a4b53;
+}
+
+.badge.safety {
+    background-color: #11221c;
+    color: #5b8a72;
+    border: 0.5px solid #1a352a;
+}
+
+.shield-icon {
+    width: 12px;
+    height: 12px;
+    fill: currentColor;
+}
+
+.reason-text {
+    color: #8b8b8b;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+.reason-label {
+    color: #8b8b8b;
+    font-weight: 600;
+}
+
+.reason-value {
+    color: #8b8b8b;
+}
+
+.description-text {
+    color: #8b8b8b;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    margin-bottom: 24px;
+    line-height: 1.4;
+}
+
+.actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.btn-action {
+    background: transparent;
+    border: 0.5px solid #4a4b53;
+    color: #cccccc;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.btn-action:hover {
+    background-color: #191919;
+    border-color: #5a5b63;
+    color: #ffffff;
+}
+
+/* Filter Feed Section */
+.filter-feed-section {
+    width: 100%;
+    padding: 20px 0 30px 0;
+    background-color: #000;
+}
+
+.filter-feed-container {
+    max-width: 1285px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 78px;
+}
+
+.filter-label {
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 27px;
+    font-weight: 500;
+    margin: 0 0 15px 0;
+}
+
+.filter-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    height: 30px;
+    padding: 6px 12px;
+    background-color: #191919;
+    border: 0.5px solid #4a4b53;
+    border-radius: 15px;
+    color: #8b8b8b;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.filter-btn:hover {
+    background-color: #252525;
+    border-color: #5a5b63;
+}
+
+.filter-btn.active {
+    background-color: #0d0b03;
+    border-color: #8d7001;
+    color: #f7931a;
+}
+
+/* News Feed Section */
+.news-feed-section {
+    width: 100%;
+    padding: 40px 0;
+    background-color: #000;
+}
+
+.news-feed-container {
+    max-width: 1285px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 78px;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+/* News Article Card */
+.news-card {
+    background-color: #050507;
+    border: 0.5px solid #4a4b53;
+    border-radius: 18.5px;
+    padding: 37px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: border-color 0.3s ease;
+}
+
+.news-card:hover {
+    border-color: #6a6b73;
+}
+
+.news-card-header {
+    width: 100%;
+    max-width: 576px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding: 0 40px;
+}
+
+.category-badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: 30px;
+    padding: 0 12px 0 12px;
+    background-color: #191919;
+    border: 0.5px solid #4a4b53;
+    border-radius: 15px;
+    position: relative;
+}
+
+.category-icon {
+    width: 17px;
+    height: 17px;
+    display: block;
+    flex-shrink: 0;
+}
+
+.category-text {
+    color: #8b8b8b;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 1.1;
+}
+
+.freedom-score-badge {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: capitalize;
+    margin: 0;
+    line-height: 1.71;
+}
+
+.freedom-score-badge.score-watch {
+    color: #c0751b;
+}
+
+.freedom-score-badge.score-danger {
+    color: #c01b1b;
+}
+
+.news-card-content {
+    width: 100%;
+    max-width: 593px;
+    padding: 0 40px;
+}
+
+.news-headline {
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin: 0 0 12px 0;
+}
+
+.news-description {
+    color: #8b8b8b;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 1.3;
+    margin: 0 0 25px 0;
+}
+
+/* Perspectives Container */
+.perspectives-container {
+    display: flex;
+    gap: 11px;
+    margin-bottom: 25px;
+}
+
+.perspective-column {
+    flex: 1;
+    min-height: 306px;
+    padding: 20px 15px;
+    background-color: #050507;
+    border: 0.856px solid #4a4b53;
+    border-radius: 17px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.perspective-column.atlas-truth {
+    background-color: #0d0b03;
+    border-color: #8d7001;
+    border-radius: 10px;
+}
+
+.perspective-header {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 19px;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 1.3;
+    margin: 0;
+}
+
+.perspective-header.left-spin {
+    color: #8ac7f1;
+}
+
+.perspective-header.right-spin {
+    color: #f0a781;
+}
+
+.perspective-column.atlas-truth .perspective-header {
+    color: #f7931a;
+}
+
+.perspective-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 1.3;
+    margin: 0;
+    flex: 1;
+}
+
+.perspective-column .perspective-text {
+    color: #8b8b8b;
+}
+
+.perspective-column.atlas-truth .perspective-text {
+    color: #ffffff;
+}
+
+/* Divider Line */
+.divider-line {
+    width: 100%;
+    height: 0.79px;
+    background-color: #4a4b53;
+    margin: 25px 0;
+}
+
+/* News Card Actions */
+.news-card-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+.action-btn {
+    height: 51px;
+    padding: 0 20px;
+    background-color: #191919;
+    border: 0.856px solid #4a4b53;
+    border-radius: 42.825px;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 19px;
+    font-weight: 600;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.action-btn:hover {
+    background-color: #252525;
+    border-color: #5a5b63;
+}
+
+.action-btn.primary-btn {
+    background-color: #0d0b03;
+    border-color: #8d7001;
+    color: #f7931a;
+}
+
+.action-btn.primary-btn:hover {
+    background-color: #1a1609;
+    border-color: #a3820e;
+}
+
+.share-section {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.share-label {
+    color: #8b8b8b;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 1.3;
+    white-space: nowrap;
+}
+
+.social-share-buttons {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.share-btn {
+    width: 42px;
+    height: 42px;
+    background-color: #191919;
+    border: 0.856px solid #4a4b53;
+    border-radius: 50%;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.share-btn.copy-link-btn {
+    width: 127px;
+    border-radius: 42.825px;
+    font-size: 17px;
+    color: #8b8b8b;
+}
+
+.share-btn:hover {
+    background-color: #252525;
+    border-color: #5a5b63;
+}
+
+.share-note {
+    color: #8b8b8b;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 1.3;
+    margin: 0;
+}
+
+/* Info Cards Section */
+.info-cards-section {
+    width: 100%;
+    padding: 40px 0;
+    background-color: #000;
+}
+
+.info-cards-container {
+    max-width: 1285px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 78px;
+    display: flex;
+    gap: 14px;
+}
+
+.info-card {
+    flex: 1;
+    max-width: 419px;
+    height: 417px;
+    background-color: #0d0b03;
+    border: 0.794px solid #8d7001;
+    border-radius: 20px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.info-card-image {
+  
+    height: 225px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.info-card-label {
+    color: #f7931a;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0 0 8px 0;
+}
+
+.info-card-title {
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 27px;
+    font-weight: 600;
+    margin: 0 0 12px 0;
+}
+
+.info-card-description {
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* Sovereign Section */
+.sovereign-section {
+    width: 100%;
+    padding: 40px 0;
+    background-color: #000;
+}
+
+.sovereign-container {
+    max-width: 1285px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 78px;
+    display: flex;
+    gap: 13px;
+}
+
+.sovereign-card {
+    flex: 1;
+    max-width: 712px;
+    min-height: 190px;
+    padding: 26px 27px;
+    background-color: #050507;
+    border: 1px solid #3e350f;
+    border-radius: 20px;
+}
+
+.sovereign-card:first-child {
+    box-shadow: 0px 4px 36.9px 0px rgba(247, 147, 26, 0.25);
+}
+
+.sovereign-card:last-child {
+    max-width: 560px;
+}
+
+.sovereign-card:last-child .sovereign-label {
+    color: #8b8b8b;
+}
+
+.sovereign-label {
+    color: #F7931A;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    margin: 0 0 8px 0;
+}
+
+.sovereign-title {
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0 0 12px 0;
+}
+
+.sovereign-description {
+    color: #8b8b8b;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 1.3;
+    margin: 0 0 15px 0;
+}
+
+.sovereign-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sovereign-features li {
+    color: #8b8b8b;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 1.3;
+    margin-bottom: 8px;
+}
+
+/* Disclaimer Section */
+.disclaimer-section {
+    width: 100%;
+    padding: 18px 0;
+    background-color: #000;
+}
+
+.disclaimer-container {
+    max-width: 1140px;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 40px;
+    padding: 18px 38px;
+    background-color: #050507;
+    border: 0.5px solid #4a4b53;
+}
+
+.disclaimer-text {
+    color: #8b8b8b;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.3;
+    margin: 0;
+    text-align: left;
+}
+
+/* Responsive Design */
+@media (max-width: 1440px) {
+    .coin-radar-banner-container,
+    .daily-brief-container,
+    .notification-container,
+    .filter-feed-container,
+    .news-feed-container,
+    .info-cards-container,
+    .sovereign-container,
+    .disclaimer-container {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .coin-radar-title {
+        font-size: 36px;
+    }
+
+    .daily-brief-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .freedom-meter-widget {
+        align-self: flex-start;
+    }
+
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .info-cards-container {
+        flex-direction: column;
+    }
+
+    .info-card {
+        max-width: 100%;
+    }
+
+    .sovereign-container {
+        flex-direction: column;
+    }
+
+    .sovereign-card {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .coin-radar-title {
+        font-size: 24px;
+    }
+
+    .coin-radar-banner-container {
+        padding: 0 20px;
+    }
+
+    .daily-brief-container {
+        padding: 20px;
+    }
+
+    .brief-title {
+        font-size: 20px;
+    }
+
+    .brief-description {
+        font-size: 10px;
+    }
+
+    .notification-container,
+    .filter-feed-container,
+    .news-feed-container,
+    .info-cards-container,
+    .sovereign-container,
+    .disclaimer-container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .notice-card {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .notification-tab-btn {
+        font-size: 12px;
+        padding: 6px 16px;
+    }
+
+    .notice-title {
+        font-size: 16px;
+    }
+
+    .reason-text,
+    .description-text {
+        font-size: 13px;
+    }
+
+    .btn-action {
+        font-size: 12px;
+        padding: 6px 14px;
+    }
+
+    .filter-label {
+        font-size: 22px;
+    }
+
+    .filter-btn {
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+
+    .news-card-header {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
+
+    .freedom-score-badge {
+        font-size: 14px;
+    }
+
+    .news-headline {
+        font-size: 20px;
+    }
+
+    .news-description {
+        font-size: 16px;
+    }
+
+    .perspectives-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .perspective-column {
+        min-height: auto;
+    }
+
+    .news-card-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .action-btn {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .social-share-buttons {
+        justify-content: center;
+    }
+
+    .info-card {
+        height: auto;
+        min-height: 350px;
+    }
+
+    .info-card-image {
+        height: 180px;
+    }
+
+    .sovereign-description {
+        font-size: 16px;
+    }
+
+    .sovereign-features li {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .coin-radar-title {
+        font-size: 18px;
+    }
+
+    .freedom-meter-box {
+        width: 120px;
+        height: 120px;
+    }
+
+    .freedom-percentage {
+        font-size: 32px;
+    }
+
+    .brief-title {
+        font-size: 18px;
+    }
+
+    .news-headline {
+        font-size: 18px;
+    }
+
+    .news-description {
+        font-size: 14px;
+    }
+
+    .perspective-header {
+        font-size: 16px;
+    }
+
+    .perspective-text {
+        font-size: 14px;
+    }
+}
+

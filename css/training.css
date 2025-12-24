@@ -1,0 +1,1707 @@
+/* Training Page Styles */
+
+/* Coin Radar Banner */
+.coin-radar-banner {
+    width: 100%;
+    background-image: url('../assets/4bad277c6aa23dc6977ba1c4cf914b053f0f6699.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-bottom: 1px solid #3e350f;
+    padding: 0;
+    position: relative;
+    height: 62px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.coin-radar-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 0;
+}
+
+.banner-container {
+    max-width: 1440px;
+    width: 100%;
+    height: 62px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+}
+
+.banner-text {
+    color: #f7931a;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.1;
+    margin: 0;
+    text-align: center;
+    text-transform: uppercase;
+    width: 1076px;
+    max-width: calc(100% - 364px);
+    letter-spacing: 0.5px;
+    position: relative;
+    padding: 0 20px;
+}
+
+.banner-text::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 62px;
+    background: linear-gradient(90deg, rgba(21, 21, 21, 0) 10.096%, rgba(21, 21, 21, 1) 30.288%, rgba(21, 21, 21, 1) 62.981%, rgba(21, 21, 21, 0) 87.981%);
+    border-top: 1px solid #f7931a;
+    border-bottom: 1px solid #f7931a;
+    border-radius: 0;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Training Progress Section */
+.training-progress-section {
+    width: 100%;
+    background-color: #000;
+    padding: 48px 0 0 0;
+    display: flex;
+    justify-content: center;
+}
+
+.training-progress-container {
+    max-width: 1440px;
+    width: 100%;
+    padding: 0 78px;
+}
+
+.training-progress-card {
+    width: 100%;
+    max-width: 1285px;
+    height: 197px;
+    background-image: url('../assets/4bad277c6aa23dc6977ba1c4cf914b053f0f6699.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid #3e350f;
+    border-radius: 20px;
+    padding: 26px 40px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    overflow: hidden;
+}
+
+.training-progress-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(103.875deg, rgba(2, 2, 3, 0.7) 0%, rgba(14, 14, 21, 0.7) 99.726%);
+    z-index: 0;
+    pointer-events: none;
+    border-radius: 20px;
+}
+
+.progress-main-content {
+    flex: 1;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.progress-title {
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.71;
+    letter-spacing: 2.4px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.progress-description {
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.71;
+    margin: 0;
+}
+
+.highlight-orange {
+    color: #f7931a;
+    font-weight: 700;
+}
+
+.xp-progress-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.xp-bar-container {
+    width: 603px;
+    height: 15px;
+    position: relative;
+}
+
+.xp-bar {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+}
+
+.xp-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #F7931A 0%, #7A1A00 100%);
+    border-radius: 15px;
+    transition: width 1s ease-out;
+}
+
+.progress-stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 603px;
+}
+
+.progress-percentage {
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 1.71;
+}
+
+.xp-auto-update {
+    color: #f7931a;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 1.71;
+    text-align: right;
+}
+
+.progress-side-cards {
+    display: flex;
+    gap: 21px;
+    position: relative;
+    z-index: 1;
+}
+
+.xp-earned-card,
+.current-track-card {
+    width: 143px;
+    height: 143px;
+    background-color: #010102;
+    border: 0.5px solid #4a4b53;
+    border-radius: 12px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 8px;
+}
+
+.current-track-card {
+    background-color: #0d0b03;
+    border-color: #8d7001;
+    box-shadow: 0px 4px 36px 0px rgba(247, 147, 26, 0.42);
+}
+
+.card-label {
+    color: #8b8b8b;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 1.71;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.current-track-card .card-label {
+    color: #ffffff;
+}
+
+.xp-value {
+    color: #f7931a;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.71;
+    margin: 0;
+}
+
+.track-name {
+    color: #f7931a;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1;
+    margin: 0;
+}
+
+.xp-description,
+.track-description {
+    color: #8b8b8b;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 8px;
+    font-weight: 500;
+    line-height: 1.31;
+    margin: 0;
+}
+
+/* Main Content Area */
+.training-main-content {
+    width: 100%;
+    background-color: #000;
+    padding: 48px 0 80px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.training-content-container {
+    max-width: 1440px;
+    width: 100%;
+    padding: 0 80px;
+    display: grid;
+    grid-template-columns: 816px 437px;
+    gap: 27px;
+    align-items: start;
+}
+
+/* Weeks Accordion Column */
+.weeks-accordion-column {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.accordion-tab {
+    width: 100%;
+    background: linear-gradient(90deg, rgba(9, 9, 11, 1) 0%, rgba(5, 5, 7, 1) 100%);
+    border: 1px solid #4a4b53;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.accordion-tab:hover {
+    border-color: #8d7001;
+}
+
+.accordion-header {
+    padding: 31px 35px;
+    width: 100%;
+}
+
+.tab-content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.module-label {
+    color: #8b8b8b;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 1.71;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.tab-title-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    width: 100%;
+}
+
+.week-title {
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.71;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    margin: 0;
+    flex: 1;
+}
+
+.lesson-badge-container {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.lesson-badge {
+    background-color: #191919;
+    border: 1px solid #4a4b53;
+    border-radius: 15px;
+    padding: 0 20px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: capitalize;
+    white-space: nowrap;
+}
+
+.accordion-arrow {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+    transform: rotate(0deg);
+}
+
+.accordion-tab.active .accordion-arrow {
+    transform: rotate(90deg);
+}
+
+.week-description {
+    color: #8b8b8b;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 1.71;
+    margin: 0;
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding: 0 35px;
+}
+
+.accordion-tab.active .accordion-content {
+    padding-bottom: 31px;
+}
+
+.lessons-list {
+    padding-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Lessons Grid Container */
+.lessons-grid-container {
+    padding-top: 25px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    width: 100%;
+    max-width: 756px;
+}
+
+/* Lesson Card Styles */
+.lesson-card {
+    width: 100%;
+    height: 210px;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.lesson-card:hover:not([data-status="locked"]) {
+    transform: translateY(-2px);
+}
+
+.lesson-card-inner {
+    width: 373px;
+    height: 210px;
+    margin: 0 auto;
+    background-color: rgba(5, 5, 7, 0.8);
+    border: 0.5px solid #4a4b53;
+    border-radius: 20px;
+    padding: 23px 25px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.lesson-status-badge {
+    position: absolute;
+    top: 38.5px;
+    left: 68px;
+    transform: translateY(-50%);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.lesson-status-badge.completed {
+    color: #8b8b8b;
+}
+
+.lesson-status-badge.unlocked {
+    color: #8b8b8b;
+}
+
+.lesson-status-badge.locked {
+    color: #8b8b8b;
+}
+
+.lesson-number-badge {
+    position: absolute;
+    top: 23px;
+    left: 25px;
+    width: 30px;
+    height: 30px;
+}
+
+.lesson-icon-circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 0.5px solid #4a4b53;
+}
+
+.lesson-icon-number {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.lesson-number-badge.completed .lesson-icon-number {
+    color: #06a9ff;
+}
+
+.lesson-number-badge.unlocked .lesson-icon-number {
+    color: #f7931a;
+}
+
+.lesson-number-badge.locked .lesson-icon-number {
+    color: #8b8b8b;
+}
+
+.lesson-check-icon,
+.lesson-play-icon,
+.lesson-lock-icon {
+    position: absolute;
+    top: 26px;
+    right: 26px;
+    width: 23px;
+    height: 23px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.check-icon-img,
+.lock-icon-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.check-icon-img {
+    filter: brightness(0) saturate(100%) invert(47%) sepia(96%) saturate(3109%) hue-rotate(186deg) brightness(102%) contrast(101%);
+    width: 23px;
+    height: 23px;
+}
+
+.lock-icon-img {
+    width: 23px;
+    height: 23px;
+    opacity: 0.8;
+}
+
+.lesson-card-title {
+    margin: 0;
+    margin-top: 36px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: 1.2px;
+    color: #ffffff;
+}
+
+.lesson-card-title.locked {
+    color: #8b8b8b;
+}
+
+.lesson-card-description {
+    margin: 0;
+    margin-top: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 1.3;
+    letter-spacing: 1px;
+    color: #8b8b8b;
+}
+
+.lesson-card-footer {
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    right: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lesson-xp-badge {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #8b8b8b;
+}
+
+.lesson-xp-badge.locked {
+    color: #8b8b8b;
+}
+
+.lesson-action-button {
+    width: 117.833px;
+    height: 30px;
+    border-radius: 15px;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: capitalize;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lesson-action-button.completed {
+    background-color: #004367;
+    color: #06a9ff;
+}
+
+.lesson-action-button.completed:hover {
+    background-color: #005580;
+}
+
+.lesson-action-button.unlocked {
+    background-color: #351f04;
+    color: #c0751b;
+}
+
+.lesson-action-button.unlocked:hover {
+    background-color: #4a2a06;
+}
+
+.lesson-action-button.locked {
+    background-color: #707070;
+    color: #1f1f1f;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* Accordion Footer */
+.accordion-footer {
+    margin-top: 45px;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 55px;
+    width: 100%;
+}
+
+.progress-sync-message {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1.4px;
+    color: #8b8b8b;
+    margin: 0;
+}
+
+.accordion-footer-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.footer-button-primary {
+    width: 293px;
+    height: 30px;
+    background-color: #351f04;
+    border: none;
+    border-radius: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: #c0751b;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.footer-button-primary:hover {
+    background-color: #4a2a06;
+}
+
+.footer-button-secondary {
+    width: 233px;
+    height: 30px;
+    background-color: #191919;
+    border: 1px solid #4a4b53;
+    border-radius: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.footer-button-secondary:hover {
+    border-color: #8d7001;
+    background-color: rgba(247, 147, 26, 0.1);
+}
+
+.lesson-item {
+    width: 100%;
+    background-color: #050507;
+    border: 1px solid #4a4b53;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.lesson-item:hover {
+    border-color: #8d7001;
+    background-color: #0d0b03;
+    box-shadow: 0px 4px 16px 0px rgba(247, 147, 26, 0.15);
+}
+
+.lesson-item-content {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 20px;
+}
+
+.lesson-number {
+    width: 40px;
+    height: 40px;
+    background-color: #191919;
+    border: 1px solid #4a4b53;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f7931a;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.lesson-item:hover .lesson-number {
+    border-color: #8d7001;
+    background-color: #0d0b03;
+}
+
+.lesson-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.lesson-title {
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.lesson-description {
+    color: #8b8b8b;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.lesson-status {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+.lesson-xp {
+    color: #f7931a;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.lesson-arrow {
+    transition: transform 0.3s ease;
+}
+
+.lesson-item:hover .lesson-arrow {
+    transform: translateX(4px);
+}
+
+.lesson-item:hover .lesson-arrow path {
+    stroke: #f7931a;
+}
+
+/* Lesson Video Popup Modal */
+.lesson-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(4px);
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.lesson-modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.lesson-modal-container {
+    width: 1034px;
+    height: 818px;
+    max-width: calc(100% - 40px);
+    max-height: calc(100vh - 40px);
+    background-color: #09090b;
+    border: 1px solid #4a4b53;
+    border-radius: 20px;
+    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+}
+
+/* Custom Scrollbar Styling - Webkit (Chrome, Edge, Safari) */
+.lesson-modal-container::-webkit-scrollbar {
+    width: 12px;
+}
+
+.lesson-modal-container::-webkit-scrollbar-track {
+    background: #09090b;
+    border-left: 1px solid #4a4b53;
+}
+
+.lesson-modal-container::-webkit-scrollbar-thumb {
+    background: #351f04;
+    border: 1px solid #4a4b53;
+    border-radius: 6px;
+}
+
+.lesson-modal-container::-webkit-scrollbar-thumb:hover {
+    background: #4a2a06;
+    border-color: #8d7001;
+}
+
+.lesson-modal-container::-webkit-scrollbar-thumb:active {
+    background: #5a3508;
+}
+
+/* Custom Scrollbar Styling - Firefox */
+.lesson-modal-container {
+    scrollbar-width: thin;
+    scrollbar-color: #351f04 #09090b;
+}
+
+.lesson-modal-overlay.active .lesson-modal-container {
+    transform: scale(1);
+}
+
+.lesson-modal-close {
+    position: absolute;
+    top: 26px;
+    right: 26px;
+    width: 83.833px;
+    height: 30px;
+    background-color: #191919;
+    border: 1px solid #4a4b53;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.lesson-modal-close:hover {
+    background-color: rgba(74, 75, 83, 0.5);
+    border-color: #8d7001;
+}
+
+.close-button-text {
+    color: #8b8b8b;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: capitalize;
+    line-height: 1.1;
+}
+
+.lesson-modal-content {
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 43px 0 40px 0;
+}
+
+.lesson-modal-header-section {
+    position: relative;
+    padding: 0 41px;
+    margin-bottom: 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    flex-shrink: 0;
+}
+
+.lesson-modal-week-label {
+    color: #8b8b8b;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.3;
+    letter-spacing: 2px;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.lesson-modal-title {
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: 2px;
+    margin: 0;
+    margin-top: 8px;
+    white-space: nowrap;
+}
+
+.lesson-modal-video-container {
+    position: relative;
+    width: 952px;
+    height: 543px;
+    max-width: calc(100% - 82px);
+    margin: 0 auto 37px auto;
+    background-color: #151517;
+    border: 1px solid #4a4b53;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.lesson-modal-video-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #151517;
+}
+
+.video-placeholder-text {
+    color: #8b8b8b;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-align: center;
+    margin: 0;
+}
+
+.lesson-modal-description-section {
+    position: relative;
+    padding: 0 41px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex-shrink: 0;
+}
+
+.lesson-description-text {
+    color: #8b8b8b;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.3;
+    letter-spacing: 1.2px;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.lesson-transcript-note {
+    color: #8b8b8b;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.3;
+    letter-spacing: 1.2px;
+    margin: 0;
+    margin-top: 4px;
+    white-space: normal;
+    max-width: 800px;
+}
+
+.lesson-modal-footer-section {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 41px;
+    margin-top: auto;
+    flex-shrink: 0;
+}
+
+.lesson-mark-complete-button {
+    width: 229px;
+    height: 30px;
+    background-color: #351f04;
+    border: none;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.lesson-mark-complete-button:hover {
+    background-color: #4a2a06;
+    transform: translateY(-1px);
+}
+
+.lesson-mark-complete-button span {
+    color: #c0751b;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: capitalize;
+    text-align: center;
+    line-height: 1.1;
+}
+
+.lesson-footer-note {
+    color: #8b8b8b;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: 1px;
+    text-align: right;
+    margin: 0;
+    white-space: nowrap;
+}
+
+/* Responsive Design for Modal */
+@media (max-width: 1200px) {
+    .lesson-modal-container {
+        width: 95%;
+        height: auto;
+        min-height: 700px;
+        max-height: 95vh;
+    }
+
+    .lesson-modal-header-section {
+        padding: 0 30px;
+    }
+
+    .lesson-modal-video-container {
+        width: calc(100% - 60px);
+        height: auto;
+        aspect-ratio: 16 / 9;
+        max-height: 500px;
+        margin-bottom: 30px;
+    }
+
+    .lesson-modal-title {
+        font-size: 18px;
+        white-space: normal;
+    }
+
+    .lesson-modal-week-label {
+        font-size: 18px;
+    }
+
+    .lesson-modal-description-section {
+        padding: 0 30px;
+    }
+
+    .lesson-modal-footer-section {
+        padding: 0 30px;
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+}
+
+@media (max-width: 968px) {
+    .lesson-modal-container {
+        width: 100%;
+        height: auto;
+        min-height: 600px;
+        max-height: 95vh;
+        border-radius: 12px;
+    }
+
+    .lesson-modal-content {
+        padding: 30px 0 30px 0;
+    }
+
+    .lesson-modal-header-section {
+        padding: 0 20px;
+        margin-bottom: 24px;
+        max-width: calc(100% - 120px);
+    }
+
+    .lesson-modal-week-label {
+        font-size: 16px;
+    }
+
+    .lesson-modal-title {
+        font-size: 16px;
+        letter-spacing: 1.5px;
+        white-space: normal;
+    }
+
+    .lesson-modal-video-container {
+        width: calc(100% - 40px);
+        height: auto;
+        aspect-ratio: 16 / 9;
+        border-radius: 12px;
+        margin-bottom: 24px;
+    }
+
+    .video-placeholder-text {
+        font-size: 12px;
+    }
+
+    .lesson-modal-description-section {
+        padding: 0 20px;
+        margin-bottom: 24px;
+    }
+
+    .lesson-description-text,
+    .lesson-transcript-note {
+        font-size: 11px;
+        white-space: normal;
+    }
+
+    .lesson-modal-footer-section {
+        flex-direction: column;
+        gap: 12px;
+        align-items: flex-start;
+        padding: 0 20px;
+    }
+
+    .lesson-mark-complete-button {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .lesson-footer-note {
+        font-size: 9px;
+        text-align: left;
+        white-space: normal;
+        max-width: 100%;
+    }
+
+    .lesson-modal-close {
+        top: 16px;
+        right: 16px;
+        width: 70px;
+    }
+
+    .close-button-text {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 640px) {
+    .lesson-modal-container {
+        border-radius: 8px;
+    }
+
+    .lesson-modal-content {
+        padding: 50px 0 20px 0;
+    }
+
+    .lesson-modal-header-section {
+        padding: 0 16px;
+        margin-bottom: 20px;
+        max-width: calc(100% - 100px);
+    }
+
+    .lesson-modal-week-label {
+        font-size: 14px;
+    }
+
+    .lesson-modal-title {
+        font-size: 14px;
+        letter-spacing: 1px;
+        white-space: normal;
+    }
+
+    .lesson-modal-video-container {
+        width: calc(100% - 32px);
+        border-radius: 8px;
+        margin-bottom: 20px;
+    }
+
+    .lesson-modal-description-section {
+        padding: 0 16px;
+        margin-bottom: 20px;
+    }
+
+    .lesson-description-text,
+    .lesson-transcript-note {
+        font-size: 10px;
+    }
+
+    .lesson-modal-footer-section {
+        padding: 0 16px;
+    }
+
+    .lesson-mark-complete-button {
+        height: 28px;
+    }
+
+    .lesson-mark-complete-button span {
+        font-size: 11px;
+    }
+
+    .lesson-footer-note {
+        font-size: 8px;
+    }
+}
+
+/* Info Cards Column */
+.info-cards-column {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.info-card {
+    width: 100%;
+    background-color: #050507;
+    border: 1px solid #3e350f;
+    border-radius: 20px;
+    padding: 23px 30px;
+    box-shadow: 0px 4px 36.9px 0px rgba(247, 147, 26, 0.25);
+}
+
+.badges-card {
+    min-height: 257px;
+}
+
+.roadmap-card {
+    min-height: 224px;
+}
+
+.disclaimer-card {
+    min-height: 63px;
+    padding: 17px 30px;
+}
+
+.info-card-title {
+    color: #f7931a;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.71;
+    text-transform: uppercase;
+    margin: 0 0 12px 0;
+}
+
+.info-card-heading {
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.71;
+    letter-spacing: 1.4px;
+    text-transform: capitalize;
+    margin: 0 0 12px 0;
+}
+
+.info-card-text {
+    color: #c8c8c8;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 1.71;
+    margin: 0 0 12px 0;
+}
+
+.highlight-bold {
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.badges-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 12px 0;
+    color: #c8c8c8;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 1.71;
+}
+
+.badges-list li {
+    margin-bottom: 4px;
+    padding-left: 16.5px;
+    position: relative;
+}
+
+.badges-list li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+}
+
+.info-card-note {
+    background-color: #0d0b03;
+    border: 0.5px solid #8d7001;
+    border-radius: 12px;
+    padding: 13px 13px;
+    margin-top: 12px;
+}
+
+.info-card-note p {
+    color: #f7931a;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 1.71;
+    margin: 0;
+}
+
+.roadmap-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: #c8c8c8;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 1.71;
+}
+
+.roadmap-features li {
+    margin-bottom: 4px;
+}
+
+.disclaimer-text {
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 1.71;
+    margin: 0;
+    text-align: left;
+}
+
+/* Responsive Design */
+
+/* Large Desktop */
+@media (max-width: 1440px) {
+    .training-content-container {
+        grid-template-columns: 1fr 437px;
+        gap: 20px;
+    }
+    
+    .banner-text {
+        max-width: calc(100% - 80px);
+        width: auto;
+    }
+    
+    .training-progress-container {
+        padding: 0 40px;
+    }
+    
+    .training-content-container {
+        padding: 0 40px;
+    }
+}
+
+/* Tablet */
+@media (max-width: 1200px) {
+    .banner-text {
+        font-size: 28px;
+    }
+    
+    .training-progress-card {
+        flex-direction: column;
+        height: auto;
+        min-height: 197px;
+        padding: 30px;
+    }
+    
+    .progress-main-content {
+        width: 100%;
+    }
+    
+    .xp-bar-container,
+    .progress-stats {
+        width: 100%;
+        max-width: 603px;
+    }
+    
+    .progress-side-cards {
+        width: 100%;
+        justify-content: flex-start;
+    }
+    
+    .training-content-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .info-cards-column {
+        order: -1;
+    }
+    
+    .weeks-accordion-column {
+        width: 100%;
+    }
+}
+
+/* Mobile */
+@media (max-width: 968px) {
+    .coin-radar-banner {
+        height: 48px;
+    }
+    
+    .banner-container {
+        height: 48px;
+    }
+    
+    .banner-text {
+        font-size: 20px;
+        max-width: calc(100% - 40px);
+        width: auto;
+    }
+    
+    .banner-text::before {
+        height: 48px;
+    }
+    
+    .training-progress-section {
+        padding: 30px 0 0 0;
+    }
+    
+    .training-progress-container {
+        padding: 0 20px;
+    }
+    
+    .training-progress-card {
+        padding: 24px 20px;
+        gap: 24px;
+    }
+    
+    .progress-title {
+        font-size: 20px;
+        letter-spacing: 1.5px;
+    }
+    
+    .progress-description {
+        font-size: 12px;
+    }
+    
+    .xp-bar-container {
+        width: 100%;
+    }
+    
+    .progress-stats {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    
+    .progress-side-cards {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .xp-earned-card,
+    .current-track-card {
+        width: 100%;
+        height: auto;
+        min-height: 120px;
+    }
+    
+    .training-main-content {
+        padding: 30px 0 60px 0;
+    }
+    
+    .training-content-container {
+        padding: 0 20px;
+        gap: 24px;
+    }
+    
+    .accordion-header {
+        padding: 24px 20px;
+    }
+    
+    .tab-title-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+    
+    .lesson-badge-container {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .week-title {
+        font-size: 14px;
+    }
+    
+    .info-card {
+        padding: 20px;
+    }
+    
+    .badges-card,
+    .roadmap-card {
+        min-height: auto;
+    }
+
+    .lessons-grid-container {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .lesson-card-inner {
+        width: 100%;
+        max-width: 373px;
+    }
+
+    .accordion-footer {
+        margin-top: 30px;
+        gap: 24px;
+    }
+
+    .accordion-footer-buttons {
+        flex-direction: column;
+    }
+
+    .footer-button-primary,
+    .footer-button-secondary {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 640px) {
+    .coin-radar-banner {
+        height: 40px;
+    }
+    
+    .banner-container {
+        height: 40px;
+    }
+    
+    .banner-text {
+        font-size: 16px;
+        max-width: calc(100% - 32px);
+        width: auto;
+        padding: 0 16px;
+    }
+    
+    .banner-text::before {
+        height: 40px;
+    }
+    
+    .training-progress-card {
+        padding: 20px 16px;
+    }
+    
+    .progress-title {
+        font-size: 16px;
+        letter-spacing: 1px;
+    }
+    
+    .progress-description {
+        font-size: 11px;
+    }
+    
+    .xp-value {
+        font-size: 18px;
+    }
+    
+    .track-name {
+        font-size: 14px;
+    }
+    
+    .accordion-header {
+        padding: 20px 16px;
+    }
+    
+    .week-title {
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+    
+    .lesson-badge {
+        font-size: 10px;
+        padding: 0 12px;
+        height: 26px;
+    }
+    
+    .info-card {
+        padding: 16px;
+    }
+    
+    .info-card-title {
+        font-size: 11px;
+    }
+    
+    .info-card-heading {
+        font-size: 12px;
+    }
+    
+    .info-card-text {
+        font-size: 10px;
+    }
+
+    .lessons-grid-container {
+        gap: 12px;
+    }
+
+    .lesson-card {
+        height: auto;
+        min-height: 200px;
+    }
+
+    .lesson-card-inner {
+        width: 100%;
+        padding: 20px;
+        min-height: 200px;
+    }
+
+    .lesson-status-badge {
+        font-size: 14px;
+        left: 60px;
+    }
+
+    .lesson-number-badge {
+        top: 20px;
+        left: 20px;
+    }
+
+    .lesson-check-icon,
+    .lesson-play-icon,
+    .lesson-lock-icon {
+        top: 20px;
+        right: 20px;
+        width: 20px;
+        height: 20px;
+    }
+
+    .lesson-card-title {
+        font-size: 11px;
+        margin-top: 30px;
+    }
+
+    .lesson-card-description {
+        font-size: 9px;
+    }
+
+    .lesson-card-footer {
+        bottom: 20px;
+        left: 20px;
+        right: 20px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .lesson-action-button {
+        width: 100%;
+        max-width: 200px;
+    }
+
+    .progress-sync-message {
+        font-size: 12px;
+    }
+
+    .footer-button-primary,
+    .footer-button-secondary {
+        height: 28px;
+        font-size: 11px;
+    }
+}
+
