@@ -15,7 +15,7 @@ body {
 .hero-section {
     position: relative;
     width: 100%;
-    height: 80vh;
+    height: 600px;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -72,9 +72,9 @@ body {
 
 .hero-headline {
     color: #ffffff;
-    font-size: 56px;
+    font-size: 60px;
     font-weight: 700;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Bebas Neue";
     text-transform: uppercase;
     letter-spacing: 2px;
     line-height: 1.1;
@@ -88,7 +88,7 @@ body {
 .hero-subheadline {
     color: #ffffff;
     font-size: 20px;
-    font-weight: 400;
+    font-weight: 700;
     font-family: 'Montserrat', sans-serif;
     line-height: 1.4;
     margin: 0;
@@ -109,13 +109,13 @@ body {
 }
 
 .hero-button-secondary {
-    width: 350px;
-height: 30px;
+    width: 316px;
+    height: 30px;
 color: #fff;
 position: relative;
 border-radius: 15px;
 border: 0.5px solid #c28637;
-font-size: 15px;
+font-size: 14px;
 font-weight: 600;
 background-color: transparent;
 box-sizing: border-box;
@@ -232,6 +232,365 @@ box-sizing: border-box;
     .hero-buttons {
         align-items: center;
         justify-content: center;
+    }
+}
+
+/* Bitcoin Price Card Section */
+.bitcoin-price-section {
+    width: 100%;
+    padding: 80px 0;
+    background: #191A25;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.bitcoin-price-wrapper {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.bitcoin-content-header {
+    max-width: 1285px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.live-coin-radar-heading {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    color: #ffffff;
+    line-height: 1.1;
+    margin: 0;
+    padding: 0;
+}
+
+.bitcoin-price-container {
+    max-width: 1285px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    gap: 14px;
+    flex-wrap: nowrap;
+}
+
+.see-full-radar-button {
+    background-color: #7E889A;
+    border: none;
+    border-radius: 20px;
+    padding: 12px 24px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: fit-content;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    color: #191A25;
+    margin: 0;
+}
+
+
+.see-full-radar-text {
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.see-full-radar-arrow {
+    color: #191A25;
+    font-size: 12px;
+    flex-shrink: 0;
+}
+
+.bitcoin-price-card {
+    background-color: #171822;
+    border: 1px solid #303241;
+    border-radius: 12px;
+    padding: 16px 12px;
+    position: relative;
+    overflow: hidden;
+    flex: 1;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.bitcoin-wave-bg {
+    position: absolute;
+    bottom: 17px;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.wave-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    object-position: bottom center;
+}
+
+.bitcoin-card-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.bitcoin-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.bitcoin-icon {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+}
+
+.bitcoin-icon-img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.bitcoin-title-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 2px;
+    flex-wrap: wrap;
+}
+
+.bitcoin-label {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #ffffff;
+    line-height: normal;
+}
+
+.bitcoin-change-group {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.change-arrow {
+    width: 8px;
+    height: 8px;
+    display: block;
+    flex-shrink: 0;
+}
+
+.change-percentage {
+    font-family: 'Poppins', sans-serif;
+    font-size: 8px;
+    font-weight: 400;
+    color: #22D49F;
+    line-height: normal;
+}
+
+.change-percentage-negative {
+    color: #FF383C;
+}
+
+.ethereum-icon-wrapper {
+    width: 24px;
+    height: 24px;
+    background-color: #C8C8C8;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.ethereum-icon {
+    width: 10px;
+    height: 17px;
+}
+
+.bitcoin-price {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: #ffffff;
+    line-height: normal;
+    margin: 0;
+}
+
+.price-symbol {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    color: #303241;
+}
+
+@media (max-width: 1440px) {
+}
+
+/* Responsive styles for 1024px devices */
+@media (max-width: 1024px) {
+    .bitcoin-price-section {
+        padding: 70px 30px;
+    }
+    
+    .bitcoin-price-wrapper {
+        gap: 20px;
+    }
+    
+    .bitcoin-content-header {
+        padding: 0 20px;
+    }
+    
+    .live-coin-radar-heading {
+        font-size: 22px;
+    }
+    
+    .bitcoin-price-container {
+        flex-wrap: wrap;
+        gap: 12px;
+        padding: 0 20px;
+    }
+    
+    .bitcoin-price-card {
+        flex: 0 0 calc((100% - 12px) / 2);
+        min-height: 140px;
+        padding: 14px 10px;
+    }
+    
+    .bitcoin-label {
+        font-size: 15px;
+    }
+    
+    .bitcoin-price {
+        font-size: 22px;
+    }
+    
+    .bitcoin-icon {
+        width: 22px;
+        height: 22px;
+    }
+    
+    .see-full-radar-button {
+        padding: 10px 20px;
+        font-size: 11px;
+    }
+    
+    .see-full-radar-arrow {
+        font-size: 11px;
+    }
+}
+
+/* Responsive styles for 768px devices */
+@media (max-width: 768px) {
+    .bitcoin-price-section {
+        padding: 50px 20px;
+    }
+    
+    .bitcoin-price-wrapper {
+        gap: 18px;
+    }
+    
+    .bitcoin-content-header {
+        padding: 0 15px;
+        gap: 12px;
+    }
+    
+    .live-coin-radar-heading {
+        font-size: 20px;
+    }
+    
+    .bitcoin-price-container {
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 0 15px;
+    }
+    
+    .bitcoin-price-card {
+        flex: 0 0 100%;
+        max-width: 100%;
+        min-height: 130px;
+        padding: 12px 10px;
+    }
+    
+    .bitcoin-header {
+        gap: 6px;
+    }
+    
+    .bitcoin-icon {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .bitcoin-label {
+        font-size: 14px;
+    }
+    
+    .change-percentage {
+        font-size: 7px;
+    }
+    
+    .change-arrow {
+        width: 7px;
+        height: 7px;
+    }
+    
+    .bitcoin-price {
+        font-size: 20px;
+    }
+    
+    .bitcoin-wave-bg {
+        bottom: 15px;
+    }
+    
+    .see-full-radar-button {
+        padding: 9px 18px;
+        font-size: 10px;
+        border-radius: 18px;
+    }
+    
+    .see-full-radar-arrow {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .bitcoin-price-section {
+        padding: 30px 0;
+    }
+    
+    .live-coin-radar-heading {
+        font-size: 20px;
+    }
+    
+    .bitcoin-label {
+        font-size: 14px;
+    }
+    
+    .bitcoin-price {
+        font-size: 20px;
     }
 }
 
@@ -660,7 +1019,7 @@ box-sizing: border-box;
 .vault-teaser-section {
     background: #21201D;
     width: 100%;
-    padding: 100px 80px;
+    padding: 100px 0px;
 }
 
 .vault-teaser-container {
@@ -673,22 +1032,20 @@ box-sizing: border-box;
 }
 
 .vault-teaser-title {
-    color: #f7931a;
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 80px;
+    color: #F7931A;
+    font-family: "Bebas Neue";
+    font-size: 60px;
+    font-style: normal;
     font-weight: 700;
-    line-height: 1.1;
+    line-height: 110%;
     text-align: center;
-    margin: 0;
-    white-space: nowrap;
-    letter-spacing: 0;
 }
 
 .vault-content-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 80px;
-    align-items: start;
+     
 }
 
 .vault-left {
@@ -699,18 +1056,18 @@ box-sizing: border-box;
 
 .your-path-section {
     display: flex;
-    flex-direction: column;
+    align-items: center;
     gap: 16px;
 }
 
 .your-path-heading {
-    color: #ffffff;
-    font-family: 'Inter', sans-serif;
-    font-size: 36px;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 28px;
+    font-style: normal;
     font-weight: 800;
-    line-height: 1.71;
+    line-height: 171%; /* 47.88px */
     text-transform: capitalize;
-    margin: 0;
 }
 
 .path-progression {
@@ -746,7 +1103,7 @@ box-sizing: border-box;
 .vault-description {
     color: #8b8b8b;
     font-family: 'Montserrat', sans-serif;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 500;
     line-height: 1.71;
     margin: 0;
@@ -801,29 +1158,25 @@ height: 30px;
 .progress-label-item {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+   justify-content: center;
+   align-items: center;
     position: relative;
 }
 
-.progress-label-item:nth-child(1) {
-    align-items: flex-start;
-}
+
 
 .progress-label-item:nth-child(2) {
     position: absolute;
-    left: 60%;
+    left: 46%;
     transform: translateX(0%);
     align-items: center;
 }
 
-.progress-label-item:nth-child(3) {
-    align-items: flex-end;
-    margin-left: auto;
-}
+ 
 
 .label-rank {
     font-family: 'Montserrat', sans-serif;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 600;
     line-height: 1.71;
 }
@@ -853,7 +1206,7 @@ height: 30px;
 .current-rank-info {
     display: flex;
     flex-direction: column;
-    gap: 6px;
+   
     align-items: center;
     text-align: center;
 }
@@ -861,7 +1214,7 @@ height: 30px;
 .current-rank {
     color: #c28637;
     font-family: 'Montserrat', sans-serif;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 700;
     line-height: 1.71;
     margin: 0;
@@ -879,7 +1232,7 @@ height: 30px;
 .vault-right {
     display: flex;
     flex-direction: column;
-    justify-content: end;
+    justify-content: center;
     align-items: flex-end;
     gap: 16px;
 }
@@ -888,13 +1241,15 @@ height: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 12px;
+    
 }
 
 .eagle-badge-container {
     position: relative;
-    width: 180px;
-    height: 247px;
+    width: 136px;
+ height: 187px;
+ aspect-ratio: 8/11;
+ margin-bottom: 85px;
 }
 
 .eagle-badge-image {
@@ -923,7 +1278,7 @@ height: 30px;
 .eagle-name {
     color: #c28637;
     font-family: 'Montserrat', sans-serif;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 700;
     line-height: 1.71;
     margin: 0;
@@ -933,7 +1288,7 @@ height: 30px;
 .eagle-earned {
     color: #8b8b8b;
     font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
+    font-size: 12px;
     font-weight: 500;
     line-height: 1.71;
     margin: 0;
@@ -942,9 +1297,10 @@ height: 30px;
 
 .vault-button {
     background-color: transparent;
+    margin-top: 20px;
     border: 0.5px solid #ffffff;
     border-radius: 15px;
-    padding: 8px 20px;
+    padding: 7px 10px;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -953,7 +1309,13 @@ height: 30px;
 }
 
 .vault-button:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: #c28637;
+    color: #ffffff;
+    border: 0.5px solid #c28637;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    white-space: nowrap;
 }
 
 .lock-icon {
@@ -965,7 +1327,7 @@ height: 30px;
 .vault-button-text {
     color: #ffffff;
     font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
+    font-size: 11px;
     font-weight: 600;
     white-space: nowrap;
 }
@@ -993,6 +1355,61 @@ height: 30px;
     
     .vault-description {
         font-size: 22px;
+    }
+}
+
+/* Responsive styles for 1024px devices */
+@media (max-width: 1024px) {
+    .vault-teaser-section {
+        padding: 70px 50px;
+    }
+    
+    .vault-teaser-container {
+        gap: 50px;
+    }
+    
+    .vault-content-wrapper {
+        gap: 50px;
+    }
+    
+    .vault-teaser-title {
+        font-size: 55px;
+    }
+    
+    .your-path-heading {
+        font-size: 26px;
+    }
+    
+    .path-progression {
+        font-size: 22px;
+    }
+    
+    .vault-description {
+        font-size: 19px;
+    }
+    
+    .xp-progress-heading {
+        font-size: 18px;
+    }
+    
+    .progress-bar {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .progress-label-item:nth-child(2) {
+        left: 46%;
+    }
+    
+    .eagle-badge-container {
+        width: 150px;
+        height: 206px;
+        margin-bottom: 70px;
+    }
+    
+    .badge-notification {
+        font-size: 13px;
+        padding: 5px 9px;
     }
 }
 
@@ -1032,30 +1449,118 @@ height: 30px;
     }
 }
 
+/* Responsive styles for 768px devices */
 @media (max-width: 768px) {
     .vault-teaser-section {
         padding: 50px 30px;
     }
     
+    .vault-teaser-container {
+        gap: 40px;
+    }
+    
+    .vault-content-wrapper {
+        gap: 40px;
+    }
+    
     .vault-teaser-title {
-        font-size: 50px;
+        font-size: 45px;
+    }
+    
+    .vault-left {
+        gap: 28px;
+    }
+    
+    .your-path-section {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
     }
     
     .your-path-heading {
-        font-size: 24px;
+        font-size: 22px;
     }
     
     .path-progression {
-        font-size: 20px;
+        font-size: 18px;
+        line-height: 1.5;
+    }
+    
+    .path-arrow {
+        padding: 0px 12px;
     }
     
     .vault-description {
-        font-size: 18px;
+        font-size: 17px;
+        line-height: 1.6;
+    }
+    
+    .xp-progress-section {
+        gap: 16px;
+    }
+    
+    .xp-progress-heading {
+        font-size: 17px;
+    }
+    
+    .progress-bar {
+        width: 100%;
+        height: 26px;
+    }
+    
+    .progress-labels {
+        margin-top: 6px;
+    }
+    
+    .label-rank {
+        font-size: 12px;
+    }
+    
+    .label-status {
+        font-size: 12px;
+    }
+    
+    .current-rank {
+        font-size: 13px;
+    }
+    
+    .rank-progress {
+        font-size: 14px;
     }
     
     .eagle-badge-container {
-        width: 140px;
-        height: 192px;
+        width: 130px;
+        height: 179px;
+        margin-bottom: 60px;
+    }
+    
+    .badge-notification {
+        font-size: 12px;
+        padding: 4px 8px;
+        top: 45px;
+        right: -8px;
+    }
+    
+    .eagle-name {
+        font-size: 13px;
+    }
+    
+    .eagle-earned {
+        font-size: 11px;
+    }
+    
+    .vault-button {
+        padding: 6px 9px;
+        margin-top: 16px;
+    }
+    
+    .vault-button-text {
+        font-size: 10px;
+    }
+    
+    .lock-icon {
+        width: 12px;
+        height: 14px;
     }
 }
 
@@ -1111,7 +1616,7 @@ height: 30px;
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     align-items: center;
-    gap: 40px;
+    gap: 106px;
     position: relative;
 }
 
@@ -1158,7 +1663,7 @@ height: 30px;
 .membership-right {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
     justify-content: center;
     gap: 12px;
     justify-self: end;
@@ -1241,9 +1746,7 @@ height: 30px;
         padding: 20px 30px;
     }
     
-    .membership-container {
-        gap: 30px;
-    }
+     
     
     .membership-heading {
         font-size: calc(36px * (100vw / 1440px));
@@ -1296,6 +1799,56 @@ height: 30px;
     
     .countdown-label {
         font-size: 20px;
+    }
+}
+
+/* Responsive styles for 1024px devices */
+@media (max-width: 1024px) {
+    .membership-section {
+        padding: 20px 30px;
+        height: auto;
+        min-height: 106px;
+    }
+    
+    .membership-container {
+        gap: 30px;
+    }
+    
+    .membership-heading {
+        font-size: 26px;
+        white-space: normal;
+    }
+    
+    .countdown-timer {
+        padding: 32px 22px;
+        gap: 32px;
+        border-radius: 20px;
+    }
+    
+    .countdown-number {
+        font-size: 48px;
+        line-height: 48px;
+        letter-spacing: 0.48px;
+    }
+    
+    .countdown-number span {
+        line-height: 48px;
+    }
+    
+    .countdown-label {
+        font-size: 18px;
+    }
+    
+    .spots-remaining {
+        font-size: 13px;
+    }
+    
+    .join-now-button {
+        padding: 7px 18px;
+    }
+    
+    .join-now-text {
+        font-size: 11px;
     }
 }
 
@@ -1370,46 +1923,61 @@ height: 30px;
     }
 }
 
+/* Responsive styles for 768px devices */
 @media (max-width: 768px) {
     .membership-section {
-        padding: 20px 15px;
+        padding: 20px 20px;
         height: auto;
         min-height: auto;
     }
     
     .membership-container {
-        gap: 15px;
+        gap: 18px;
     }
     
     .membership-heading {
-        font-size: 24px;
+        font-size: 22px;
+        line-height: 1.2;
+    }
+    
+    .membership-center {
+        transform: translateX(0);
     }
     
     .countdown-timer {
-        padding: 25px 15px;
-        gap: 20px;
-        border-radius: 18px;
+        padding: 24px 14px;
+        gap: 18px;
+        border-radius: 16px;
     }
     
     .countdown-number {
-        font-size: 40px;
-        line-height: 40px;
+        font-size: 38px;
+        line-height: 38px;
+        letter-spacing: 0.38px;
     }
     
     .countdown-number span {
-        line-height: 40px;
+        line-height: 38px;
     }
     
     .countdown-label {
-        font-size: 16px;
+        font-size: 15px;
+    }
+    
+    .membership-right {
+        gap: 10px;
     }
     
     .spots-remaining {
         font-size: 12px;
     }
     
+    .join-now-button {
+        padding: 6px 16px;
+    }
+    
     .join-now-text {
-        font-size: 11px;
+        font-size: 10px;
     }
 }
 
@@ -1753,60 +2321,62 @@ height: 30px;
 
 /* Footer Styles */
 .footer {
-    background-color: #191a25;
+    background-color: #0f1421;
     width: 100%;
-    padding: 60px 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 50px 0;
+    border-top: none;
 }
 
 .footer-container {
     max-width: 1440px;
     width: 100%;
     margin: 0 auto;
-    padding: 0 40px;
+    padding: 0 60px;
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 60px;
 }
 
 .footer-logo {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex: 0 0 auto;
 }
 
 .footer-logo img {
-    max-width: 200px;
+    max-width: 220px;
     height: auto;
 }
 
 .footer-center {
     display: flex;
-    flex-direction: row;
-    gap: 30px;
+    flex-direction: column;
+    gap: 20px;
     align-items: center;
-    flex-wrap: wrap;
     justify-content: center;
+    flex: 1 1 auto;
+    max-width: 500px;
 }
 
 .footer-nav {
     display: flex;
     flex-direction: row;
-    gap: 24px;
-    flex-wrap: wrap;
+    gap: 30px;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .footer-nav-link {
-    color: rgba(255, 255, 255, 0.7);
+    color: #b0b0b0;
     text-decoration: none;
     font-size: 14px;
     font-weight: 400;
     font-family: 'Montserrat', sans-serif;
     transition: color 0.3s ease;
+    white-space: nowrap;
 }
 
 .footer-nav-link:hover {
@@ -1815,63 +2385,62 @@ height: 30px;
 
 .footer-social {
     display: flex;
-    gap: 16px;
-    justify-content: center;
+    gap: 12px;
+    justify-content: flex-start;
     align-items: center;
+    margin-left: 0;
 }
 
 .social-icon {
-    width: 45px;
-    height: 45px;
+    width: 38px;
+    height: 38px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
+    
     cursor: pointer;
-    transition: transform 0.2s ease;
+    transition: all 0.2s ease;
     flex-shrink: 0;
 }
 
 .social-icon:hover {
     transform: scale(1.05);
+    background-color: #3a3d45;
 }
 
 .social-icon img {
-    width: 22px;
-    height: 22px;
+    width: 18px;
+    height: 18px;
     object-fit: contain;
-    filter: brightness(0) invert(0.7);
-    transition: filter 0.3s ease;
-}
-
-.social-icon:hover img {
     filter: brightness(0) invert(1);
 }
 
 .footer-tagline {
-    color: rgba(255, 255, 255, 0.7);
+    color: #b0b0b0;
     font-size: 12px;
     font-weight: 400;
     font-family: 'Montserrat', sans-serif;
-    text-align: center;
-    margin: 0;
-    white-space: nowrap;
+    text-align: left;
+    margin: 8px 0 0 0;
+    line-height: 1.4;
 }
 
 .footer-right {
     display: flex;
-    flex-direction: row;
-    gap: 20px;
-    align-items: center;
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex: 0 0 auto;
 }
 
 .footer-title {
-    color: rgba(255, 255, 255, 0.7);
+    color: #b0b0b0;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 700;
     font-family: 'Montserrat', sans-serif;
-    margin: 0;
+    margin: 0 0 8px 0;
 }
 
 .footer-links {
@@ -1879,19 +2448,19 @@ height: 30px;
     padding: 0;
     margin: 0;
     display: flex;
-    flex-direction: row;
-    gap: 16px;
-    align-items: center;
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 6px;
+    align-items: flex-start;
 }
 
 .footer-link {
-    color: rgba(255, 255, 255, 0.7);
+    color: #b0b0b0;
     text-decoration: none;
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 400;
     font-family: 'Montserrat', sans-serif;
     transition: color 0.3s ease;
+    line-height: 1.5;
 }
 
 .footer-link:hover {
@@ -1901,12 +2470,71 @@ height: 30px;
 /* Footer Responsive Design */
 @media (max-width: 1200px) {
     .footer-container {
-        padding: 0 30px;
+        padding: 0 40px;
         gap: 40px;
     }
     
     .footer-logo img {
         max-width: 180px;
+    }
+    
+    .footer-nav {
+        gap: 24px;
+    }
+}
+
+/* Responsive styles for 1024px devices */
+@media (max-width: 1024px) {
+    .footer {
+        padding: 45px 0;
+    }
+    
+    .footer-container {
+        padding: 0 50px;
+        gap: 50px;
+    }
+    
+    .footer-logo img {
+        max-width: 200px;
+    }
+    
+    .footer-center {
+        max-width: 450px;
+        gap: 18px;
+    }
+    
+    .footer-nav {
+        gap: 22px;
+    }
+    
+    .footer-nav-link {
+        font-size: 13px;
+    }
+    
+    .footer-social {
+        gap: 11px;
+    }
+    
+    .social-icon {
+        width: 36px;
+        height: 36px;
+    }
+    
+    .social-icon img {
+        width: 17px;
+        height: 17px;
+    }
+    
+    .footer-tagline {
+        font-size: 11px;
+    }
+    
+    .footer-title {
+        font-size: 15px;
+    }
+    
+    .footer-link {
+        font-size: 12px;
     }
 }
 
@@ -1916,14 +2544,64 @@ height: 30px;
     }
     
     .footer-container {
-        flex-direction: row;
-        gap: 30px;
-        padding: 0 30px;
-        justify-content: center;
+        flex-direction: column;
+        gap: 35px;
+        padding: 0 40px;
+        align-items: center;
     }
     
     .footer-logo {
         justify-content: center;
+        width: 100%;
+    }
+    
+    .footer-logo img {
+        max-width: 180px;
+        margin: 0 auto;
+    }
+    
+    .footer-center {
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .footer-nav {
+        justify-content: center;
+        gap: 20px;
+        width: 100%;
+    }
+    
+    .footer-social {
+        justify-content: center;
+    }
+    
+    .footer-tagline {
+        text-align: center;
+    }
+    
+    .footer-right {
+        align-items: center;
+        gap: 12px;
+        width: 100%;
+    }
+    
+    .footer-links {
+        align-items: center;
+        gap: 8px;
+    }
+}
+
+/* Responsive styles for 768px devices */
+@media (max-width: 768px) {
+    .footer {
+        padding: 35px 0;
+    }
+    
+    .footer-container {
+        padding: 0 30px;
+        gap: 30px;
     }
     
     .footer-logo img {
@@ -1931,38 +2609,64 @@ height: 30px;
     }
     
     .footer-center {
-        align-items: center;
-        gap: 20px;
+        gap: 18px;
     }
     
     .footer-nav {
-        justify-content: center;
         gap: 16px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .footer-nav-link {
+        font-size: 12px;
+    }
+    
+    .footer-social {
+        gap: 10px;
+        justify-content: center;
+    }
+    
+    .social-icon {
+        width: 34px;
+        height: 34px;
+    }
+    
+    .social-icon img {
+        width: 16px;
+        height: 16px;
+    }
+    
+    .footer-tagline {
+        font-size: 11px;
+        text-align: center;
+    }
+    
+    .footer-title {
+        font-size: 14px;
+    }
+    
+    .footer-link {
+        font-size: 12px;
     }
     
     .footer-right {
         align-items: center;
-        justify-content: center;
-        gap: 16px;
     }
     
     .footer-links {
         align-items: center;
-        justify-content: center;
-        gap: 12px;
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
     .footer {
         padding: 30px 0;
     }
     
     .footer-container {
-        flex-direction: row;
         padding: 0 20px;
-        gap: 20px;
-        justify-content: center;
+        gap: 25px;
     }
     
     .footer-logo img {
@@ -1974,40 +2678,31 @@ height: 30px;
     }
     
     .footer-nav {
-        flex-direction: row;
         gap: 12px;
-        flex-wrap: wrap;
-    }
-    
-    .footer-right {
-        gap: 12px;
-    }
-    
-    .footer-links {
-        gap: 10px;
-        flex-wrap: wrap;
     }
     
     .footer-nav-link {
-        font-size: 13px;
+        font-size: 12px;
     }
     
     .footer-social {
-        gap: 12px;
+        gap: 8px;
     }
     
     .social-icon {
-        width: 41px;
-        height: 41px;
+        width: 34px;
+        height: 34px;
     }
     
     .social-icon img {
-        width: 20px;
-        height: 20px;
+        width: 15px;
+        height: 15px;
     }
     
     .footer-tagline {
-        font-size: 11px;
+        font-size: 10px;
+        text-align: center;
+        padding: 0 10px;
     }
     
     .footer-title {
@@ -2016,54 +2711,6 @@ height: 30px;
     
     .footer-link {
         font-size: 11px;
-    }
-}
-
-@media (max-width: 480px) {
-    .footer {
-        padding: 25px 0;
-    }
-    
-    .footer-container {
-        flex-direction: row;
-        padding: 0 15px;
-        gap: 15px;
-        justify-content: center;
-    }
-    
-    .footer-logo img {
-        max-width: 120px;
-    }
-    
-    .footer-center {
-        gap: 12px;
-    }
-    
-    .footer-nav {
-        gap: 8px;
-        flex-wrap: wrap;
-    }
-    
-    .footer-nav-link {
-        font-size: 11px;
-    }
-    
-    .footer-social {
-        gap: 8px;
-    }
-    
-    .footer-right {
-        gap: 10px;
-    }
-    
-    .footer-links {
-        gap: 8px;
-        flex-wrap: wrap;
-    }
-    
-    .footer-tagline {
-        font-size: 10px;
-        padding: 0 10px;
     }
 }
 
@@ -2084,6 +2731,23 @@ height: 30px;
     flex-direction: column;
     align-items: center;
     gap: 40px;
+    padding: 0 40px;
+}
+.training-bottom-content {
+    display: flex;
+    gap: 40px;
+}
+
+.training-container .training-description {
+    align-self: flex-start;
+    max-width: none;
+    margin-left: 0;
+}
+
+@media (max-width: 1200px) {
+    .training-container .training-description {
+        align-self: center;
+    }
 }
 
 .training-heading {
@@ -2098,32 +2762,73 @@ height: 30px;
 }
 
 .training-description {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
-    font-weight: 600;
-    color: #ffffff;
-    text-align: center;
-    line-height: 1.71;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
     margin: 0;
-    white-space: pre-wrap;
-}
-
-.training-weeks-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
     width: 100%;
     max-width: 1200px;
 }
 
+.training-bullet {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #ffffff;
+    line-height: 1.71;
+}
+
+.bullet-arrow-icon {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+.training-weeks-row {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.training-weeks-row::-webkit-scrollbar {
+    height: 8px;
+}
+
+.training-weeks-row::-webkit-scrollbar-track {
+    background: #0d0b03;
+    border-radius: 4px;
+}
+
+.training-weeks-row::-webkit-scrollbar-thumb {
+    background: #8d7001;
+    border-radius: 4px;
+}
+
+.training-weeks-row::-webkit-scrollbar-thumb:hover {
+    background: #f7931a;
+}
+
 .week-box {
     position: relative;
-    width: 100%;
+    width: 87px;
+height: 108px;
     aspect-ratio: 1;
     background-color: #0d0b03;
-    border: 0.5px solid #8d7001;
+    border: 0.5px solid #f7931a;
     border-radius: 12px;
     overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+     
 }
 
 .week-box-border {
@@ -2134,13 +2839,9 @@ height: 30px;
 }
 
 .week-box-image {
-    position: absolute;
-    top: 5.59%;
-    left: 5.33%;
-    right: 5.33%;
-    bottom: 20.57%;
-    border-radius: 10px;
-    overflow: hidden;
+    width: 77.72px;
+height: 79.75px;
+margin-top: 5px;
 }
 
 .week-image {
@@ -2153,59 +2854,112 @@ height: 30px;
 }
 
 .week-label {
-    position: absolute;
-    bottom: 6.95%;
-    left: 0;
-    right: 0;
+    
     font-family: 'Poppins', sans-serif;
     font-size: 12px;
     font-weight: 700;
-    color: #f7931a;
+    color: #ffffff;
+     
     text-align: center;
     text-transform: uppercase;
     margin: 0;
     line-height: normal;
     white-space: pre-wrap;
+    padding: 4px 0;
 }
 
 .start-training-button {
     display: flex;
     align-items: center;
     justify-content: center;
+    color: white;
     gap: 8px;
     font-family: 'Montserrat', sans-serif;
-    font-size: 12px;
-    font-weight: 600;
-    color: #ffffff;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    padding: 12px 24px;
-    text-align: center;
-    line-height: 1.1;
-    white-space: pre-wrap;
-    transition: opacity 0.3s ease;
+    background-color: #e68217;
 }
 
-.start-training-button:hover {
-    opacity: 0.8;
+ 
+
+.start-training-button:active {
+    transform: translateY(0);
 }
 
 .start-training-text {
     display: inline-block;
 }
 
-.start-training-arrow {
-    width: 12px;
-    height: 12px;
+.start-training-arrow-symbol {
     display: inline-block;
+    font-size: 16px;
+    font-weight: 700;
 }
 
 /* Responsive Design for Training Section */
 @media (max-width: 1200px) {
-    .training-weeks-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
+    .training-weeks-row {
+        gap: 14px;
+    }
+    
+    .week-box {
+        min-width: 120px;
+        max-width: 160px;
+    }
+}
+
+/* Responsive styles for 1024px devices */
+@media (max-width: 1024px) {
+    .training-section {
+        padding: 70px 35px;
+    }
+    
+    .training-container {
+        gap: 35px;
+        padding: 0 35px;
+    }
+    
+    .training-heading {
+        font-size: 52px;
+    }
+    
+    .training-bottom-content {
+        flex-direction: column;
+        gap: 35px;
+        width: 100%;
+    }
+    
+    .training-description {
+        gap: 10px;
+    }
+    
+    .training-bullet {
+        font-size: 19px;
+        gap: 11px;
+    }
+    
+    .bullet-arrow-icon {
+        width: 22px;
+        height: 22px;
+    }
+    
+    .training-weeks-row {
+        gap: 13px;
+        overflow-x: auto;
+        padding: 10px 0;
+    }
+    
+    .week-box {
+        width: 85px;
+        height: 106px;
+        min-width: 85px;
+    }
+    
+    .week-box-image {
+        width: 75px;
+        height: 77px;
+    }
+    
+    .week-label {
+        font-size: 11px;
     }
 }
 
@@ -2218,13 +2972,83 @@ height: 30px;
         font-size: 48px;
     }
     
-    .training-description {
+    .training-bullet {
         font-size: 18px;
     }
     
-    .training-weeks-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 16px;
+    .bullet-arrow-icon {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .training-weeks-row {
+        gap: 12px;
+    }
+    
+    .week-box {
+        min-width: 110px;
+        max-width: 140px;
+    }
+}
+
+/* Responsive styles for 768px devices */
+@media (max-width: 768px) {
+    .training-section {
+        padding: 50px 25px;
+    }
+    
+    .training-container {
+        gap: 30px;
+        padding: 0 25px;
+    }
+    
+    .training-heading {
+        font-size: 42px;
+    }
+    
+    .training-bottom-content {
+        gap: 30px;
+    }
+    
+    .training-description {
+        gap: 10px;
+    }
+    
+    .training-bullet {
+        font-size: 17px;
+        gap: 10px;
+    }
+    
+    .bullet-arrow-icon {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .training-weeks-row {
+        gap: 10px;
+        padding: 8px 0;
+    }
+    
+    .week-box {
+        width: 75px;
+        height: 94px;
+        min-width: 75px;
+    }
+    
+    .week-box-image {
+        width: 67px;
+        height: 69px;
+        margin-top: 4px;
+    }
+    
+    .week-label {
+        font-size: 10px;
+        padding: 3px 0;
+    }
+    
+    .start-training-button {
+        padding: 12px 24px;
+        font-size: 14px;
     }
 }
 
@@ -2241,13 +3065,170 @@ height: 30px;
         font-size: 36px;
     }
     
-    .training-description {
+    .training-bullet {
         font-size: 16px;
+        gap: 10px;
     }
     
-    .training-weeks-grid {
-        grid-template-columns: 1fr;
-        gap: 16px;
-        max-width: 400px;
+    .bullet-arrow-icon {
+        width: 18px;
+        height: 18px;
+    }
+    
+    .training-weeks-row {
+        gap: 10px;
+    }
+    
+    .week-box {
+        min-width: 100px;
+        max-width: 120px;
+    }
+    
+    .week-label {
+        font-size: 10px;
+    }
+    
+    .start-training-button {
+        padding: 12px 24px;
+        font-size: 12px;
+    }
+}
+
+
+
+
+/* info cards */
+.info-card {
+    background-color: transparent !important;
+    border: 0.794px solid #303241 !important;
+     
+}
+.info-cards-wrapper {
+    max-width: 1126px;
+    align-items: center !important;
+    padding: 0px !important;
+}
+
+/* Responsive styles for News Radar section - 1024px devices */
+@media (max-width: 1024px) {
+    .info-cards-section {
+        padding: 35px 0 70px 0 !important;
+    }
+    
+    .info-cards-wrapper {
+        padding: 0 50px !important;
+        gap: 20px;
+    }
+    
+    .info-content-header {
+        padding: 0 20px;
+    }
+    
+    .live-coin-radar-heading {
+        font-size: 22px;
+    }
+    
+    .info-cards-container {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+    
+    .info-card {
+        flex: 0 0 calc((100% - 12px) / 2) !important;
+        max-width: calc((100% - 12px) / 2) !important;
+        height: auto;
+        min-height: 380px;
+    }
+    
+    .info-card-image {
+        height: 200px;
+    }
+    
+    .info-card-label {
+        font-size: 13px;
+    }
+    
+    .info-card-title {
+        font-size: 24px;
+    }
+    
+    .info-card-description {
+        font-size: 13px;
+    }
+    
+    .see-full-radar-button {
+        padding: 10px 20px;
+        font-size: 11px;
+    }
+    
+    .see-full-radar-arrow {
+        font-size: 11px;
+    }
+    
+    .read-full-truth-radar-text {
+        font-size: 11px;
+    }
+}
+
+/* Responsive styles for News Radar section - 768px devices */
+@media (max-width: 768px) {
+    .info-cards-section {
+        padding: 30px 0 60px 0 !important;
+    }
+    
+    .info-cards-wrapper {
+        padding: 0 30px !important;
+        gap: 18px;
+    }
+    
+    .info-content-header {
+        padding: 0 15px;
+        gap: 12px;
+    }
+    
+    .live-coin-radar-heading {
+        font-size: 20px;
+    }
+    
+    .info-cards-container {
+        flex-direction: column;
+        gap: 14px;
+    }
+    
+    .info-card {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        height: auto;
+        min-height: 360px;
+    }
+    
+    .info-card-image {
+        height: 180px;
+    }
+    
+    .info-card-label {
+        font-size: 12px;
+    }
+    
+    .info-card-title {
+        font-size: 22px;
+    }
+    
+    .info-card-description {
+        font-size: 13px;
+    }
+    
+    .see-full-radar-button {
+        padding: 9px 18px;
+        font-size: 10px;
+        border-radius: 18px;
+    }
+    
+    .see-full-radar-arrow {
+        font-size: 10px;
+    }
+    
+    .read-full-truth-radar-text {
+        font-size: 10px;
     }
 }

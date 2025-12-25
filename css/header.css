@@ -32,9 +32,8 @@
 }
 
 .logo img {
-    height: auto;
-    max-height: 100px;
-    width: auto;
+    width: 128px;
+height: 66px;
     transition: max-height 0.3s ease;
 }
 
@@ -76,9 +75,8 @@
 .navigation {
     display: flex;
     align-items: center;
-    gap: 32px;
+    gap: 20px;
     flex: 1;
-    margin-top: 40px;
     justify-content: center;
     transition: all 0.3s ease;
     flex-shrink: 1;
@@ -88,7 +86,7 @@
 .nav-link {
     color: #fff;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 10px;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -112,7 +110,7 @@
     border: none;
     border-radius: 30px;
     padding: 12px 24px;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 600;
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
