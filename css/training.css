@@ -2,35 +2,57 @@
 
 /* Coin Radar Banner */
 .coin-radar-banner {
-    width: 100%;
-    background-image: url('../assets/4bad277c6aa23dc6977ba1c4cf914b053f0f6699.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    border-bottom: 1px solid #3e350f;
-    padding: 0;
+    width: 60%;
+    margin: 0 auto;
+    padding: 16px 0;
     position: relative;
-    height: 62px;
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
 }
 
+/* Top Orange Glowing Line */
 .coin-radar-banner::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, 
+        rgba(255,170,59,0) 0%, 
+        rgba(255,170,59,0.5) 10%, 
+        rgba(255,170,59,1) 50%, 
+        rgba(255,170,59,0.5) 90%, 
+        rgba(255,170,59,0) 100%);
+    box-shadow: 0 0 4px rgba(255, 170, 59, 0.3);
+    z-index: 1;
+    opacity: 0.5;
+}
+
+/* Bottom Orange Glowing Line */
+.coin-radar-banner::after {
+    content: '';
+    position: absolute;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.3);
-    z-index: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0.5;
+    height: 2px;
+    background: linear-gradient(90deg, 
+        rgba(255,170,59,0) 0%, 
+        rgba(255,170,59,0.5) 10%, 
+        rgba(255,170,59,1) 50%, 
+        rgba(255,170,59,0.5) 90%, 
+        rgba(255,170,59,0) 100%);
+    box-shadow: 0 0 4px rgba(255, 170, 59, 0.3);
+    z-index: 1;
 }
 
 .banner-container {
     max-width: 1440px;
     width: 100%;
-    height: 62px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -39,41 +61,34 @@
 }
 
 .banner-text {
-    color: #f7931a;
+    color: #ffaa3b;
     font-family: 'Montserrat', sans-serif;
     font-size: 32px;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 1.1;
     margin: 0;
     text-align: center;
     text-transform: uppercase;
-    width: 1076px;
-    max-width: calc(100% - 364px);
-    letter-spacing: 0.5px;
-    position: relative;
-    padding: 0 20px;
+    letter-spacing: 1.5px;
+    text-shadow: 0 0 5px rgba(255, 170, 59, 0.3);
 }
 
-.banner-text::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+/* Training Background Wrapper */
+.training-background-wrapper {
+    padding-top: 60px;
     width: 100%;
-    height: 62px;
-    background: linear-gradient(90deg, rgba(21, 21, 21, 0) 10.096%, rgba(21, 21, 21, 1) 30.288%, rgba(21, 21, 21, 1) 62.981%, rgba(21, 21, 21, 0) 87.981%);
-    border-top: 1px solid #f7931a;
-    border-bottom: 1px solid #f7931a;
-    border-radius: 0;
-    z-index: -1;
-    pointer-events: none;
+    background-image: url('../assets/Rectangle 4165.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* Training Progress Section */
 .training-progress-section {
     width: 100%;
-    background-color: #000;
+    background-color: transparent;
     padding: 48px 0 0 0;
     display: flex;
     justify-content: center;
@@ -276,7 +291,7 @@
 /* Main Content Area */
 .training-main-content {
     width: 100%;
-    background-color: #000;
+    background-color: transparent;
     padding: 48px 0 80px 0;
     display: flex;
     justify-content: center;
@@ -1375,6 +1390,13 @@
 /* Responsive Design */
 
 /* Large Desktop */
+/* 1500px devices */
+@media (min-width: 1800px) {
+    .coin-radar-banner {
+        width: 40%;
+    }
+}
+
 @media (max-width: 1440px) {
     .training-content-container {
         grid-template-columns: 1fr 437px;
@@ -1382,8 +1404,7 @@
     }
     
     .banner-text {
-        max-width: calc(100% - 80px);
-        width: auto;
+        padding: 0 40px;
     }
     
     .training-progress-container {
@@ -1398,7 +1419,7 @@
 /* Tablet */
 @media (max-width: 1200px) {
     .banner-text {
-        font-size: 28px;
+        font-size: 22px;
     }
     
     .training-progress-card {
@@ -1440,21 +1461,13 @@
 /* Mobile */
 @media (max-width: 968px) {
     .coin-radar-banner {
-        height: 48px;
-    }
-    
-    .banner-container {
-        height: 48px;
+        width: 80%;
+        padding: 14px 0;
     }
     
     .banner-text {
-        font-size: 20px;
-        max-width: calc(100% - 40px);
-        width: auto;
-    }
-    
-    .banner-text::before {
-        height: 48px;
+        font-size: 18px;
+        padding: 0 20px;
     }
     
     .training-progress-section {
@@ -1567,22 +1580,13 @@
 /* Small Mobile */
 @media (max-width: 640px) {
     .coin-radar-banner {
-        height: 40px;
-    }
-    
-    .banner-container {
-        height: 40px;
+        width: 80%;
+        padding: 12px 0;
     }
     
     .banner-text {
-        font-size: 16px;
-        max-width: calc(100% - 32px);
-        width: auto;
+        font-size: 14px;
         padding: 0 16px;
-    }
-    
-    .banner-text::before {
-        height: 40px;
     }
     
     .training-progress-card {

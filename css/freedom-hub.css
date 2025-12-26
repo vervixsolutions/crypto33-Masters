@@ -2,27 +2,77 @@
 
 /* Coin Radar Banner */
 .coin-radar-banner {
-    background-color: #09090b;
+    margin-top: 60px !important;
+    width: 80%;
+    margin: 0 auto;
+    padding: 16px 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+/* Top Orange Glowing Line */
+.coin-radar-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    padding: 7px 0;
-    border-bottom: 1px solid #1a1a1a;
+    height: 2px;
+    background: linear-gradient(90deg, 
+        rgba(255,170,59,0) 0%, 
+        rgba(255,170,59,0.5) 10%, 
+        rgba(255,170,59,1) 50%, 
+        rgba(255,170,59,0.5) 90%, 
+        rgba(255,170,59,0) 100%);
+    box-shadow: 0 0 4px rgba(255, 170, 59, 0.3);
+    z-index: 1;
+    opacity: 0.5;
+}
+
+/* Bottom Orange Glowing Line */
+.coin-radar-banner::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0.5;
+    height: 2px;
+    background: linear-gradient(90deg, 
+        rgba(255,170,59,0) 0%, 
+        rgba(255,170,59,0.5) 10%, 
+        rgba(255,170,59,1) 50%, 
+        rgba(255,170,59,0.5) 90%, 
+        rgba(255,170,59,0) 100%);
+    box-shadow: 0 0 4px rgba(255, 170, 59, 0.3);
+    z-index: 1;
 }
 
 .coin-radar-banner-container {
     max-width: 1440px;
     width: 100%;
-    margin: 0 auto;
-    padding: 0 182px;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
 }
 
 .coin-radar-title {
-    color: #ffffff;
+    color: #ffaa3b;
     font-family: 'Montserrat', sans-serif;
-    font-size: 48px;
+    font-size: 32px;
     font-weight: 500;
+    line-height: 1.1;
     margin: 0;
-    line-height: 1;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    text-shadow: 0 0 5px rgba(255, 170, 59, 0.3);
+    white-space: nowrap;
 }
 
 /* Daily Brief Section */
@@ -173,7 +223,7 @@
     max-width: 1285px;
     width: 100%;
     margin: 0 auto;
-    padding: 0 78px;
+   
 }
 
 .notification-tabs {
@@ -214,8 +264,12 @@
     border: 0.5px solid #2d2d2d;
     border-radius: 16px;
     padding: 24px;
-    display: flex;
+    display: none;
     gap: 20px;
+}
+
+.notice-card.active {
+    display: flex;
 }
 
 .icon-col {
@@ -339,6 +393,53 @@
     color: #ffffff;
 }
 
+/* Banned Card Styling */
+.notice-card.banned-card {
+    background-color: #1a0a0a;
+    border: 0.5px solid #4a1a1a;
+}
+
+.banned-icon-box {
+    width: 36px;
+    height: 36px;
+    background: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+.banned-icon {
+    width: 36px;
+    height: 36px;
+    display: block;
+    filter: drop-shadow(0 0 3px rgba(192, 27, 27, 0.5));
+}
+
+.badge.banned-strike {
+    background-color: #c01b1b;
+    color: #ffffff;
+    border: 0.5px solid #c01b1b;
+}
+
+.banned-reason {
+    color: #c01b1b;
+}
+
+.banned-reason .reason-label {
+    color: #c01b1b;
+    font-weight: 600;
+}
+
+.banned-reason .reason-value {
+    color: #c01b1b;
+}
+
+.banned-description {
+    color: #c01b1b;
+}
+
 /* Filter Feed Section */
 .filter-feed-section {
     width: 100%;
@@ -350,7 +451,7 @@
     max-width: 1285px;
     width: 100%;
     margin: 0 auto;
-    padding: 0 78px;
+     
 }
 
 .filter-label {
@@ -404,7 +505,7 @@
     max-width: 1285px;
     width: 100%;
     margin: 0 auto;
-    padding: 0 78px;
+     
 }
 
 .news-grid {
@@ -708,7 +809,7 @@
 .info-cards-container {
     max-width: 1285px;
     width: 100%;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     display: flex;
     gap: 14px;
@@ -729,8 +830,8 @@
 }
 
 .info-card-image {
-  
-    height: 225px;
+    width: 100%;
+    height: 280px;
     border-radius: 12px;
     margin-bottom: 20px;
     object-fit: cover;
@@ -807,7 +908,7 @@
     max-width: 1285px;
     width: 100%;
     margin: 0 auto;
-    padding: 0 78px;
+    
     display: flex;
     gap: 13px;
 }
@@ -882,7 +983,7 @@
 }
 
 .disclaimer-container {
-    max-width: 1140px;
+    max-width: 1285px;
     width: 100%;
     margin: 0 auto;
     border-radius: 40px;
@@ -902,23 +1003,46 @@
 }
 
 /* Responsive Design */
+/* 1800px and above devices */
+@media (min-width: 1800px) {
+    .coin-radar-banner {
+        width: 70%;
+    }
+}
+
+/* 1500px devices */
+@media (max-width: 1500px) {
+    .coin-radar-banner {
+        width: 75%;
+    }
+}
+
 @media (max-width: 1440px) {
     .coin-radar-banner-container,
     .daily-brief-container,
     .notification-container,
     .filter-feed-container,
     .news-feed-container,
+    .info-cards-container,
     .info-cards-wrapper,
     .sovereign-container,
     .disclaimer-container {
         padding-left: 40px;
         padding-right: 40px;
     }
+    
+    .coin-radar-title {
+        padding: 0 40px;
+    }
 }
 
 @media (max-width: 1200px) {
+    .coin-radar-banner {
+        width: 85%;
+    }
+    
     .coin-radar-title {
-        font-size: 36px;
+        font-size: 22px;
     }
 
     .daily-brief-container {
@@ -936,10 +1060,21 @@
 
     .info-cards-container {
         flex-direction: column;
+        gap: 20px;
     }
 
     .info-card {
         max-width: 100%;
+        height: auto;
+        min-height: 450px;
+    }
+
+    .info-card-image {
+        height: 250px;
+    }
+
+    .info-card-title {
+        font-size: 24px;
     }
 
     .sovereign-container {
@@ -951,11 +1086,54 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 968px) {
+    .coin-radar-banner {
+        width: 90%;
+        padding: 14px 0;
+    }
+    
     .coin-radar-title {
-        font-size: 24px;
+        font-size: 18px;
+        padding: 0 20px;
+        white-space: normal;
+    }
+}
+
+/* Tablet styles (768px - 1024px) */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .info-cards-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 16px;
+        padding-left: 30px;
+        padding-right: 30px;
     }
 
+    .info-card {
+        flex: 1 1 calc(50% - 8px);
+        max-width: calc(50% - 8px);
+        height: auto;
+        min-height: 470px;
+    }
+
+    .info-card-image {
+        height: 240px;
+    }
+
+    .info-card-title {
+        font-size: 22px;
+    }
+
+    .info-card-label {
+        font-size: 13px;
+    }
+
+    .info-card-description {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 768px) {
     .coin-radar-banner-container {
         padding: 0 20px;
     }
@@ -975,7 +1153,7 @@
     .notification-container,
     .filter-feed-container,
     .news-feed-container,
-    .info-cards-wrapper,
+    .info-cards-container,
     .sovereign-container,
     .disclaimer-container {
         padding-left: 20px;
@@ -1056,13 +1234,36 @@
         justify-content: center;
     }
 
+    .info-cards-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
     .info-card {
+        max-width: 100%;
         height: auto;
         min-height: 350px;
+        padding: 16px;
     }
 
     .info-card-image {
-        height: 180px;
+        height: 220px;
+        width: 100%;
+    }
+
+    .info-card-label {
+        font-size: 12px;
+        margin-bottom: 6px;
+    }
+
+    .info-card-title {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .info-card-description {
+        font-size: 13px;
+        line-height: 1.5;
     }
 
     .read-full-truth-radar-button {
@@ -1079,9 +1280,53 @@
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 640px) {
+    .coin-radar-banner {
+        width: 95%;
+        padding: 12px 0;
+    }
+    
     .coin-radar-title {
+        font-size: 14px;
+        padding: 0 16px;
+        white-space: normal;
+    }
+}
+
+@media (max-width: 480px) {
+    .info-cards-section {
+        padding: 30px 0;
+    }
+
+    .info-cards-container {
+        padding-left: 16px;
+        padding-right: 16px;
+        gap: 16px;
+    }
+
+    .info-card {
+        padding: 14px;
+        min-height: 320px;
+    }
+
+    .info-card-image {
+        height: 200px;
+        margin-bottom: 16px;
+    }
+
+    .info-card-label {
+        font-size: 11px;
+        margin-bottom: 6px;
+    }
+
+    .info-card-title {
         font-size: 18px;
+        margin-bottom: 8px;
+    }
+
+    .info-card-description {
+        font-size: 12px;
+        line-height: 1.4;
     }
 
     .freedom-meter-box {

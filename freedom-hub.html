@@ -346,14 +346,15 @@
 <section class="notification-section">
     <div class="notification-container">
         <nav class="notification-tabs">
-            <button class="notification-tab-btn active">Info</button>
-            <button class="notification-tab-btn">Warning</button>
-            <button class="notification-tab-btn">Final</button>
-            <button class="notification-tab-btn">Restricted</button>
-            <button class="notification-tab-btn">Banned</button>
+            <button class="notification-tab-btn active" data-tab="info">Info</button>
+            <button class="notification-tab-btn" data-tab="warning">Warning</button>
+            <button class="notification-tab-btn" data-tab="final">Final</button>
+            <button class="notification-tab-btn" data-tab="restricted">Restricted</button>
+            <button class="notification-tab-btn" data-tab="banned">Banned</button>
         </nav>
 
-        <div class="notice-card">
+        <!-- Info Tab Content -->
+        <div class="notice-card active" data-content="info">
             <div class="icon-col">
                 <div class="icon-box">
                     <img src="assets/8da0219f435a8ec02d6e88d85e21d30fe0732392.png" alt="Info" class="icon-image">
@@ -378,6 +379,157 @@
                 </div>
 
                 <p class="description-text">
+                    Please Keep Discussions Respectful And Avoid Personal Attacks.
+                </p>
+
+                <div class="actions">
+                    <button class="btn-action">View Details</button>
+                    <button class="btn-action">Read Rules</button>
+                    <button class="btn-action">Appeal</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Warning Tab Content -->
+        <div class="notice-card" data-content="warning">
+            <div class="icon-col">
+                <div class="icon-box">
+                    <img src="assets/8da0219f435a8ec02d6e88d85e21d30fe0732392.png" alt="Warning" class="icon-image">
+                </div>
+            </div>
+
+            <div class="content-col">
+                <div class="header-row">
+                    <h2 class="notice-title">Community Warning</h2>
+                    <span class="badge strike">Strike 1/3</span>
+                    <span class="badge safety">
+                        <svg class="shield-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z" fill="currentColor"/>
+                        </svg>
+                        Safety Rules Apply
+                    </span>
+                </div>
+
+                <div class="reason-text">
+                    <span class="reason-label">Reason:</span>
+                    <span class="reason-value">Personal Attack / Disrespectful Language</span>
+                </div>
+
+                <p class="description-text">
+                    Please Keep Discussions Respectful And Avoid Personal Attacks.
+                </p>
+
+                <div class="actions">
+                    <button class="btn-action">View Details</button>
+                    <button class="btn-action">Read Rules</button>
+                    <button class="btn-action">Appeal</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Final Tab Content -->
+        <div class="notice-card" data-content="final">
+            <div class="icon-col">
+                <div class="icon-box">
+                    <img src="assets/8da0219f435a8ec02d6e88d85e21d30fe0732392.png" alt="Final" class="icon-image">
+                </div>
+            </div>
+
+            <div class="content-col">
+                <div class="header-row">
+                    <h2 class="notice-title">Final Warning</h2>
+                    <span class="badge strike">Strike 2/3</span>
+                    <span class="badge safety">
+                        <svg class="shield-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z" fill="currentColor"/>
+                        </svg>
+                        Safety Rules Apply
+                    </span>
+                </div>
+
+                <div class="reason-text">
+                    <span class="reason-label">Reason:</span>
+                    <span class="reason-value">Repeated Violations / Spam Content</span>
+                </div>
+
+                <p class="description-text">
+                    This is your final warning. Continued violations may result in account restrictions or suspension.
+                </p>
+
+                <div class="actions">
+                    <button class="btn-action">View Details</button>
+                    <button class="btn-action">Read Rules</button>
+                    <button class="btn-action">Appeal</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Restricted Tab Content -->
+        <div class="notice-card" data-content="restricted">
+            <div class="icon-col">
+                <div class="icon-box">
+                    <img src="assets/8da0219f435a8ec02d6e88d85e21d30fe0732392.png" alt="Restricted" class="icon-image">
+                </div>
+            </div>
+
+            <div class="content-col">
+                <div class="header-row">
+                    <h2 class="notice-title">Account Restricted</h2>
+                    <span class="badge strike">Strike 3/3</span>
+                    <span class="badge safety">
+                        <svg class="shield-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z" fill="currentColor"/>
+                        </svg>
+                        Safety Rules Apply
+                    </span>
+                </div>
+
+                <div class="reason-text">
+                    <span class="reason-label">Reason:</span>
+                    <span class="reason-value">Multiple Policy Violations</span>
+                </div>
+
+                <p class="description-text">
+                    Your account has been restricted due to multiple policy violations. Some features may be limited.
+                </p>
+
+                <div class="actions">
+                    <button class="btn-action">View Details</button>
+                    <button class="btn-action">Read Rules</button>
+                    <button class="btn-action">Appeal</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Banned Tab Content -->
+        <div class="notice-card banned-card" data-content="banned">
+            <div class="icon-col">
+                <div class="icon-box banned-icon-box">
+                    <svg class="banned-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="9" fill="white" stroke="#c01b1b" stroke-width="2.5"/>
+                        <path d="M7 7l10 10" stroke="#c01b1b" stroke-width="3" stroke-linecap="round"/>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="content-col">
+                <div class="header-row">
+                    <h2 class="notice-title">Account Banned</h2>
+                    <span class="badge strike banned-strike">Strike 1/3</span>
+                    <span class="badge safety">
+                        <svg class="shield-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z" fill="currentColor"/>
+                        </svg>
+                        Safety Rules Apply
+                    </span>
+                </div>
+
+                <div class="reason-text banned-reason">
+                    <span class="reason-label">Reason:</span>
+                    <span class="reason-value">Personal Attack / Disrespectful Language</span>
+                </div>
+
+                <p class="description-text banned-description">
                     Please Keep Discussions Respectful And Avoid Personal Attacks.
                 </p>
 
@@ -476,12 +628,27 @@
 
         // Notification tabs functionality
         const notificationTabs = document.querySelectorAll('.notification-tab-btn');
+        const noticeCards = document.querySelectorAll('.notice-card');
+        
         notificationTabs.forEach(tab => {
             tab.addEventListener('click', function() {
+                // Remove active class from all tabs
                 notificationTabs.forEach(btn => btn.classList.remove('active'));
                 this.classList.add('active');
-                // Add functionality to show different notice content based on selected tab
-                // This can be extended to show different notices for each tab type
+                
+                // Get the tab data attribute
+                const tabType = this.getAttribute('data-tab');
+                
+                // Hide all notice cards
+                noticeCards.forEach(card => {
+                    card.classList.remove('active');
+                });
+                
+                // Show the corresponding notice card
+                const targetCard = document.querySelector(`.notice-card[data-content="${tabType}"]`);
+                if (targetCard) {
+                    targetCard.classList.add('active');
+                }
             });
         });
 
