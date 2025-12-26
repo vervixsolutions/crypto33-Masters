@@ -109,7 +109,7 @@ body {
 }
 
 .hero-button-secondary {
-    width: 316px;
+    width: 340px;
     height: 30px;
 color: #fff;
 position: relative;
@@ -528,12 +528,7 @@ box-sizing: border-box;
         padding: 0 15px;
     }
     
-    .bitcoin-price-card {
-        flex: 0 0 100%;
-        max-width: 100%;
-        min-height: 130px;
-        padding: 12px 10px;
-    }
+    
     
     .bitcoin-header {
         gap: 6px;
@@ -3101,12 +3096,13 @@ margin-top: 5px;
 .info-card {
     background-color: transparent !important;
     border: 0.794px solid #303241 !important;
+    box-shadow: none !important;
      
 }
 .info-cards-wrapper {
-    max-width: 1126px;
+     
     align-items: center !important;
-    padding: 0px !important;
+     
 }
 
 /* Responsive styles for News Radar section - 1024px devices */
@@ -3203,7 +3199,7 @@ margin-top: 5px;
     }
     
     .info-card-image {
-        height: 180px;
+        height: 100%;
     }
     
     .info-card-label {
@@ -3231,4 +3227,8 @@ margin-top: 5px;
     .read-full-truth-radar-text {
         font-size: 10px;
     }
+}
+
+.info-cards-section {
+    background-color: var(--color-bg-secondary) !important;
 }
