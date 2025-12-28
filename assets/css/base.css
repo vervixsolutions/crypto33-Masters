@@ -1,0 +1,153 @@
+/* ============================================
+   BASE STYLES
+   ============================================ */
+
+body {
+  margin: 0;
+  line-height: normal;
+  font-family: var(--font-primary);
+  background-color: var(--color-bg-primary);
+  overflow-x: hidden;
+  color: var(--color-text-primary);
+}
+
+/* ========== RESET & BASE TYPOGRAPHY ========== */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+}
+
+p {
+  margin: 0;
+  line-height: var(--line-height-relaxed);
+}
+
+a {
+  transition: color var(--transition-base);
+}
+
+/* ========== COMMON SECTION STYLES ========== */
+.section {
+  width: 100%;
+  padding: var(--spacing-7xl) 0;
+}
+
+.section-sm {
+  padding: var(--spacing-4xl) 0;
+}
+
+.section-lg {
+  padding: var(--spacing-8xl) 0;
+}
+
+/* ========== COMMON HEADING STYLES ========== */
+.heading-display {
+  font-family: var(--font-display);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-wider);
+  color: var(--color-text-primary);
+}
+
+.heading-1 {
+  font-size: var(--font-size-11xl);
+  line-height: var(--line-height-tight);
+}
+
+.heading-2 {
+  font-size: var(--font-size-8xl);
+  line-height: var(--line-height-tight);
+}
+
+.heading-3 {
+  font-size: var(--font-size-6xl);
+  line-height: var(--line-height-tight);
+}
+
+.heading-4 {
+  font-size: var(--font-size-4xl);
+  line-height: var(--line-height-normal);
+}
+
+/* ========== COMMON CARD STYLES ========== */
+.card {
+  background-color: var(--color-bg-card);
+  border: var(--border-width-thin) solid var(--color-border-primary);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-2xl);
+}
+
+.card-dark {
+  background-color: var(--color-bg-card-dark);
+  border-color: var(--color-border-gold);
+}
+
+/* ========== COMMON BUTTON VARIANTS ========== */
+.btn-hero-primary {
+  width: 96px;
+  height: 30px;
+  background-color: var(--color-primary);
+  color: var(--color-bg-primary);
+  border-radius: 22px;
+  font-family: var(--font-primary);
+  font-size: 15px;
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-tight);
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.btn-hero-primary:hover {
+  background-color: var(--color-primary-hover);
+}
+
+.btn-hero-secondary {
+  width: 316px;
+  height: 30px;
+  color: var(--color-text-primary);
+  border-radius: var(--radius-lg);
+  border: var(--border-width-thin) solid var(--color-secondary);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
+  background-color: transparent;
+}
+
+.btn-hero-secondary:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+/* ========== RESPONSIVE HELPERS ========== */
+@media (max-width: 1200px) {
+  .heading-1 { font-size: var(--font-size-9xl); }
+  .heading-2 { font-size: var(--font-size-7xl); }
+  .heading-3 { font-size: var(--font-size-5xl); }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: var(--spacing-5xl) 0;
+  }
+  
+  .heading-1 { font-size: var(--font-size-6xl); }
+  .heading-2 { font-size: var(--font-size-5xl); }
+  .heading-3 { font-size: var(--font-size-4xl); }
+  
+  .btn-hero-primary,
+  .btn-hero-secondary {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: var(--spacing-4xl) 0;
+  }
+  
+  .heading-1 { font-size: var(--font-size-5xl); }
+  .heading-2 { font-size: var(--font-size-4xl); }
+  .heading-3 { font-size: var(--font-size-3xl); }
+}
+

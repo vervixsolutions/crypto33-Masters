@@ -1,0 +1,14 @@
+<svg preserveAspectRatio="none" width="100%" height="100%" overflow="visible" style="display: block;" viewBox="0 0 456.189 11.5421" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="XP Bar">
+<path id="Line 2 (Stroke)" d="M450.418 0.0946058C453.553 0.0946061 456.095 2.63599 456.095 5.77096C456.095 8.90592 453.553 11.4473 450.418 11.4473L5.77095 11.4475C2.63599 11.4475 0.0946056 8.90611 0.0946058 5.77115C0.0946061 2.63618 2.63599 0.094797 5.77096 0.0947973L450.418 0.0946058Z" fill="var(--fill-0, white)" stroke="var(--stroke-0, #8B846D)" stroke-width="0.189212" stroke-linecap="round"/>
+<path id="Line 4 (Stroke)" d="M201.595 0.0945665C204.73 0.0945665 207.271 2.63595 207.271 5.77091C207.271 8.90588 204.73 11.4473 201.595 11.4473H5.77096C2.63599 11.4473 0.0946063 8.90588 0.0946063 5.77092C0.0946063 2.63596 2.63599 0.0945726 5.77096 0.0945726L201.595 0.0945665Z" fill="url(#paint0_linear_0_13)"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_0_13" x1="0.0946063" y1="5.77092" x2="134.571" y2="5.77092" gradientUnits="userSpaceOnUse">
+<stop stop-color="#E14B3D"/>
+<stop offset="0.274038" stop-color="#F3B445"/>
+<stop offset="0.552885" stop-color="#DED588"/>
+<stop offset="1" stop-color="#93D2FC"/>
+</linearGradient>
+</defs>
+</svg>

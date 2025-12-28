@@ -1,0 +1,273 @@
+/* ========================================
+   ATLAS JR. POPUP STYLES
+   ======================================== */
+
+/* Overlay */
+.atlas-jr-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.atlas-jr-popup-overlay.active {
+    display: flex;
+    animation: fadeInOverlay 0.3s ease-in-out;
+}
+
+@keyframes fadeInOverlay {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Popup Container */
+.atlas-jr-popup {
+    position: relative;
+    width: 100%;
+    max-width: 1153px;
+    background: linear-gradient(135deg, #201709 0%, #1a1306 100%);
+    border: 1px solid #8d7001;
+    border-radius: 20px;
+    box-shadow: 0px 4px 36.9px 0px rgba(247, 147, 26, 0.25);
+    padding: 40px 43px;
+    box-sizing: border-box;
+    animation: popupSlideIn 0.4s ease-out;
+}
+
+@keyframes popupSlideIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9) translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* Close Button */
+.atlas-close-btn {
+    position: absolute;
+    top: 33px;
+    right: 43px;
+    background-color: #563a17;
+    border: 0.5px solid #f7931a;
+    border-radius: 39px;
+    padding: 7px 16px;
+    color: #f7931a;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    line-height: 1.1;
+}
+
+.atlas-close-btn:hover {
+    background-color: #6b4a1f;
+    border-color: #ffa033;
+    transform: scale(1.05);
+}
+
+/* Popup Content */
+.atlas-popup-content {
+    max-width: 1057px;
+}
+
+.atlas-popup-label {
+    color: #f7931a;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.6px;
+    margin: 0 0 20px 0;
+    line-height: 1.3;
+}
+
+.atlas-popup-headline {
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 21.5px;
+    font-weight: 700;
+    margin: 0 0 15px 0;
+    line-height: 1.3;
+}
+
+.atlas-popup-description {
+    color: #f5e6cd;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0 0 30px 0;
+    line-height: 1.3;
+}
+
+/* Response Box */
+.atlas-response-box {
+    background-color: #050507;
+    border: 0.5px solid #4a4b53;
+    border-radius: 20px;
+    padding: 28px;
+    margin-bottom: 20px;
+}
+
+.atlas-response-label {
+    color: #f7931a;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    margin: 0 0 15px 0;
+    line-height: 1.3;
+}
+
+.atlas-response-text {
+    color: #f5e6cd;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0 0 20px 0;
+    line-height: 1.3;
+}
+
+.atlas-dev-note {
+    color: #ffbe52;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0;
+    line-height: 1.3;
+}
+
+/* Disclaimer */
+.atlas-popup-disclaimer {
+    color: #f7931a;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0;
+    line-height: 1.3;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+@media (max-width: 1200px) {
+    .atlas-jr-popup {
+        max-width: 900px;
+        padding: 35px 30px;
+    }
+    
+    .atlas-close-btn {
+        top: 25px;
+        right: 30px;
+    }
+    
+    .atlas-popup-headline {
+        font-size: 19px;
+    }
+}
+
+@media (max-width: 768px) {
+    .atlas-jr-popup {
+        max-width: 100%;
+        padding: 30px 20px;
+        margin: 0 10px;
+    }
+    
+    .atlas-close-btn {
+        top: 20px;
+        right: 20px;
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+    
+    .atlas-popup-label {
+        font-size: 14px;
+        letter-spacing: 1.4px;
+    }
+    
+    .atlas-popup-headline {
+        font-size: 17px;
+        margin-bottom: 12px;
+    }
+    
+    .atlas-popup-description {
+        font-size: 13px;
+        margin-bottom: 25px;
+    }
+    
+    .atlas-response-box {
+        padding: 20px;
+    }
+    
+    .atlas-response-label {
+        font-size: 11px;
+    }
+    
+    .atlas-response-text,
+    .atlas-dev-note,
+    .atlas-popup-disclaimer {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .atlas-jr-popup-overlay {
+        padding: 10px;
+    }
+    
+    .atlas-jr-popup {
+        padding: 25px 15px;
+    }
+    
+    .atlas-close-btn {
+        top: 15px;
+        right: 15px;
+        font-size: 11px;
+        padding: 5px 10px;
+    }
+    
+    .atlas-popup-label {
+        font-size: 12px;
+        margin-bottom: 15px;
+    }
+    
+    .atlas-popup-headline {
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+    
+    .atlas-popup-description {
+        font-size: 12px;
+        margin-bottom: 20px;
+    }
+    
+    .atlas-response-box {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+    
+    .atlas-response-text,
+    .atlas-dev-note,
+    .atlas-popup-disclaimer {
+        font-size: 12px;
+    }
+}
+

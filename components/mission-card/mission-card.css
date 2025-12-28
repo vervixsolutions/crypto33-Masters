@@ -1,0 +1,211 @@
+/* ============================================
+   MISSION CARD COMPONENT (Pillar 5)
+   ============================================ */
+
+.mission-card {
+  width: 1283px;
+  height: 341px;
+  background-color: rgba(13, 11, 3, 0.8);
+  border: 0.794px solid #8d7001;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.mission-card__content {
+  padding: 22.97px 25.09px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 0;
+  position: relative;
+  z-index: var(--z-dropdown);
+}
+
+.mission-card__subtitle {
+  font-family: var(--font-primary);
+  font-size: 15.907px;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 0;
+  line-height: 1.71;
+  margin: 0 0 35px 0;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.mission-card__title {
+  font-family: var(--font-primary);
+  font-size: 23.86px;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  text-transform: none;
+  letter-spacing: 2.386px;
+  line-height: 1.71;
+  margin: 0 0 22px 0;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.mission-card__bullets {
+  list-style: none;
+  margin: 0 0 58px 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.mission-card__bullets li {
+  font-family: var(--font-primary);
+  font-size: 13.918px;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-primary);
+  line-height: 1.71;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.mission-card__bullets li::before {
+  content: '• ';
+  color: var(--color-text-primary);
+  margin-right: 4px;
+}
+
+.mission-card__info-boxes {
+  display: flex;
+  gap: var(--spacing-3xl);
+  align-items: flex-start;
+}
+
+.mission-card__badge-box {
+  background-color: #563a17;
+  border: 0.459px solid var(--color-primary);
+  border-radius: 12px;
+  padding: 16px 41px;
+  width: 760px;
+  height: 65px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0;
+}
+
+.mission-card__badge-title {
+  font-family: var(--font-primary);
+  font-size: 12px;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary);
+  text-transform: uppercase;
+  line-height: 1.3;
+  margin: 0 0 10px 0;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.mission-card__badge-description {
+  font-family: var(--font-primary);
+  font-size: 12px;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-primary);
+  line-height: 1.3;
+  margin: 0;
+  padding: 0;
+  max-width: 744px;
+  white-space: pre-wrap;
+}
+
+.mission-card__tracking-box {
+  background-color: #191919;
+  border: 0.856px solid #4a4b53;
+  border-radius: 17.13px;
+  padding: 10px 16px;
+  width: 459px;
+  height: 65px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0;
+}
+
+.mission-card__tracking-title {
+  font-family: var(--font-primary);
+  font-size: 12px;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  text-transform: uppercase;
+  line-height: 1.3;
+  margin: 0 0 10px 0;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.mission-card__tracking-description {
+  font-family: var(--font-primary);
+  font-size: 10px;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-secondary);
+  line-height: 1.3;
+  margin: 0;
+  padding: 0;
+  max-width: 422px;
+  white-space: pre-wrap;
+}
+
+/* Responsive */
+@media (max-width: 1400px) {
+  .mission-card {
+    width: 100%;
+    max-width: 1283px;
+  }
+  
+  .mission-card__info-boxes {
+    flex-direction: column;
+    gap: var(--spacing-lg);
+  }
+  
+  .mission-card__badge-box,
+  .mission-card__tracking-box {
+    width: 100%;
+    max-width: 760px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mission-card {
+    height: auto;
+    min-height: 341px;
+  }
+  
+  .mission-card__content {
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+  
+  .mission-card__subtitle {
+    font-size: 14px;
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .mission-card__title {
+    font-size: 20px;
+    letter-spacing: 2px;
+    margin-bottom: var(--spacing-md);
+    white-space: normal;
+  }
+  
+  .mission-card__bullets li {
+    font-size: 12px;
+    white-space: normal;
+  }
+  
+  .mission-card__badge-box,
+  .mission-card__tracking-box {
+    height: auto;
+    min-height: 65px;
+    padding: var(--spacing-md);
+  }
+}
+

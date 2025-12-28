@@ -9,9 +9,15 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="assets/logo-2.png">
+    <link rel="icon" type="image/x-icon" href="assets/images/logos/logo-2.png">
     <!-- Main CSS - Imports all styles -->
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/freedom-hub.css">
+    <link rel="stylesheet" href="assets/css/freedom-meter.css">
+    <link rel="stylesheet" href="assets/css/comment-section.css">
+    <link rel="stylesheet" href="assets/css/atlas-jr-popup.css">
     <title>Freedom Hub - Crypto33</title>
 </head>
 <body>
@@ -19,7 +25,9 @@
     <header class="header">
         <div class="header-container">
             <div class="logo">
-                <img src="assets/main-logo-2.png" alt="Crypto33 Mastery Logo">
+                <a href="index.html">
+                    <img src="assets/images/logos/main-logo-2.png" alt="Crypto33 Mastery Logo">
+                </a>
             </div>
             <button class="mobile-menu-toggle" aria-label="Toggle menu">
                 <span></span>
@@ -28,18 +36,18 @@
             </button>
             <nav class="navigation">
                 <a href="index.html" class="nav-link">HOME</a>
-                <a href="#" class="nav-link">COIN RADAR</a>
-                <a href="#" class="nav-link">VAULT</a>
+                <a href="coin-radar.html" class="nav-link">COIN RADAR</a>
+                <a href="vault.html" class="nav-link">VAULT</a>
                 <a href="training.html" class="nav-link">TRAINING</a>
                 <a href="freedom-hub.html" class="nav-link active">FREEDOM HUB (NEWS)</a>
-                <a href="#" class="nav-link">FOG BREAKER XP</a>
-                <a href="#" class="nav-link">BOOKS</a>
-                <a href="#" class="nav-link">LOGIN/JOIN</a>
+                <a href="frog-breaker-xp.html" class="nav-link">FOG BREAKER XP</a>
+                <a href="books.html" class="nav-link">BOOKS</a>
+                <a href="signup.html" class="nav-link">LOGIN/JOIN</a>
             </nav>
-            <button class="cta-button">
+            <a href="signup.html" class="cta-button">
                 <span class="full-text">Join the $33 Club — Limited Founding Offer</span>
                 <span class="short-text">Join $33 Club</span>
-            </button>
+            </a>
         </div>
     </header>
 
@@ -66,15 +74,8 @@
                 </ul>
             </div>
             <div class="gauge-container">
-                <div class="gauge-box">
-                    <div class="gauge-fill"></div>
-                    <div class="gauge-label">Freedom Meter</div>
-                    <div class="gauge-value">58%</div>
-                    <div class="gauge-status">Watch Closely</div>
-                    <div class="gauge-risk">
-                        <div class="gauge-risk-label">Latest risk:</div>
-                        <div class="gauge-risk-text">new surveillance bill</div>
-                    </div>
+                <div class="watch-meter">
+                    <img src="assets/images/books/freedom-hub/Frame.png" alt="Freedom Meter" class="meter-image">
                 </div>
             </div>
             <div class="freedom-meter-widget">
@@ -118,7 +119,7 @@
                 <article class="news-card" data-category="crypto" data-score="40">
                     <div class="news-card-header">
                         <div class="category-badge">
-                            <img src="assets/Object.svg" alt="Crypto" class="category-icon">
+                            <img src="assets/images/icons/Object.svg" alt="Crypto" class="category-icon">
                             <span class="category-text">Crypto</span>
                         </div>
                         <p class="freedom-score-badge score-watch">This Story Freedom Score: 40% — Watch Closely</p>
@@ -160,7 +161,7 @@
                         <p class="share-note">Shared posts include the headline, Freedom Meter score, and a small Crypto33 watermark.</p>
                         
                         <!-- Inline Comment Section -->
-                        <div class="inline-comment-section" style="display: none;">
+                        <div class="inline-comment-section">
                             <!-- Rules Section -->
                             <div class="comment-rules-section">
                                 <div class="comment-rules-container">
@@ -186,21 +187,19 @@
                                 <div class="comment-textarea-container">
                                     <textarea 
                                         class="comment-textarea" 
-                                        placeholder="Share your thoughts..."
+                                        placeholder="Hold up Patriot: keep it sharp, respectful, and on-topic."
                                         rows="6"
                                     ></textarea>
                                 </div>
-
-                                <p class="comment-guideline-text">Hold up Patriot: keep it sharp, respectful, and on-topic.</p>
                             </div>
 
                             <!-- Action Buttons Section -->
                             <div class="comment-actions-section">
-                                <button class="comment-btn ask-atlas-btn">
-                                    <span class="btn-text">Ask Atlas Jr.</span>
-                                </button>
                                 <button class="comment-btn post-comment-btn">
                                     <span class="btn-text">Post Comment</span>
+                                </button>
+                                <button class="comment-btn ask-atlas-btn">
+                                    <span class="btn-text">Ask Atlas Jr.</span>
                                 </button>
                             </div>
 
@@ -214,7 +213,7 @@
                 <article class="news-card" data-category="politics" data-score="35">
                     <div class="news-card-header">
                         <div class="category-badge">
-                            <img src="assets/Object.svg" alt="Politics" class="category-icon">
+                            <img src="assets/images/icons/Object.svg" alt="Politics" class="category-icon">
                             <span class="category-text">Politics</span>
                         </div>
                         <p class="freedom-score-badge score-danger">This Story Freedom Score: 35% — Danger Zone</p>
@@ -256,7 +255,7 @@
                         <p class="share-note">Shared posts include the headline, Freedom Meter score, and a small Crypto33 watermark.</p>
                         
                         <!-- Inline Comment Section -->
-                        <div class="inline-comment-section" style="display: none;">
+                        <div class="inline-comment-section">
                             <!-- Rules Section -->
                             <div class="comment-rules-section">
                                 <div class="comment-rules-container">
@@ -282,21 +281,19 @@
                                 <div class="comment-textarea-container">
                                     <textarea 
                                         class="comment-textarea" 
-                                        placeholder="Share your thoughts..."
+                                        placeholder="Hold up Patriot: keep it sharp, respectful, and on-topic."
                                         rows="6"
                                     ></textarea>
                                 </div>
-
-                                <p class="comment-guideline-text">Hold up Patriot: keep it sharp, respectful, and on-topic.</p>
                             </div>
 
                             <!-- Action Buttons Section -->
                             <div class="comment-actions-section">
-                                <button class="comment-btn ask-atlas-btn">
-                                    <span class="btn-text">Ask Atlas Jr.</span>
-                                </button>
                                 <button class="comment-btn post-comment-btn">
                                     <span class="btn-text">Post Comment</span>
+                                </button>
+                                <button class="comment-btn ask-atlas-btn">
+                                    <span class="btn-text">Ask Atlas Jr.</span>
                                 </button>
                             </div>
 
@@ -310,7 +307,7 @@
                 <article class="news-card" data-category="health" data-score="45">
                     <div class="news-card-header">
                         <div class="category-badge">
-                            <img src="assets/Object.svg" alt="Health" class="category-icon">
+                            <img src="assets/images/icons/Object.svg" alt="Health" class="category-icon">
                             <span class="category-text">Health</span>
                         </div>
                         <p class="freedom-score-badge score-watch">This Story Freedom Score: 45% — Watch Closely</p>
@@ -352,7 +349,7 @@
                         <p class="share-note">Shared posts include the headline, Freedom Meter score, and a small Crypto33 watermark.</p>
                         
                         <!-- Inline Comment Section -->
-                        <div class="inline-comment-section" style="display: none;">
+                        <div class="inline-comment-section">
                             <!-- Rules Section -->
                             <div class="comment-rules-section">
                                 <div class="comment-rules-container">
@@ -378,21 +375,19 @@
                                 <div class="comment-textarea-container">
                                     <textarea 
                                         class="comment-textarea" 
-                                        placeholder="Share your thoughts..."
+                                        placeholder="Hold up Patriot: keep it sharp, respectful, and on-topic."
                                         rows="6"
                                     ></textarea>
                                 </div>
-
-                                <p class="comment-guideline-text">Hold up Patriot: keep it sharp, respectful, and on-topic.</p>
                             </div>
 
                             <!-- Action Buttons Section -->
                             <div class="comment-actions-section">
-                                <button class="comment-btn ask-atlas-btn">
-                                    <span class="btn-text">Ask Atlas Jr.</span>
-                                </button>
                                 <button class="comment-btn post-comment-btn">
                                     <span class="btn-text">Post Comment</span>
+                                </button>
+                                <button class="comment-btn ask-atlas-btn">
+                                    <span class="btn-text">Ask Atlas Jr.</span>
                                 </button>
                             </div>
 
@@ -406,7 +401,7 @@
                 <article class="news-card" data-category="economy" data-score="42">
                     <div class="news-card-header">
                         <div class="category-badge">
-                            <img src="assets/Object.svg" alt="Economy" class="category-icon">
+                            <img src="assets/images/icons/Object.svg" alt="Economy" class="category-icon">
                             <span class="category-text">Economy</span>
                         </div>
                         <p class="freedom-score-badge score-watch">This Story Freedom Score: 42% — Watch Closely</p>
@@ -448,7 +443,7 @@
                         <p class="share-note">Shared posts include the headline, Freedom Meter score, and a small Crypto33 watermark.</p>
                         
                         <!-- Inline Comment Section -->
-                        <div class="inline-comment-section" style="display: none;">
+                        <div class="inline-comment-section">
                             <!-- Rules Section -->
                             <div class="comment-rules-section">
                                 <div class="comment-rules-container">
@@ -474,21 +469,19 @@
                                 <div class="comment-textarea-container">
                                     <textarea 
                                         class="comment-textarea" 
-                                        placeholder="Share your thoughts..."
+                                        placeholder="Hold up Patriot: keep it sharp, respectful, and on-topic."
                                         rows="6"
                                     ></textarea>
                                 </div>
-
-                                <p class="comment-guideline-text">Hold up Patriot: keep it sharp, respectful, and on-topic.</p>
                             </div>
 
                             <!-- Action Buttons Section -->
                             <div class="comment-actions-section">
-                                <button class="comment-btn ask-atlas-btn">
-                                    <span class="btn-text">Ask Atlas Jr.</span>
-                                </button>
                                 <button class="comment-btn post-comment-btn">
                                     <span class="btn-text">Post Comment</span>
+                                </button>
+                                <button class="comment-btn ask-atlas-btn">
+                                    <span class="btn-text">Ask Atlas Jr.</span>
                                 </button>
                             </div>
 
@@ -505,19 +498,19 @@
     <section class="info-cards-section">
         <div class="info-cards-container">
             <div class="info-card">
-                <img src="assets/source_8002.jpg" alt="Crypto News" class="info-card-image">
+                <img src="assets/images/content/source_8002.jpg" alt="Crypto News" class="info-card-image">
                 <p class="info-card-label">Daily Insight Radar</p>
                 <h3 class="info-card-title">Crypto News</h3>
                 <p class="info-card-description">New meme coin pumps 220% overnight.</p>
             </div>
             <div class="info-card">
-                <img src="assets/756340dda6e5b2f11eb37c5681f2eb909b8902b5.jpg" alt="Global News" class="info-card-image">
+                <img src="assets/images/content/756340dda6e5b2f11eb37c5681f2eb909b8902b5.jpg" alt="Global News" class="info-card-image">
                 <p class="info-card-label">Global Crypto Intelligence</p>
                 <h3 class="info-card-title">Global News</h3>
                 <p class="info-card-description">Fed hints at new crypto tax rules.</p>
             </div>
             <div class="info-card">
-                <img src="assets/source_169.jpg" alt="Freedom Meter" class="info-card-image">
+                <img src="assets/images/content/source_169.jpg" alt="Freedom Meter" class="info-card-image">
                 <p class="info-card-label">The Freedom Briefing Board</p>
                 <h3 class="info-card-title">Freedom Meter</h3>
                 <p class="info-card-description">This week's Freedom Score: 🟡 58% — Watch Closely.</p>
@@ -566,7 +559,7 @@
         <div class="notice-card active" data-content="info">
             <div class="icon-col">
                 <div class="icon-box">
-                    <img src="assets/8da0219f435a8ec02d6e88d85e21d30fe0732392.png" alt="Info" class="icon-image">
+                    <img src="assets/images/content/8da0219f435a8ec02d6e88d85e21d30fe0732392.png" alt="Info" class="icon-image">
                 </div>
             </div>
 
@@ -600,18 +593,20 @@
         </div>
 
         <!-- Warning Tab Content -->
-        <div class="notice-card" data-content="warning">
+        <div class="notice-card warning-card" data-content="warning">
             <div class="icon-col">
-                <div class="icon-box">
-                    <img src="assets/8da0219f435a8ec02d6e88d85e21d30fe0732392.png" alt="Warning" class="icon-image">
+                <div class="icon-box warning-icon-box">
+                    <svg class="warning-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2L1 21h22L12 2zm0 6v6m0 2v2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
                 </div>
             </div>
 
             <div class="content-col">
                 <div class="header-row">
-                    <h2 class="notice-title">Community Warning</h2>
-                    <span class="badge strike">Strike 1/3</span>
-                    <span class="badge safety">
+                    <h2 class="notice-title warning-title">Community Warning</h2>
+                    <span class="badge strike warning-strike">Strike 1/3</span>
+                    <span class="badge safety warning-safety">
                         <svg class="shield-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z" fill="currentColor"/>
                         </svg>
@@ -619,12 +614,12 @@
                     </span>
                 </div>
 
-                <div class="reason-text">
+                <div class="reason-text warning-reason">
                     <span class="reason-label">Reason:</span>
                     <span class="reason-value">Personal Attack / Disrespectful Language</span>
                 </div>
 
-                <p class="description-text">
+                <p class="description-text warning-description">
                     Please Keep Discussions Respectful And Avoid Personal Attacks.
                 </p>
 
@@ -637,18 +632,21 @@
         </div>
 
         <!-- Final Tab Content -->
-        <div class="notice-card" data-content="final">
+        <div class="notice-card final-card" data-content="final">
             <div class="icon-col">
-                <div class="icon-box">
-                    <img src="assets/8da0219f435a8ec02d6e88d85e21d30fe0732392.png" alt="Final" class="icon-image">
+                <div class="icon-box final-icon-box">
+                    <svg class="final-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2L2 12L12 22L22 12L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M12 8V12M12 16H12.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
                 </div>
             </div>
 
             <div class="content-col">
                 <div class="header-row">
-                    <h2 class="notice-title">Final Warning</h2>
-                    <span class="badge strike">Strike 2/3</span>
-                    <span class="badge safety">
+                    <h2 class="notice-title final-title">Final Warning</h2>
+                    <span class="badge strike final-strike">Strike 1/3</span>
+                    <span class="badge safety final-safety">
                         <svg class="shield-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z" fill="currentColor"/>
                         </svg>
@@ -656,13 +654,13 @@
                     </span>
                 </div>
 
-                <div class="reason-text">
+                <div class="reason-text final-reason">
                     <span class="reason-label">Reason:</span>
-                    <span class="reason-value">Repeated Violations / Spam Content</span>
+                    <span class="reason-value">Personal Attack / Disrespectful Language</span>
                 </div>
 
-                <p class="description-text">
-                    This is your final warning. Continued violations may result in account restrictions or suspension.
+                <p class="description-text final-description">
+                    Please Keep Discussions Respectful And Avoid Personal Attacks.
                 </p>
 
                 <div class="actions">
@@ -674,18 +672,18 @@
         </div>
 
         <!-- Restricted Tab Content -->
-        <div class="notice-card" data-content="restricted">
+        <div class="notice-card restricted-card" data-content="restricted">
             <div class="icon-col">
-                <div class="icon-box">
-                    <img src="assets/8da0219f435a8ec02d6e88d85e21d30fe0732392.png" alt="Restricted" class="icon-image">
+                <div class="icon-box restricted-icon-box">
+                    <img src="assets/images/icons/Denied.png" alt="Restricted" class="restricted-icon">
                 </div>
             </div>
 
             <div class="content-col">
                 <div class="header-row">
-                    <h2 class="notice-title">Account Restricted</h2>
-                    <span class="badge strike">Strike 3/3</span>
-                    <span class="badge safety">
+                    <h2 class="notice-title restricted-title">Restricted</h2>
+                    <span class="badge strike restricted-strike">Strike 1/3</span>
+                    <span class="badge safety restricted-safety">
                         <svg class="shield-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z" fill="currentColor"/>
                         </svg>
@@ -693,13 +691,13 @@
                     </span>
                 </div>
 
-                <div class="reason-text">
+                <div class="reason-text restricted-reason">
                     <span class="reason-label">Reason:</span>
-                    <span class="reason-value">Multiple Policy Violations</span>
+                    <span class="reason-value">Personal Attack / Disrespectful Language</span>
                 </div>
 
-                <p class="description-text">
-                    Your account has been restricted due to multiple policy violations. Some features may be limited.
+                <p class="description-text restricted-description">
+                    Please Keep Discussions Respectful And Avoid Personal Attacks.
                 </p>
 
                 <div class="actions">
@@ -752,6 +750,27 @@
     </div>
 </section>
 
+    <!-- Atlas Jr. Popup -->
+    <div class="atlas-jr-popup-overlay" id="atlasJrPopup">
+        <div class="atlas-jr-popup">
+            <button class="atlas-close-btn" onclick="closeAtlasJrPopup()">Close X</button>
+            
+            <div class="atlas-popup-content">
+                <p class="atlas-popup-label">Ask Atlas Jr. • Quick Take</p>
+                <h2 class="atlas-popup-headline" id="atlasPopupHeadline">Global Regulators Target Self-Custody Wallets</h2>
+                <p class="atlas-popup-description" id="atlasPopupDescription">Proposal would treat many self-custody wallets like custodial exchanges, demanding strict KYC.</p>
+                
+                <div class="atlas-response-box">
+                    <p class="atlas-response-label">Example Atlas Jr. Response (Mockup)</p>
+                    <p class="atlas-response-text">In production, this box will show either a stored explainer or a live AI answer that breaks down the bill, threat, or opportunity in plain English with action steps.</p>
+                    <p class="atlas-dev-note">Dev note: hook this button to your Atlas Jr. endpoint or pre-written explainer database. Response can also include links to law text, PDFs, or related Coin Radar alerts.</p>
+                </div>
+                
+                <p class="atlas-popup-disclaimer">Freedom Hub + Balanced News Radar = your daily truth filter. Not financial or legal advice; verify details and talk with qualified professionals before acting.</p>
+            </div>
+        </div>
+    </div>
+
     <!-- Disclaimer Section -->
     <section class="disclaimer-section">
         <div class="disclaimer-container">
@@ -763,27 +782,29 @@
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-logo">
-                <img src="assets/main-logo-2.png" alt="Crypto33 Mastery Logo">
+                <a href="index.html">
+                    <img src="assets/images/logos/main-logo-2.png" alt="Crypto33 Mastery Logo">
+                </a>
             </div>
             
             <div class="footer-center">
                 <nav class="footer-nav">
                     <a href="index.html" class="footer-nav-link">Home</a>
-                    <a href="#" class="footer-nav-link">Coin Radar</a>
-                    <a href="#" class="footer-nav-link">Vault</a>
+                    <a href="coin-radar.html" class="footer-nav-link">Coin Radar</a>
+                    <a href="vault.html" class="footer-nav-link">Vault</a>
                     <a href="training.html" class="footer-nav-link">Training</a>
                     <a href="freedom-hub.html" class="footer-nav-link">Freedom Hub (News)</a>
                 </nav>
                 
                 <div class="footer-social">
                     <a href="#" class="social-icon" aria-label="Facebook">
-                        <img src="assets/FB icon.svg" alt="Facebook">
+                        <img src="assets/images/icons/FB icon.svg" alt="Facebook">
                     </a>
                     <a href="#" class="social-icon" aria-label="Instagram">
-                        <img src="assets/IG icon.svg" alt="Instagram">
+                        <img src="assets/images/icons/IG icon.svg" alt="Instagram">
                     </a>
                     <a href="#" class="social-icon" aria-label="X (Twitter)">
-                        <img src="assets/X icon.svg" alt="X">
+                        <img src="assets/images/icons/X icon.svg" alt="X">
                     </a>
                 </div>
                 
@@ -924,18 +945,19 @@
         const commentButtons = document.querySelectorAll('.comments-btn');
 
         commentButtons.forEach(button => {
-            button.addEventListener('click', function() {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
                 // Find the comment section within the same news card
                 const newsCard = this.closest('.news-card');
                 const commentSection = newsCard.querySelector('.inline-comment-section');
                 
                 if (commentSection) {
-                    // Toggle display
-                    if (commentSection.style.display === 'none') {
-                        commentSection.style.display = 'block';
-                    } else {
-                        commentSection.style.display = 'none';
-                    }
+                    // Toggle active class
+                    commentSection.classList.toggle('active');
+                    
+                    // Update button text based on state
+                    const isOpen = commentSection.classList.contains('active');
+                    console.log('Comment section toggled:', isOpen ? 'Open' : 'Closed');
                 }
             });
         });
@@ -943,6 +965,7 @@
         // Post Comment button functionality
         document.addEventListener('click', function(e) {
             if (e.target.closest('.post-comment-btn')) {
+                e.preventDefault();
                 const btn = e.target.closest('.post-comment-btn');
                 const commentSection = btn.closest('.inline-comment-section');
                 const textarea = commentSection.querySelector('.comment-textarea');
@@ -954,8 +977,9 @@
                     // Reset textarea
                     textarea.value = '';
                     // Hide comment section
-                    commentSection.style.display = 'none';
-                    // You could show a success message here
+                    commentSection.classList.remove('active');
+                    // Show success message
+                    alert('Comment posted successfully!');
                 } else {
                     alert('Please enter a comment before posting.');
                 }
@@ -965,25 +989,54 @@
         // Ask Atlas Jr. button functionality
         document.addEventListener('click', function(e) {
             if (e.target.closest('.ask-atlas-btn')) {
+                e.preventDefault();
                 const btn = e.target.closest('.ask-atlas-btn');
                 const commentSection = btn.closest('.inline-comment-section');
-                const textarea = commentSection.querySelector('.comment-textarea');
-                const questionText = textarea.value.trim();
+                const newsCard = commentSection.closest('.news-card');
                 
-                if (questionText) {
-                    // Here you would typically send the question to Atlas Jr.
-                    console.log('Asking Atlas Jr.:', questionText);
-                    // Reset textarea
-                    textarea.value = '';
-                    // Hide comment section
-                    commentSection.style.display = 'none';
-                    // You could show a success message here
-                } else {
-                    alert('Please enter your question before asking Atlas Jr.');
-                }
+                // Get article details
+                const headline = newsCard.querySelector('.news-headline').textContent;
+                const description = newsCard.querySelector('.news-description').textContent;
+                
+                // Open Atlas Jr. popup with article context
+                openAtlasJrPopup(headline, description);
+                
+                // Close comment section
+                commentSection.classList.remove('active');
+            }
+        });
+        
+        // Atlas Jr. Popup Functions
+        function openAtlasJrPopup(headline, description) {
+            const popup = document.getElementById('atlasJrPopup');
+            const popupHeadline = document.getElementById('atlasPopupHeadline');
+            const popupDescription = document.getElementById('atlasPopupDescription');
+            
+            // Set content
+            if (headline) popupHeadline.textContent = headline;
+            if (description) popupDescription.textContent = description;
+            
+            // Show popup
+            popup.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent background scroll
+        }
+        
+        function closeAtlasJrPopup() {
+            const popup = document.getElementById('atlasJrPopup');
+            popup.classList.remove('active');
+            document.body.style.overflow = ''; // Restore scroll
+        }
+        
+        // Close popup when clicking outside
+        document.getElementById('atlasJrPopup').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeAtlasJrPopup();
             }
         });
     </script>
+    
+    <!-- Main JavaScript -->
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
 

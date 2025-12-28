@@ -1,0 +1,187 @@
+/* ============================================
+   TRACKER CARD COMPONENT
+   ============================================ */
+
+.tracker-card {
+  width: 560.189px;
+  height: 258.736px;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.tracker-card__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: var(--z-base);
+  background-image: url('../../../assets/images/frog-breaker-xp/tracker-card-background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.tracker-card__content {
+  position: relative;
+  z-index: var(--z-dropdown);
+  padding: 59.67px 122.98px 0 122.04px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 0;
+}
+
+.tracker-card__title {
+  font-family: var(--font-primary);
+  font-size: 14.645px;
+  font-weight: var(--font-weight-bold);
+  color: #250c09;
+  text-transform: uppercase;
+  line-height: 1.3;
+  margin: 0 0 13px 0;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.tracker-card__subtitle {
+  font-family: var(--font-primary);
+  font-size: 9.379px;
+  font-weight: var(--font-weight-medium);
+  color: #7d3e15;
+  line-height: 1.3;
+  margin: 0 0 22px 0;
+  padding: 0;
+  max-width: 315.082px;
+  white-space: pre-wrap;
+}
+
+.tracker-card__bullets {
+  list-style: none;
+  margin: 0 0 18px 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.tracker-card__bullets li {
+  font-family: var(--font-primary);
+  font-size: 9.379px;
+  font-weight: var(--font-weight-medium);
+  color: #191919;
+  line-height: 1.3;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.tracker-card__bullets li::before {
+  content: '• ';
+  color: #191919;
+  margin-right: 4px;
+}
+
+.tracker-card__xp-info {
+  background-color: #965327;
+  border: 0.701px solid #a37140;
+  border-radius: 8.411px;
+  padding: 0 var(--spacing-md);
+  height: 32.88px;
+  display: flex;
+  align-items: center;
+  width: 316.098px;
+}
+
+.tracker-card__xp-info p {
+  font-family: var(--font-primary);
+  font-size: 8.967px;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-primary);
+  line-height: 1.3;
+  margin: 0;
+  padding: 0;
+  white-space: pre-wrap;
+}
+
+/* Loyalty Unlocks variant */
+.tracker-card--loyalty {
+  transform: rotate(180deg) scaleY(-1);
+}
+
+.tracker-card--loyalty .tracker-card__background {
+  background-image: url('../../../assets/images/frog-breaker-xp/loyalty-unlocks-background.png');
+}
+
+.tracker-card--loyalty .tracker-card__content {
+  transform: rotate(180deg) scaleY(-1);
+  padding: 72.01px 119.59px 0 114.85px;
+}
+
+.tracker-card--loyalty .tracker-card__title {
+  color: #250c09;
+}
+
+.tracker-card--loyalty .tracker-card__subtitle {
+  color: #000000;
+  font-size: 9.379px;
+}
+
+.tracker-card--loyalty .tracker-card__bullets li {
+  color: #191919;
+}
+
+.tracker-card--loyalty .tracker-card__xp-info {
+  display: none;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .tracker-card {
+    width: 100%;
+    max-width: 560.189px;
+  }
+  
+  .tracker-card__content {
+    padding-left: var(--spacing-4xl);
+    padding-right: var(--spacing-4xl);
+  }
+}
+
+@media (max-width: 768px) {
+  .tracker-card {
+    width: 100%;
+    max-width: 560.189px;
+    height: auto;
+    min-height: 258.736px;
+  }
+  
+  .tracker-card__content {
+    padding: var(--spacing-4xl) var(--spacing-3xl);
+  }
+  
+  .tracker-card__title {
+    font-size: 13px;
+  }
+  
+  .tracker-card__subtitle {
+    font-size: 8.5px;
+  }
+  
+  .tracker-card__bullets li {
+    font-size: 8.5px;
+    white-space: normal;
+  }
+  
+  .tracker-card__xp-info {
+    width: 100%;
+    max-width: 316.098px;
+  }
+  
+  .tracker-card__xp-info p {
+    font-size: 8px;
+  }
+}
+

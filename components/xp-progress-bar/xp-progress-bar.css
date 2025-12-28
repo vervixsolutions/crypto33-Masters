@@ -1,0 +1,193 @@
+/* ============================================
+   XP PROGRESS BAR COMPONENT
+   ============================================ */
+
+.xp-progress-bar {
+  width: 100%;
+  min-height: 58px;
+   
+  background-color: #0d0b03;
+  position: relative;
+}
+
+.xp-progress-bar__content {
+  max-width: var(--container-xl);
+  width: 100%;
+  min-height: 100%;
+  margin: 0 auto;
+  padding: var(--spacing-sm) var(--spacing-4xl);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-4xl);
+}
+
+.xp-progress-bar__text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  flex: 1;
+  min-width: 0;
+  padding: var(--spacing-sm) 0;
+  justify-content: center;
+}
+
+.xp-progress-bar__title {
+  font-family: var(--font-primary);
+  font-size: 24.017px;
+  font-weight: var(--font-weight-semibold);
+  color: #f5e6cd;
+  text-transform: uppercase;
+  letter-spacing: 2.4017px;
+  line-height: 1.71;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.xp-progress-bar__percentage,
+.xp-progress-bar__tier {
+  color: #f5e6cd;
+}
+
+.xp-progress-bar__description {
+  font-family: var(--font-primary);
+  font-size: 10.007px;
+  font-weight: var(--font-weight-normal);
+  color: var(--color-text-primary);
+  line-height: 1.71;
+  margin: 0;
+  padding: 0;
+}
+
+.xp-progress-bar__bar-wrapper {
+  flex-shrink: 0;
+  width: 579.848px;
+  height: 14.436px;
+  position: relative;
+}
+
+.xp-progress-bar__bar {
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  border-radius: 7.218px;
+  position: relative;
+  overflow: visible;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: var(--spacing-xs);
+}
+
+.xp-progress-bar__fill {
+  height: 100%;
+  border-radius: 7.218px;
+  transition: width 0.3s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: var(--z-base);
+  overflow: hidden;
+  background: linear-gradient(90deg, #E14B3D 0%, #F3B445 27.45%, #DED588 55.38%, #93D2FC 100.17%);
+}
+
+.xp-progress-bar__bar-text {
+  font-family: var(--font-primary);
+  font-size: 9px;
+  font-weight: var(--font-weight-medium);
+  color: #B04328;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  z-index: var(--z-dropdown);
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+
+.xp-progress-bar__fill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.2) 50%, transparent 100%);
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .xp-progress-bar__content {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: var(--spacing-lg) var(--spacing-4xl);
+    height: auto;
+    min-height: 58px;
+    gap: var(--spacing-md);
+  }
+  
+  .xp-progress-bar__bar-wrapper {
+    width: 100%;
+    max-width: 579.848px;
+  }
+  
+  .xp-progress-bar__title {
+    font-size: 20px;
+    letter-spacing: 2px;
+    white-space: normal;
+  }
+}
+
+@media (max-width: 768px) {
+  .xp-progress-bar {
+    height: auto;
+    min-height: 58px;
+  }
+  
+  .xp-progress-bar__content {
+    padding: var(--spacing-md) var(--spacing-lg);
+  }
+  
+  .xp-progress-bar__title {
+    font-size: 14px;
+    letter-spacing: 1.2px;
+    white-space: normal;
+    word-break: break-word;
+  }
+  
+  .xp-progress-bar__description {
+    font-size: 9px;
+  }
+  
+  .xp-progress-bar__bar-wrapper {
+    height: 12px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .xp-progress-bar__content {
+    padding: var(--spacing-md) var(--spacing-md);
+  }
+  
+  .xp-progress-bar__title {
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+  
+  .xp-progress-bar__description {
+    font-size: 8px;
+  }
+}
+

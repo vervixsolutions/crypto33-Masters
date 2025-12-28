@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/logos/logo-2.png">
+    <!-- Main CSS - Imports all styles -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/coin-radar.css">
+    <link rel="stylesheet" href="assets/css/portfolio-math-popup.css">
+    <link rel="stylesheet" href="assets/css/coin-alert-popup.css">
+    <link rel="stylesheet" href="assets/css/market-image-popup.css">
+    <title>Coin Radar - Live Market Heatmap | Crypto33 Masters</title>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/images/logos/main-logo-2.png" alt="Crypto33 Mastery Logo">
+                </a>
+            </div>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="navigation">
+                <a href="index.html" class="nav-link">HOME</a>
+                <a href="coin-radar.html" class="nav-link active">COIN RADAR</a>
+                <a href="vault.html" class="nav-link">VAULT</a>
+                <a href="training.html" class="nav-link">TRAINING</a>
+                <a href="freedom-hub.html" class="nav-link">FREEDOM HUB (NEWS)</a>
+                <a href="frog-breaker-xp.html" class="nav-link">FOG BREAKER XP</a>
+                <a href="books.html" class="nav-link">BOOKS</a>
+            </nav>
+            <div class="header-actions">
+                <a href="signup.html" class="btn-login">Login</a>
+                <a href="signup.html" class="btn-upgrade">Upgrade</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Coin Radar Hero Section -->
+    <section class="coin-radar-banner">
+        <div class="banner-container">
+            <p class="banner-text">COIN RADAR - LIVE MARKET HEATMAP</p>
+        </div>
+    </section>
+
+    <!-- Coin Radar Content -->
+    <main class="coin-radar-main">
+        <!-- Favorites Tab Section -->
+        <section class="coin-radar-tabs-section">
+            <div class="container">
+                <div class="tabs-container">
+                    <div class="tabs-wrapper">
+                        <button class="tab-btn active">Favorites</button>
+                        <button class="tab-btn">Hot</button>
+                        <button class="tab-btn">New</button>
+                        <button class="tab-btn">Gainers</button>
+                        <button class="tab-btn">Losers</button>
+                        <button class="tab-btn">24h Vol</button>
+                        <button class="tab-btn">Market Cap</button>
+                    </div>
+                    <div class="search-filter-wrapper">
+                        <button class="filter-btn">
+                            <img src="assets/images/coin-radar/filter-icon.svg" alt="Filter">
+                        </button>
+                        <div class="search-box">
+                            <img src="assets/images/coin-radar/search-icon.svg" alt="Search" class="search-icon">
+                            <input type="text" placeholder="Search market" class="search-input">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Top 4 Coin Cards -->
+        <section class="top-coins-section">
+            <div class="container">
+                <div class="coin-cards-grid">
+                    <!-- Bitcoin Card -->
+                    <div class="coin-card" onclick="openPortfolioPopup({name: 'Bitcoin (BTC)', icon: 'assets/images/icons/BTC.svg', livePrice: '$97,850'})" style="cursor: pointer;">
+                        <div class="coin-card-chart">
+                            <img src="assets/images/icons/Group 190.svg" alt="Bitcoin Chart">
+                        </div>
+                        <div class="coin-card-header">
+                            <img src="assets/images/icons/BTC.svg" alt="Bitcoin" class="coin-icon">
+                            <div class="coin-info">
+                                <span class="coin-name">Bitcoin (24h)</span>
+                                <div class="coin-change positive">
+                                    <img src="assets/images/icons/green-rectangle.svg" alt="Up" class="change-arrow">
+                                    <span>+2.31%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="coin-price"><span class="price-symbol">$</span>97,850</p>
+                        <button class="coin-favorite" onclick="event.stopPropagation(); this.classList.toggle('active');">
+                            <img src="assets/images/coin-radar/star-icon.svg" alt="Favorite">
+                        </button>
+                    </div>
+
+                    <!-- Ethereum Card -->
+                    <div class="coin-card" onclick="openPortfolioPopup({name: 'Ethereum (ETH)', icon: 'assets/images/icons/Group 1585.svg', livePrice: '$4,150'})" style="cursor: pointer;">
+                        <div class="coin-card-chart">
+                            <img src="assets/images/icons/Group 191.svg" alt="Ethereum Chart">
+                        </div>
+                        <div class="coin-card-header">
+                            <img src="assets/images/icons/Group 1585.svg" alt="Ethereum" class="coin-icon">
+                            <div class="coin-info">
+                                <span class="coin-name">Ethereum (24h)</span>
+                                <div class="coin-change negative">
+                                    <img src="assets/images/icons/Rectangle 4165.png" alt="Down" class="change-arrow">
+                                    <span>-2.69%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="coin-price"><span class="price-symbol">$</span>4,150</p>
+                        <button class="coin-favorite" onclick="event.stopPropagation(); this.classList.toggle('active');">
+                            <img src="assets/images/coin-radar/star-icon.svg" alt="Favorite">
+                        </button>
+                    </div>
+
+                    <!-- DOGE Card -->
+                    <div class="coin-card" onclick="openPortfolioPopup({name: 'Doge (DOGE)', icon: 'assets/images/coin-radar/dogecoin-logo.png', livePrice: '$0.1381'})" style="cursor: pointer;">
+                        <div class="coin-card-chart">
+                            <img src="assets/images/icons/Group 187.svg" alt="DOGE Chart">
+                        </div>
+                        <div class="coin-card-header">
+                            <img src="assets/images/coin-radar/dogecoin-logo.png" alt="DOGE" class="coin-icon">
+                            <div class="coin-info">
+                                <span class="coin-name">DOGE (24h)</span>
+                                <div class="coin-change positive">
+                                    <img src="assets/images/icons/green-rectangle.svg" alt="Up" class="change-arrow">
+                                    <span>+2.31%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="coin-price"><span class="price-symbol">$</span>0.1381</p>
+                        <button class="coin-favorite" onclick="event.stopPropagation(); this.classList.toggle('active');">
+                            <img src="assets/images/coin-radar/star-icon.svg" alt="Favorite">
+                        </button>
+                    </div>
+
+                    <!-- Turbo Card -->
+                    <div class="coin-card" onclick="openPortfolioPopup({name: 'Turbo (TURBO)', icon: 'assets/images/coin-radar/turbo-wallet.png', livePrice: '$0.0019'})" style="cursor: pointer;">
+                        <div class="coin-card-chart">
+                            <img src="assets/images/icons/Group 190.svg" alt="Turbo Chart">
+                        </div>
+                        <div class="coin-card-header">
+                            <img src="assets/images/coin-radar/turbo-wallet.png" alt="Turbo" class="coin-icon">
+                            <div class="coin-info">
+                                <span class="coin-name">Turbo (24h)</span>
+                                <div class="coin-change positive">
+                                    <img src="assets/images/icons/green-rectangle.svg" alt="Up" class="change-arrow">
+                                    <span>+3.31%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="coin-price"><span class="price-symbol">$</span>0.0019</p>
+                        <button class="coin-favorite" onclick="event.stopPropagation(); this.classList.toggle('active');">
+                            <img src="assets/images/coin-radar/star-icon.svg" alt="Favorite">
+                        </button>
+                    </div>
+
+                    <!-- Bitcoin Card (Row 2) -->
+                    <div class="coin-card" onclick="openPortfolioPopup({name: 'Bitcoin (BTC)', icon: 'assets/images/icons/BTC.svg', livePrice: '$97,850'})" style="cursor: pointer;">
+                        <div class="coin-card-chart">
+                            <img src="assets/images/icons/Group 190.svg" alt="Bitcoin Chart">
+                        </div>
+                        <div class="coin-card-header">
+                            <img src="assets/images/icons/BTC.svg" alt="Bitcoin" class="coin-icon">
+                            <div class="coin-info">
+                                <span class="coin-name">Bitcoin (24h)</span>
+                                <div class="coin-change positive">
+                                    <img src="assets/images/icons/green-rectangle.svg" alt="Up" class="change-arrow">
+                                    <span>+2.31%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="coin-price"><span class="price-symbol">$</span>97,850</p>
+                        <button class="coin-favorite" onclick="event.stopPropagation(); this.classList.toggle('active');">
+                            <img src="assets/images/coin-radar/star-icon.svg" alt="Favorite">
+                        </button>
+                    </div>
+
+                    <!-- Ethereum Card (Row 2) -->
+                    <div class="coin-card" onclick="openPortfolioPopup({name: 'Ethereum (ETH)', icon: 'assets/images/icons/Group 1585.svg', livePrice: '$4,150'})" style="cursor: pointer;">
+                        <div class="coin-card-chart">
+                            <img src="assets/images/icons/Group 191.svg" alt="Ethereum Chart">
+                        </div>
+                        <div class="coin-card-header">
+                            <img src="assets/images/icons/Group 1585.svg" alt="Ethereum" class="coin-icon">
+                            <div class="coin-info">
+                                <span class="coin-name">Ethereum (24h)</span>
+                                <div class="coin-change negative">
+                                    <img src="assets/images/icons/Rectangle 4165.png" alt="Down" class="change-arrow">
+                                    <span>-2.69%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="coin-price"><span class="price-symbol">$</span>4,150</p>
+                        <button class="coin-favorite" onclick="event.stopPropagation(); this.classList.toggle('active');">
+                            <img src="assets/images/coin-radar/star-icon.svg" alt="Favorite">
+                        </button>
+                    </div>
+
+                    <!-- DOGE Card (Row 2) -->
+                    <div class="coin-card" onclick="openPortfolioPopup({name: 'Doge (DOGE)', icon: 'assets/images/coin-radar/dogecoin-logo.png', livePrice: '$0.1381'})" style="cursor: pointer;">
+                        <div class="coin-card-chart">
+                            <img src="assets/images/icons/Group 187.svg" alt="DOGE Chart">
+                        </div>
+                        <div class="coin-card-header">
+                            <img src="assets/images/coin-radar/dogecoin-logo.png" alt="DOGE" class="coin-icon">
+                            <div class="coin-info">
+                                <span class="coin-name">DOGE (24h)</span>
+                                <div class="coin-change positive">
+                                    <img src="assets/images/icons/green-rectangle.svg" alt="Up" class="change-arrow">
+                                    <span>+2.31%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="coin-price"><span class="price-symbol">$</span>0.1381</p>
+                        <button class="coin-favorite" onclick="event.stopPropagation(); this.classList.toggle('active');">
+                            <img src="assets/images/coin-radar/star-icon.svg" alt="Favorite">
+                        </button>
+                    </div>
+
+                    <!-- Turbo Card (Row 2) -->
+                    <div class="coin-card" onclick="openPortfolioPopup({name: 'Turbo (TURBO)', icon: 'assets/images/coin-radar/turbo-wallet.png', livePrice: '$0.0019'})" style="cursor: pointer;">
+                        <div class="coin-card-chart">
+                            <img src="assets/images/icons/Group 190.svg" alt="Turbo Chart">
+                        </div>
+                        <div class="coin-card-header">
+                            <img src="assets/images/coin-radar/turbo-wallet.png" alt="Turbo" class="coin-icon">
+                            <div class="coin-info">
+                                <span class="coin-name">Turbo (24h)</span>
+                                <div class="coin-change positive">
+                                    <img src="assets/images/icons/green-rectangle.svg" alt="Up" class="change-arrow">
+                                    <span>+3.31%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="coin-price"><span class="price-symbol">$</span>0.0019</p>
+                        <button class="coin-favorite" onclick="event.stopPropagation(); this.classList.toggle('active');">
+                            <img src="assets/images/coin-radar/star-icon.svg" alt="Favorite">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hot Coins Table Section -->
+        <section class="coins-table-section">
+            <div class="container">
+                <!-- Hot Tab -->
+                <div class="table-tabs">
+                    <div class="table-tabs-wrapper">
+                        <button class="table-tab">Favorites</button>
+                        <button class="table-tab active">Hot</button>
+                        <button class="table-tab">New</button>
+                        <button class="table-tab">Gainers</button>
+                        <button class="table-tab">Losers</button>
+                        <button class="table-tab">24h Vol</button>
+                        <button class="table-tab">Market Cap</button>
+                    </div>
+                </div>
+
+                <!-- Table Header -->
+                <div class="table-header">
+                    <span class="th-coin-name">Coin Name</span>
+                    <span class="th-symbol">Symbol</span>
+                    <span class="th-price">Price</span>
+                    <span class="th-change">24h % Change</span>
+                    <span class="th-sentiment">Bullish/Bearish</span>
+                    <span class="th-badge">Badge</span>
+                </div>
+
+                <!-- Coin Rows -->
+                <div class="coins-table">
+                    <!-- Bitcoin Row -->
+                    <div class="coin-row" onclick="openPortfolioPopup({name: 'Bitcoin (BTC)', icon: 'assets/images/icons/BTC.svg', livePrice: '$97,850'})" style="cursor: pointer;">
+                        <div class="coin-row-number">1</div>
+                        <div class="coin-row-name">
+                            <img src="assets/images/icons/BTC.svg" alt="Bitcoin" class="row-coin-icon">
+                            <span>Bitcoin</span>
+                        </div>
+                        <div class="coin-row-symbol">BTC</div>
+                        <div class="coin-row-price">$97,850</div>
+                        <div class="coin-row-change positive-badge">+2.31%</div>
+                        <div class="coin-row-sentiment neutral">
+                            <img src="assets/images/coin-radar/neutral-dot.svg" alt="Neutral">
+                            <span>53 Neutral</span>
+                        </div>
+                        <div class="coin-row-badge"></div>
+                    </div>
+
+                    <!-- Ethereum Row -->
+                    <div class="coin-row" onclick="openPortfolioPopup({name: 'Ethereum (ETH)', icon: 'assets/images/icons/Group 1585.svg', livePrice: '$4,150'})" style="cursor: pointer;">
+                        <div class="coin-row-number">2</div>
+                        <div class="coin-row-name">
+                            <img src="assets/images/icons/Group 1585.svg" alt="Ethereum" class="row-coin-icon">
+                            <span>Ethereum</span>
+                        </div>
+                        <div class="coin-row-symbol">ETH</div>
+                        <div class="coin-row-price">$4,150</div>
+                        <div class="coin-row-change negative-badge">-2.69%</div>
+                        <div class="coin-row-sentiment bearish">
+                            <img src="assets/images/coin-radar/bearish-dot.svg" alt="Bearish">
+                            <span>03 Bearish</span>
+                        </div>
+                        <div class="coin-row-badge"></div>
+                    </div>
+
+                    <!-- BNB Row -->
+                    <div class="coin-row" onclick="openPortfolioPopup({name: 'BNB', icon: 'assets/images/coin-radar/bnb-icon.svg', livePrice: '$867'})" style="cursor: pointer;">
+                        <div class="coin-row-number">3</div>
+                        <div class="coin-row-name">
+                            <img src="assets/images/coin-radar/bnb-icon.svg" alt="BNB" class="row-coin-icon">
+                            <span>BNB</span>
+                        </div>
+                        <div class="coin-row-symbol">BNB</div>
+                        <div class="coin-row-price">$867</div>
+                        <div class="coin-row-change negative-badge">-2.46%</div>
+                        <div class="coin-row-sentiment bearish">
+                            <img src="assets/images/coin-radar/bearish-dot.svg" alt="Bearish">
+                            <span>03 Bearish</span>
+                        </div>
+                        <div class="coin-row-badge"></div>
+                    </div>
+
+                    <!-- Flux Row -->
+                    <div class="coin-row" onclick="openPortfolioPopup({name: 'Flux (FLUX)', icon: 'assets/images/coin-radar/flux-icon.svg', livePrice: '$0.1138'})" style="cursor: pointer;">
+                        <div class="coin-row-number">4</div>
+                        <div class="coin-row-name">
+                            <img src="assets/images/coin-radar/flux-icon.svg" alt="Flux" class="row-coin-icon">
+                            <span>Flux</span>
+                        </div>
+                        <div class="coin-row-symbol">FLUX</div>
+                        <div class="coin-row-price">$0.1138</div>
+                        <div class="coin-row-change positive-badge">+5.68%</div>
+                        <div class="coin-row-sentiment bullish">
+                            <img src="assets/images/coin-radar/bullish-dot.svg" alt="Bullish">
+                            <span>82 Bullish</span>
+                        </div>
+                        <div class="coin-row-badge">
+                            <img src="assets/images/coin-radar/crown-icon.png" alt="Featured" class="crown-badge">
+                        </div>
+                    </div>
+
+                    <!-- Turbo Row -->
+                    <div class="coin-row" onclick="openPortfolioPopup({name: 'Turbo (TURBO)', icon: 'assets/images/coin-radar/turbo-wallet.png', livePrice: '$0.0019'})" style="cursor: pointer;">
+                        <div class="coin-row-number">5</div>
+                        <div class="coin-row-name">
+                            <img src="assets/images/coin-radar/turbo-wallet.png" alt="Turbo" class="row-coin-icon">
+                            <span>Turbo</span>
+                        </div>
+                        <div class="coin-row-symbol">TURBO</div>
+                        <div class="coin-row-price">$0.0019</div>
+                        <div class="coin-row-change positive-badge">+3.31%</div>
+                        <div class="coin-row-sentiment neutral">
+                            <img src="assets/images/coin-radar/neutral-dot.svg" alt="Neutral">
+                            <span>67 Neutral</span>
+                        </div>
+                        <div class="coin-row-badge"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- New Coins Table Section (Duplicate with New active) -->
+        <section class="coins-table-section">
+            <div class="container">
+                <!-- New Tab -->
+                <div class="table-tabs">
+                    <div class="table-tabs-wrapper">
+                        <button class="table-tab">Favorites</button>
+                        <button class="table-tab">Hot</button>
+                        <button class="table-tab active">New</button>
+                        <button class="table-tab">Gainers</button>
+                        <button class="table-tab">Losers</button>
+                        <button class="table-tab">24h Vol</button>
+                        <button class="table-tab">Market Cap</button>
+                        <button class="visit-coingecko-btn">Visit CoinGecko</button>
+                    </div>
+                </div>
+
+                <!-- Table Header -->
+                <div class="table-header">
+                    <span class="th-coin-name">Coin Name</span>
+                    <span class="th-symbol">Symbol</span>
+                    <span class="th-price">Price</span>
+                    <span class="th-change">24h % Change</span>
+                    <span class="th-sentiment">Bullish/Bearish</span>
+                    <span class="th-favorites">Favorites</span>
+                </div>
+
+                <!-- Coin Rows -->
+                <div class="coins-table">
+                    <!-- Bitcoin Row -->
+                    <div class="coin-row" onclick="openPortfolioPopup({name: 'Bitcoin (BTC)', icon: 'assets/images/icons/BTC.svg', livePrice: '$97,850'})" style="cursor: pointer;">
+                        <div class="coin-row-number">1</div>
+                        <div class="coin-row-name">
+                            <img src="assets/images/icons/BTC.svg" alt="Bitcoin" class="row-coin-icon">
+                            <span>Bitcoin</span>
+                        </div>
+                        <div class="coin-row-symbol">BTC</div>
+                        <div class="coin-row-price">$97,850</div>
+                        <div class="coin-row-change positive-badge">+2.31%</div>
+                        <div class="coin-row-sentiment neutral">
+                            <img src="assets/images/coin-radar/neutral-dot.svg" alt="Neutral">
+                            <span>53 Neutral</span>
+                        </div>
+                        <div class="coin-row-favorite" onclick="event.stopPropagation(); this.classList.toggle('active');">
+                            <img src="assets/images/coin-radar/star-icon.svg" alt="Favorite">
+                        </div>
+                    </div>
+
+                    <!-- Ethereum Row -->
+                    <div class="coin-row" onclick="openPortfolioPopup({name: 'Ethereum (ETH)', icon: 'assets/images/icons/Group 1585.svg', livePrice: '$4,150'})" style="cursor: pointer;">
+                        <div class="coin-row-number">2</div>
+                        <div class="coin-row-name">
+                            <img src="assets/images/icons/Group 1585.svg" alt="Ethereum" class="row-coin-icon">
+                            <span>Ethereum</span>
+                        </div>
+                        <div class="coin-row-symbol">ETH</div>
+                        <div class="coin-row-price">$4,150</div>
+                        <div class="coin-row-change negative-badge">-2.69%</div>
+                        <div class="coin-row-sentiment bearish">
+                            <img src="assets/images/coin-radar/bearish-dot.svg" alt="Bearish">
+                            <span>03 Bearish</span>
+                        </div>
+                        <div class="coin-row-favorite" onclick="event.stopPropagation(); this.classList.toggle('active');">
+                            <img src="assets/images/coin-radar/star-icon.svg" alt="Favorite">
+                        </div>
+                    </div>
+
+                    <!-- BNB Row -->
+                    <div class="coin-row" onclick="openPortfolioPopup({name: 'BNB', icon: 'assets/images/coin-radar/bnb-icon.svg', livePrice: '$867'})" style="cursor: pointer;">
+                        <div class="coin-row-number">3</div>
+                        <div class="coin-row-name">
+                            <img src="assets/images/coin-radar/bnb-icon.svg" alt="BNB" class="row-coin-icon">
+                            <span>BNB</span>
+                        </div>
+                        <div class="coin-row-symbol">BNB</div>
+                        <div class="coin-row-price">$867</div>
+                        <div class="coin-row-change negative-badge">-2.46%</div>
+                        <div class="coin-row-sentiment bearish">
+                            <img src="assets/images/coin-radar/bearish-dot.svg" alt="Bearish">
+                            <span>03 Bearish</span>
+                        </div>
+                        <div class="coin-row-favorite" onclick="event.stopPropagation(); this.classList.toggle('active');">
+                            <img src="assets/images/coin-radar/star-icon.svg" alt="Favorite" class="favorite-outline">
+                        </div>
+                    </div>
+
+                    <!-- Flux Row -->
+                    <div class="coin-row" onclick="openPortfolioPopup({name: 'Flux (FLUX)', icon: 'assets/images/coin-radar/flux-icon.svg', livePrice: '$0.1138'})" style="cursor: pointer;">
+                        <div class="coin-row-number">4</div>
+                        <div class="coin-row-name">
+                            <img src="assets/images/coin-radar/flux-icon.svg" alt="Flux" class="row-coin-icon">
+                            <span>Flux</span>
+                        </div>
+                        <div class="coin-row-symbol">FLUX</div>
+                        <div class="coin-row-price">$0.1138</div>
+                        <div class="coin-row-change positive-badge">+5.68%</div>
+                        <div class="coin-row-sentiment bullish">
+                            <img src="assets/images/coin-radar/bullish-dot.svg" alt="Bullish">
+                            <span>82 Bullish</span>
+                        </div>
+                        <div class="coin-row-favorite" onclick="event.stopPropagation(); this.classList.toggle('active');">
+                            <img src="assets/images/coin-radar/star-icon.svg" alt="Favorite" class="favorite-outline">
+                        </div>
+                    </div>
+
+                    <!-- Turbo Row -->
+                    <div class="coin-row" onclick="openPortfolioPopup({name: 'Turbo (TURBO)', icon: 'assets/images/coin-radar/turbo-wallet.png', livePrice: '$0.0019'})" style="cursor: pointer;">
+                        <div class="coin-row-number">5</div>
+                        <div class="coin-row-name">
+                            <img src="assets/images/coin-radar/turbo-wallet.png" alt="Turbo" class="row-coin-icon">
+                            <span>Turbo</span>
+                        </div>
+                        <div class="coin-row-symbol">TURBO</div>
+                        <div class="coin-row-price">$0.0019</div>
+                        <div class="coin-row-change positive-badge">+3.31%</div>
+                        <div class="coin-row-sentiment neutral">
+                            <img src="assets/images/coin-radar/neutral-dot.svg" alt="Neutral">
+                            <span>67 Neutral</span>
+                        </div>
+                        <div class="coin-row-favorite" onclick="event.stopPropagation(); this.classList.toggle('active');">
+                            <img src="assets/images/coin-radar/star-icon.svg" alt="Favorite">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bottom Info Section -->
+                <div class="bottom-info-section">
+                    <!-- Disclaimer -->
+                    <p class="disclaimer-text">
+                        Crypto33 provides real-time data for educational purposes only. Not financial advice. Trade responsibly.
+                    </p>
+
+                    <!-- Popup Description with Circles -->
+                    <div class="popup-description-wrapper">
+                        <span class="circle-indicator red"></span>
+                        <span class="circle-indicator green"></span>
+                        <p class="popup-description">
+                            Click these circles to view "Sell Now" & "Hold Tight pop-ups
+                        </p>
+                    </div>
+
+                    <!-- Popup Button -->
+                    <button class="popup-btn" onclick="openCoinAlert({name: 'Bitcoin (BTC)', symbol: 'BTC', message: '$BTC is breaking out!', sentiment: '92% Bullish.', icon: 'assets/images/icons/BTC.svg', price: '$97,850'})">CLICK ME TO SEE POP UP</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- This Week's Movers Section -->
+        <section class="movers-section">
+            <div class="container">
+                <div class="movers-container">
+                    <div class="movers-header">
+                        <img src="assets/images/coin-radar/fire-icon.svg" alt="Fire" class="fire-icon">
+                        <h2 class="movers-title">THIS WEEK'S MOVERS</h2>
+                        <img src="assets/images/coin-radar/fire-icon.svg" alt="Fire" class="fire-icon">
+                    </div>
+                    
+                    <div class="movers-content-wrapper">
+                        <h3 class="movers-subtitle">Biggest 24h Gainers</h3>
+                        
+                        <div class="movers-grid">
+                            <!-- Mover Card 1 -->
+                            <div class="mover-card" onclick="openMarketImage()" style="cursor: pointer;">
+                                <div class="mover-card-header">
+                                    <img src="assets/images/icons/BTC.svg" alt="Bitcoin" class="mover-coin-icon">
+                                    <span class="mover-coin-name">Bitcoin (24h)</span>
+                                </div>
+                                <p class="mover-price"><span class="price-symbol">$</span>97,850</p>
+                                <div class="mover-change">
+                                    <img src="assets/images/icons/green-rectangle.svg" alt="Up" class="mover-arrow">
+                                    <span>+89.78%</span>
+                                </div>
+                            </div>
+
+                            <!-- Mover Card 2 -->
+                            <div class="mover-card" onclick="openMarketImage()" style="cursor: pointer;">
+                                <div class="mover-card-header">
+                                    <img src="assets/images/icons/BTC.svg" alt="Bitcoin" class="mover-coin-icon">
+                                    <span class="mover-coin-name">Bitcoin (24h)</span>
+                                </div>
+                                <p class="mover-price"><span class="price-symbol">$</span>97,850</p>
+                                <div class="mover-change">
+                                    <img src="assets/images/icons/green-rectangle.svg" alt="Up" class="mover-arrow">
+                                    <span>+89.78%</span>
+                                </div>
+                            </div>
+
+                            <!-- Mover Card 3 -->
+                            <div class="mover-card" onclick="openMarketImage()" style="cursor: pointer;">
+                                <div class="mover-card-header">
+                                    <img src="assets/images/icons/BTC.svg" alt="Bitcoin" class="mover-coin-icon">
+                                    <span class="mover-coin-name">Bitcoin (24h)</span>
+                                </div>
+                                <p class="mover-price"><span class="price-symbol">$</span>97,850</p>
+                                <div class="mover-change">
+                                    <img src="assets/images/icons/green-rectangle.svg" alt="Up" class="mover-arrow">
+                                    <span>+89.78%</span>
+                                </div>
+                            </div>
+
+                            <!-- Mover Card 4 -->
+                            <div class="mover-card" onclick="openMarketImage()" style="cursor: pointer;">
+                                <div class="mover-card-header">
+                                    <img src="assets/images/icons/BTC.svg" alt="Bitcoin" class="mover-coin-icon">
+                                    <span class="mover-coin-name">Bitcoin (24h)</span>
+                                </div>
+                                <p class="mover-price"><span class="price-symbol">$</span>97,850</p>
+                                <div class="mover-change">
+                                    <img src="assets/images/icons/green-rectangle.svg" alt="Up" class="mover-arrow">
+                                    <span>+89.78%</span>
+                                </div>
+                            </div>
+
+                            <!-- Mover Card 5 -->
+                            <div class="mover-card" onclick="openMarketImage()" style="cursor: pointer;">
+                                <div class="mover-card-header">
+                                    <img src="assets/images/icons/BTC.svg" alt="Bitcoin" class="mover-coin-icon">
+                                    <span class="mover-coin-name">Bitcoin (24h)</span>
+                                </div>
+                                <p class="mover-price"><span class="price-symbol">$</span>97,850</p>
+                                <div class="mover-change">
+                                    <img src="assets/images/icons/green-rectangle.svg" alt="Up" class="mover-arrow">
+                                    <span>+89.78%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <a href="index.html">
+                    <img src="assets/images/logos/main-logo-2.png" alt="Crypto33 Mastery Logo">
+                </a>
+            </div>
+            
+            <div class="footer-center">
+                <nav class="footer-nav">
+                    <a href="index.html" class="footer-nav-link">Home</a>
+                    <a href="coin-radar.html" class="footer-nav-link">Coin Radar</a>
+                    <a href="vault.html" class="footer-nav-link">Vault</a>
+                    <a href="training.html" class="footer-nav-link">Training</a>
+                    <a href="freedom-hub.html" class="footer-nav-link">Freedom Hub (News)</a>
+                </nav>
+                
+                <div class="footer-social">
+                    <a href="#" class="social-icon" aria-label="Facebook">
+                        <img src="assets/images/icons/FB icon.svg" alt="Facebook">
+                    </a>
+                    <a href="#" class="social-icon" aria-label="Instagram">
+                        <img src="assets/images/icons/IG icon.svg" alt="Instagram">
+                    </a>
+                    <a href="#" class="social-icon" aria-label="X (Twitter)">
+                        <img src="assets/images/icons/X icon.svg" alt="X">
+                    </a>
+                </div>
+                
+                <p class="footer-tagline">Atlas Jr. Scanning: 24/7 Truth Radar Online.</p>
+            </div>
+            
+            <div class="footer-right">
+                <h3 class="footer-title">Crypto33</h3>
+                <ul class="footer-links">
+                    <li><a href="#" class="footer-link">• All Rights Reserved</a></li>
+                    <li><a href="#" class="footer-link">• Terms</a></li>
+                    <li><a href="#" class="footer-link">• Privacy</a></li>
+                    <li><a href="#" class="footer-link">• Affiliate Disclosure</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="assets/js/coin-alert-popup.js"></script>
+    <script src="assets/js/portfolio-math-popup.js"></script>
+    <script src="assets/js/market-image-popup.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
+

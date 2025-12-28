@@ -1,0 +1,218 @@
+/* ============================================
+   SERIES CARD COMPONENT (Mini-Series Library)
+   ============================================ */
+
+.series-card {
+  width: 415.311px;
+  height: 233.559px;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform var(--transition-base);
+}
+
+.series-card:hover {
+  transform: translateY(-2px);
+}
+
+.series-card__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: var(--z-base);
+  overflow: hidden;
+  border-radius: 20px;
+  opacity: 0.65;
+}
+
+/* Sugar variant */
+.series-card--sugar {
+  border: 0.849px solid #624d24;
+  box-shadow: 0px 8.493px 31.339px 0px #7e693a;
+}
+
+.series-card--sugar .series-card__background::before {
+  content: '';
+  position: absolute;
+  top: -7.78%;
+  left: -1.37%;
+  width: 102.74%;
+  height: 121.79%;
+  background-image: url('../../../assets/images/frog-breaker-xp/series-sugar-background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.series-card--sugar .series-card__button {
+  background-color: #7e6a3f;
+}
+
+/* Alcohol variant */
+.series-card--alcohol {
+  border: 0.849px solid #006f6f;
+  box-shadow: 0px 8.493px 31.339px 0px #0097a1;
+}
+
+.series-card--alcohol .series-card__background::before {
+  content: '';
+  position: absolute;
+  top: -26.27%;
+  left: 0;
+  width: 107.67%;
+  height: 127.64%;
+  background-image: url('../../../assets/images/frog-breaker-xp/series-alcohol-background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.series-card--alcohol .series-card__button {
+  background-color: #006f90;
+}
+
+/* Warrior variant */
+.series-card--warrior {
+  border: 0.849px solid #4c340b;
+  box-shadow: 0px 8.493px 31.339px 0px #784505;
+}
+
+.series-card--warrior .series-card__background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../../../assets/images/frog-breaker-xp/series-warrior-background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.series-card--warrior .series-card__button {
+  background-color: #7f4605;
+}
+
+.series-card__content {
+  position: relative;
+  z-index: var(--z-dropdown);
+  padding: 12px 22.93px 30px 14.44px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 0;
+}
+
+.series-card__title {
+  font-family: var(--font-primary);
+  font-size: 20px;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  line-height: 1.71;
+  /* margin: 0 0 22px 0; */
+  padding: 0;
+  white-space: nowrap;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 1);
+}
+
+.series-card__videos {
+  list-style: none;
+  margin: 0 0 var(--spacing-lg) 17.73px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  flex: 1;
+}
+
+.series-card__videos li {
+  font-family: var(--font-primary);
+  font-size: 11.821px;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-primary);
+  line-height: 1.71;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 1);
+}
+
+.series-card__videos li::before {
+  content: '• ';
+  color: var(--color-text-primary);
+  margin-right: 4px;
+}
+
+.series-card__button {
+  width: 370.297px;
+  height: 25.479px;
+  border-radius: 15.571px;
+  border: none;
+  font-family: var(--font-primary);
+  font-size: 12.74px;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  text-transform: capitalize;
+  line-height: 1.1;
+  cursor: pointer;
+  transition: background-color var(--transition-base);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+.series-card__button:hover {
+  opacity: 0.9;
+}
+
+/* Responsive */
+@media (max-width: 1400px) {
+  .series-card {
+    width: 100%;
+    max-width: 415.311px;
+  }
+}
+
+@media (max-width: 768px) {
+  .series-card {
+    height: auto;
+    min-height: 233.559px;
+  }
+  
+  .series-card__content {
+    padding: var(--spacing-3xl) var(--spacing-md) var(--spacing-4xl);
+  }
+  
+  .series-card__title {
+    font-size: 18px;
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .series-card__videos li {
+    font-size: 10.5px;
+    white-space: normal;
+  }
+  
+  .series-card__bonus {
+    font-size: 10.5px;
+    white-space: normal;
+  }
+  
+  .series-card__button {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    width: 100%;
+    max-width: 370.297px;
+    margin-top: var(--spacing-md);
+    margin-bottom: 0;
+  }
+}
+

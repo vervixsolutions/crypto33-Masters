@@ -1,0 +1,717 @@
+/* ============================================
+   FAITH PAGE STYLES
+   ============================================ */
+
+/* ========== PAGE LAYOUT ========== */
+.faith-page {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #ffffff;
+  overflow-x: hidden;
+}
+
+.faith-page-background {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-51%) scaleY(-2);
+  width: 2534px;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.65;
+}
+
+.faith-bg-texture {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Ensure header and footer are isolated from background */
+.header {
+  position: relative;
+  z-index: 10;
+  background-color: #F5E6CD;
+  border-bottom: none;
+}
+
+/* Header text color overrides for faith page */
+.header .nav-link {
+  color: #000000;
+}
+
+.header .nav-link.active {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+.header .nav-link:hover {
+  color: var(--color-primary);
+}
+
+.footer {
+  position: relative;
+  z-index: 10;
+  background-color: var(--color-bg-primary);
+}
+
+/* ========== HERO SECTION ========== */
+.faith-hero-section {
+  position: relative;
+  width: 100%;
+  padding: 47px 0 60px 0;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+}
+
+.faith-hero-container {
+  max-width: 1285px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 78px;
+  display: grid;
+  grid-template-columns: 1fr 509px;
+  gap: 24px;
+  background: linear-gradient(to right, #362915, #110b07);
+  border: 1px solid #8d7001;
+  border-radius: 20px;
+  box-shadow: 0px 11px 12px 0px rgba(78, 66, 30, 0.48);
+  min-height: 261px;
+  padding: 40px;
+}
+
+/* Left Side - Hero Content */
+.faith-hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 18px;
+}
+
+.faith-hero-label {
+  font-family: var(--font-primary);
+  font-size: 22.035px;
+  font-weight: var(--font-weight-extrabold);
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 2.2035px;
+  line-height: 1.71;
+  margin: 0;
+}
+
+.faith-hero-title {
+  font-family: var(--font-primary);
+  font-size: 28.828px;
+  font-weight: var(--font-weight-extrabold);
+  color: #f5e6cd;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.faith-hero-description {
+  font-family: var(--font-primary);
+  font-size: 15px;
+  font-weight: var(--font-weight-medium);
+  color: #ffffff;
+  line-height: 1.3;
+  margin: 0;
+}
+
+/* Right Side - Progress Card */
+.faith-progress-card {
+  background-color: #201709;
+  border: 1px solid #8d7001;
+  border-radius: 14px;
+  padding: 16px 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+}
+
+.progress-card-title {
+  font-family: var(--font-primary);
+  font-size: 12px;
+  font-weight: var(--font-weight-semibold);
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  line-height: 1.71;
+  margin: 0;
+}
+
+.progress-card-subtitle {
+  font-family: var(--font-primary);
+  font-size: 15px;
+  font-weight: var(--font-weight-semibold);
+  color: #f5e6cd;
+  line-height: 1.71;
+  margin: 0;
+}
+
+/* Progress Bar */
+.progress-bar-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.progress-labels {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.progress-label-left,
+.progress-label-right {
+  font-family: var(--font-primary);
+  font-size: 8px;
+  font-weight: var(--font-weight-semibold);
+  color: #f5e6cd;
+  text-transform: uppercase;
+  line-height: 1.71;
+}
+
+.xp-progress-bar {
+  width: 456px;
+  height: 11.353px;
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 39.28px;
+  overflow: hidden;
+}
+
+.xp-progress-bar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(90deg, #E14B3D 0%, #F3B445 17.79%, #DED588 35.89%, #93D2FC 64.91%);
+  border-radius: 39.28px;
+}
+
+.xp-bar-image {
+  display: none;
+}
+
+/* Daily Verse Card */
+.daily-verse-card {
+  background-color: #2e2208;
+  border: 1px solid #8d7001;
+  border-radius: 12px;
+  padding: 9px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.daily-verse-label {
+  font-family: var(--font-primary);
+  font-size: 12px;
+  font-weight: var(--font-weight-bold);
+  color: #f7931a;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.daily-verse-text {
+  font-family: var(--font-primary);
+  font-size: 10px;
+  font-weight: var(--font-weight-semibold);
+  color: #f5e6cd;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.next-verse-btn {
+  width: 46px;
+  height: 14px;
+  background-color: #563a17;
+  border: 0.459px solid #f7931a;
+  border-radius: 39.28px;
+  font-family: var(--font-primary);
+  font-size: 5.538px;
+  font-weight: var(--font-weight-semibold);
+  color: #f7931a;
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  line-height: 1.1;
+  padding: 0;
+}
+
+.next-verse-btn:hover {
+  background-color: #6d4a20;
+  border-color: #ffaa3b;
+}
+
+/* ========== EPISODES SECTION ========== */
+.faith-episodes-section {
+  position: relative;
+  width: 100%;
+  padding: 0 0 60px 0;
+  z-index: 1;
+}
+
+.faith-episodes-container {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 78px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.episodes-header {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.episodes-title {
+  font-family: var(--font-primary);
+  font-size: 26.097px;
+  font-weight: var(--font-weight-semibold);
+  color: #0f1115;
+  text-transform: uppercase;
+  letter-spacing: 2.6097px;
+  line-height: 1.71;
+  margin: 0;
+}
+
+.episodes-description {
+  font-family: var(--font-primary);
+  font-size: 17.398px;
+  font-weight: var(--font-weight-medium);
+  color: #201709;
+  line-height: 1.71;
+  margin: 0;
+}
+
+/* Episodes Grid */
+.episodes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  width: 100%;
+}
+
+/* Episode Card */
+.episode-card {
+  background-color: #352810;
+  border: 0.786px solid #8d7001;
+  border-radius: 11.689px;
+  padding: 18.05px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.episode-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(141, 112, 1, 0.3);
+}
+
+.episode-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.episode-number {
+  background-color: #644106;
+  border-radius: 6.85px;
+  padding: 2px 6px;
+  font-family: var(--font-primary);
+  font-size: 6.372px;
+  font-weight: var(--font-weight-semibold);
+  color: #ffffff;
+  text-transform: capitalize;
+  text-align: center;
+  line-height: 1.1;
+}
+
+.episode-series {
+  font-family: var(--font-primary);
+  font-size: 6.372px;
+  font-weight: var(--font-weight-semibold);
+  color: #f7931a;
+  text-transform: uppercase;
+  line-height: 1.1;
+}
+
+.episode-verse {
+  font-family: var(--font-primary);
+  font-size: 6.444px;
+  font-weight: var(--font-weight-normal);
+  color: #f7931a;
+  text-transform: capitalize;
+  line-height: 1.1;
+  margin-left: auto;
+  text-align: right;
+}
+
+.episode-title {
+  font-family: var(--font-primary);
+  font-size: 12.744px;
+  font-weight: var(--font-weight-bold);
+  color: #f7931a;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.episode-description {
+  font-family: var(--font-primary);
+  font-size: 10.62px;
+  font-weight: var(--font-weight-normal);
+  color: #f5e6cd;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.episode-play-btn {
+  background-color: #563a17;
+  border: 0.487px solid #f7931a;
+  border-radius: 41.715px;
+  padding: 6.37px 19.12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-primary);
+  font-size: 8.496px;
+  font-weight: var(--font-weight-semibold);
+  color: #f7931a;
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  line-height: 1.1;
+  width: fit-content;
+}
+
+.episode-play-btn:hover {
+  background-color: #6d4a20;
+  border-color: #ffaa3b;
+  transform: scale(1.05);
+}
+
+.play-icon {
+  width: 7.434px;
+  height: 7.434px;
+  flex-shrink: 0;
+}
+
+.episode-xp {
+  font-family: var(--font-primary);
+  font-size: 6.444px;
+  font-weight: var(--font-weight-normal);
+  color: #f7931a;
+  text-transform: capitalize;
+  line-height: 1.1;
+  margin-top: auto;
+}
+
+.episode-devotional {
+  background-color: #0d0b03;
+  border: 0.499px solid #8d7001;
+  border-radius: 11.966px;
+  padding: 12.75px;
+  margin-top: 8px;
+}
+
+.episode-devotional p {
+  font-family: var(--font-primary);
+  font-size: 9.972px;
+  font-weight: var(--font-weight-normal);
+  color: #f5e6cd;
+  line-height: 1.3;
+  margin: 0;
+}
+
+/* ========== BOTTOM SECTIONS ========== */
+.faith-bottom-sections {
+  position: relative;
+  width: 100%;
+  padding: 0 0 40px 0;
+  z-index: 1;
+}
+
+.faith-bottom-container {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 78px;
+  display: grid;
+  grid-template-columns: 791px 470px;
+  gap: 24px;
+}
+
+/* XP Tie-In Card */
+.xp-tiein-card {
+  background-color: #0c2b1e;
+  border: 1px solid #214737;
+  border-radius: 20px;
+  box-shadow: 0px 4px 36.9px 0px #214737;
+  padding: 25px 19px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.tiein-title {
+  font-family: var(--font-primary);
+  font-size: 17.398px;
+  font-weight: var(--font-weight-semibold);
+  color: #0cea8d;
+  text-transform: uppercase;
+  letter-spacing: 1.7398px;
+  line-height: 1.71;
+  margin: 0;
+}
+
+.tiein-description {
+  font-family: var(--font-primary);
+  font-size: 15.223px;
+  font-weight: var(--font-weight-medium);
+  color: #f5e6cd;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.tiein-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.tiein-list li {
+  font-family: var(--font-primary);
+  font-size: 13px;
+  font-weight: var(--font-weight-normal);
+  color: #ffffff;
+  line-height: 2;
+}
+
+/* Related Scriptures Card */
+.related-scriptures-card {
+  background-color: #0d0d0e;
+  border: 0.745px solid #4a4b53;
+  border-radius: 20px;
+  padding: 30px 19.76px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.scriptures-title {
+  font-family: var(--font-primary);
+  font-size: 15.456px;
+  font-weight: var(--font-weight-semibold);
+  color: #7e889a;
+  text-transform: uppercase;
+  letter-spacing: 1.5456px;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.scriptures-description {
+  font-family: var(--font-primary);
+  font-size: 12.88px;
+  font-weight: var(--font-weight-medium);
+  color: #7e889a;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.scriptures-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.scriptures-list li {
+  font-family: var(--font-primary);
+  font-size: 12.88px;
+  font-weight: var(--font-weight-normal);
+  color: #7e889a;
+  line-height: 2;
+}
+
+/* ========== DISCLAIMER ========== */
+.faith-disclaimer {
+  position: relative;
+  width: 100%;
+  padding: 0 0 60px 0;
+  z-index: 1;
+}
+
+.disclaimer-container {
+  max-width: 1285px;
+  width: 100%;
+  margin: 0 auto;
+   
+}
+
+.disclaimer-text {
+  background-color: #050507;
+  border: 1px solid #4a4b53;
+  border-radius: 20px;
+  padding: 18px 38px;
+  font-family: var(--font-primary);
+  font-size: 9px;
+  font-weight: var(--font-weight-medium);
+  color: #8b8b8b;
+  line-height: 1.71;
+  text-align: left;
+  margin: 0;
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+
+/* Tablet (≤ 968px) */
+@media (max-width: 968px) {
+  .faith-hero-container {
+    grid-template-columns: 1fr;
+    padding: 30px;
+    gap: 30px;
+  }
+
+  .faith-progress-card {
+    max-width: 100%;
+  }
+
+  .faith-episodes-container {
+    padding: 0 40px;
+  }
+
+  .episodes-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .faith-bottom-container {
+    grid-template-columns: 1fr;
+    padding: 0 40px;
+    gap: 20px;
+  }
+
+  .xp-tiein-card,
+  .related-scriptures-card {
+    max-width: 100%;
+  }
+
+  .disclaimer-container {
+    padding: 0 40px;
+  }
+}
+
+/* Mobile (≤ 768px) */
+@media (max-width: 768px) {
+  .faith-hero-section {
+    padding: 30px 0 40px 0;
+  }
+
+  .faith-hero-container {
+    padding: 24px;
+    gap: 24px;
+  }
+
+  .faith-hero-label {
+    font-size: 18px;
+    letter-spacing: 1.8px;
+  }
+
+  .faith-hero-title {
+    font-size: 24px;
+  }
+
+  .faith-hero-description {
+    font-size: 14px;
+  }
+
+  .faith-episodes-container {
+    padding: 0 20px;
+    gap: 30px;
+  }
+
+  .episodes-title {
+    font-size: 22px;
+    letter-spacing: 2.2px;
+  }
+
+  .episodes-description {
+    font-size: 15px;
+  }
+
+  .episodes-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .faith-bottom-container {
+    padding: 0 20px;
+  }
+
+  .disclaimer-container {
+    padding: 0 20px;
+  }
+
+  .disclaimer-text {
+    padding: 16px 24px;
+    font-size: 8px;
+  }
+}
+
+/* Small Mobile (≤ 480px) */
+@media (max-width: 480px) {
+  .faith-hero-container {
+    padding: 20px;
+  }
+
+  .faith-hero-label {
+    font-size: 16px;
+  }
+
+  .faith-hero-title {
+    font-size: 20px;
+  }
+
+  .faith-episodes-container {
+    padding: 0 16px;
+  }
+
+  .episodes-title {
+    font-size: 18px;
+    letter-spacing: 1.8px;
+  }
+
+  .episodes-description {
+    font-size: 14px;
+  }
+
+  .faith-bottom-container {
+    padding: 0 16px;
+  }
+
+  .disclaimer-container {
+    padding: 0 16px;
+  }
+}
+
