@@ -9,8 +9,8 @@
   min-height: 100vh;
   background-color: var(--color-bg-primary);
   overflow: hidden;
-  padding-top: var(--spacing-7xl);
-  padding-bottom: var(--spacing-7xl);
+   
+
 }
 
 /* Background Image */
@@ -37,6 +37,86 @@
 /* Show image when available */
 .vault-background.has-image .vault-bg-image {
   display: block;
+}
+
+/* Glowing Frame Element (Left Side Under Header) */
+.vault-glowing-frame {
+  position: absolute;
+  left: 0px;
+  top: 80px;
+  width: 250px;
+  height: auto;
+  z-index: 1;
+  pointer-events: none;
+  animation: glowingPulse 3s ease-in-out infinite;
+}
+
+.vault-glowing-frame-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 0 20px rgba(247, 147, 26, 0.6)) 
+          drop-shadow(0 0 40px rgba(247, 147, 26, 0.4));
+}
+
+/* Glowing Frame Element 2 (Right Side) */
+.vault-glowing-frame-2 {
+  position: absolute;
+  right: 0px;
+  top: 45%;
+  transform: translateY(-50%);
+  width: 220px;
+  height: auto;
+  z-index: 1;
+  pointer-events: none;
+  animation: glowingPulseBlue 3.5s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+.vault-glowing-frame-image-2 {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 0 20px rgba(0, 191, 255, 0.6)) 
+          drop-shadow(0 0 40px rgba(0, 191, 255, 0.4));
+}
+
+/* Glowing Pulse Animation */
+@keyframes glowingPulse {
+  0% {
+    opacity: 0.6;
+    filter: drop-shadow(0 0 15px rgba(247, 147, 26, 0.5)) 
+            drop-shadow(0 0 30px rgba(247, 147, 26, 0.3));
+  }
+  50% {
+    opacity: 1;
+    filter: drop-shadow(0 0 30px rgba(247, 147, 26, 0.8)) 
+            drop-shadow(0 0 60px rgba(247, 147, 26, 0.6));
+  }
+  100% {
+    opacity: 0.6;
+    filter: drop-shadow(0 0 15px rgba(247, 147, 26, 0.5)) 
+            drop-shadow(0 0 30px rgba(247, 147, 26, 0.3));
+  }
+}
+
+/* Glowing Pulse Animation - Blue */
+@keyframes glowingPulseBlue {
+  0% {
+    opacity: 0.6;
+    filter: drop-shadow(0 0 15px rgba(0, 191, 255, 0.5)) 
+            drop-shadow(0 0 30px rgba(0, 191, 255, 0.3));
+  }
+  50% {
+    opacity: 1;
+    filter: drop-shadow(0 0 30px rgba(0, 191, 255, 0.8)) 
+            drop-shadow(0 0 60px rgba(0, 191, 255, 0.6));
+  }
+  100% {
+    opacity: 0.6;
+    filter: drop-shadow(0 0 15px rgba(0, 191, 255, 0.5)) 
+            drop-shadow(0 0 30px rgba(0, 191, 255, 0.3));
+  }
 }
 
 /* Decorative Elements */
@@ -109,62 +189,6 @@
   top: 0;
 }
 
-/* Geometric Decorative Element (428:2220) */
-.vault-decorative-geo {
-  width: 75.681px;
-  height: 75.597px;
-  opacity: 0.30;
-  right: 5%;
-  top: 40%;
-}
-
-.vault-decorative-geo-group {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  inset: 0;
-}
-
-.vault-decorative-geo-group-2,
-.vault-decorative-geo-group-3,
-.vault-decorative-geo-group-4 {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  inset: 0;
-}
-
-.vault-decorative-geo-subgroup {
-  position: absolute;
-  width: 48.4%;
-  height: 43.59%;
-  left: 25.8%;
-  top: 18.82%;
-}
-
-.vault-decorative-geo-layer1 {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-}
-
-.vault-decorative-geo-layer2 {
-  position: absolute;
-  width: 100%;
-  height: 73.23%;
-  left: 0;
-  top: 26.77%;
-}
-
-.vault-decorative-geo-base {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-}
 
 /* Litecoin Decorative Element (428:2328) */
 .vault-decorative-ltc {
@@ -217,7 +241,7 @@
   padding: 0 var(--spacing-4xl);
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-5xl);
+  gap: 0;
 }
 
 /* Page Banner uses global .page-banner component from components.css */
@@ -231,12 +255,14 @@
 
 /* Page Banner spacing */
 .vault-container .page-banner {
-  margin-bottom: var(--spacing-5xl);
+  margin-bottom: var(--spacing-7xl);
+  margin-top: var(--spacing-4xl);
 }
 
 /* First section gets top margin */
 .vault-section-1 {
   margin-top: 0;
+  margin-bottom: var(--spacing-4xl);
 }
 
 /* Last section gets bottom margin (now handled by disclaimer) */
@@ -445,8 +471,8 @@
 
 /* Section 2: Current Tier & XP */
 .vault-section-2 {
-  margin-top: var(--spacing-6xl);
-  margin-bottom: 0;
+  margin-top: 0;
+  margin-bottom: var(--spacing-4xl);
 }
 
 .vault-tier-card {
@@ -658,6 +684,16 @@
     padding: 0 var(--spacing-2xl);
   }
   
+  .vault-glowing-frame {
+    width: 200px;
+    left: 0px;
+    top: 80px;
+  }
+  
+  .vault-glowing-frame-2 {
+    width: 180px;
+    right: 0px;
+  }
   
   .vault-card {
     padding: var(--spacing-3xl);
@@ -680,12 +716,44 @@
   .vault-next-tier-text {
     text-align: left;
   }
+  
+  /* Fix vault image positioning on tablet */
+  .vault-tier-content {
+    flex-direction: column;
+    gap: var(--spacing-2xl);
+    align-items: center;
+  }
+  
+  .vault-tier-image {
+    position: relative;
+    right: auto;
+    top: auto;
+    transform: none;
+    margin-top: var(--spacing-2xl);
+    margin-bottom: var(--spacing-lg);
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .vault-tier-cta-box {
+    margin-bottom: var(--spacing-md);
+  }
 }
 
 @media (max-width: 768px) {
-  .vault-main-section {
-    padding-top: var(--spacing-5xl);
-    padding-bottom: var(--spacing-5xl);
+
+  
+  .vault-glowing-frame {
+    width: 150px;
+    left: 0px;
+    top: 70px;
+    opacity: 0.7;
+  }
+  
+  .vault-glowing-frame-2 {
+    width: 140px;
+    right: 0px;
+    opacity: 0.7;
   }
   
   .vault-title-text {
@@ -716,6 +784,11 @@
   .vault-tier-content {
     flex-direction: column;
     gap: var(--spacing-2xl);
+    align-items: center;
+  }
+  
+  .vault-tier-cta-box {
+    margin-bottom: var(--spacing-lg);
   }
   
   .vault-tier-image {
@@ -724,7 +797,8 @@
     max-width: 362px;
     height: 250px;
     min-height: 250px;
-    margin-top: var(--spacing-xl);
+    margin-top: var(--spacing-3xl);
+    margin-bottom: var(--spacing-lg);
     margin-left: auto;
     margin-right: auto;
   }
@@ -759,8 +833,8 @@
 
 /* Section 3: Badge Wall */
 .vault-section-3 {
-  margin-top: var(--spacing-6xl);
-  margin-bottom: 0;
+  margin-top: 0;
+  margin-bottom: var(--spacing-4xl);
 }
 
 .vault-badge-card {
@@ -793,20 +867,18 @@
 
 /* Badge Grid */
 .vault-badge-grid {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: var(--spacing-xl);
   margin-top: var(--spacing-2xl);
   margin-bottom: var(--spacing-xl);
   min-height: 112px;
-  flex-wrap: nowrap;
   width: 100%;
 }
 
 .vault-badge-item {
-  flex: 1;
-  max-width: 291px;
+  width: 100%;
+  max-width: 100%;
   height: 112px;
   border-radius: var(--radius-md);
   overflow: hidden;
@@ -819,7 +891,7 @@
 }
 
 .vault-badge-item:hover {
-  /* Removed translateY to prevent upward movement */
+  opacity: 0.9;
 }
 
 .vault-badge-unlocked {
@@ -998,31 +1070,33 @@
   }
   
   .vault-badge-grid {
+    grid-template-columns: repeat(2, 1fr);
     gap: var(--spacing-md);
     margin-bottom: var(--spacing-lg);
   }
   
   .vault-badge-item {
-    max-width: none;
+    max-width: 100%;
     height: 90px;
   }
 }
 
 @media (max-width: 480px) {
   .vault-badge-grid {
+    grid-template-columns: repeat(2, 1fr);
     gap: var(--spacing-sm);
   }
   
   .vault-badge-item {
-    max-width: none;
+    max-width: 100%;
     height: 85px;
   }
 }
 
 /* Section 4: XP Missions */
 .vault-section-4 {
-  margin-top: var(--spacing-6xl);
-  margin-bottom: 0;
+  margin-top: 0;
+  margin-bottom: var(--spacing-4xl);
 }
 
 .vault-missions-card {
@@ -1229,8 +1303,8 @@
 
 /* Section 5: Reward Teaser Area */
 .vault-section-5 {
-  margin-top: var(--spacing-6xl);
-  margin-bottom: 0;
+  margin-top: 0;
+  margin-bottom: var(--spacing-4xl);
 }
 
 .vault-rewards-card {
@@ -1307,7 +1381,7 @@
   background: linear-gradient(90deg, #8d0a00 0%, #885100 100%);
   border: var(--border-width-base) solid #e2a301;
   justify-content: center;
-  align-items: center;
+  
   text-align: center;
   position: relative;
 }
@@ -1398,7 +1472,7 @@
 .vault-reward-coming-soon-content {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   gap: var(--spacing-xs);
   z-index: 1;
 }
@@ -1425,15 +1499,15 @@
 
 /* Section 6: Tier Upgrade */
 .vault-section-6 {
-  margin-top: var(--spacing-6xl);
-  margin-bottom: 0;
+  margin-top: 0;
+  margin-bottom: var(--spacing-4xl);
 }
 
 /* Disclaimer Text */
 .vault-disclaimer {
   width: 100%;
   max-width: 1200px;
-  margin: var(--spacing-6xl) auto var(--spacing-6xl);
+  margin: 0 auto var(--spacing-4xl);
   text-align: center;
   padding: 0 var(--spacing-4xl);
 }
@@ -1452,7 +1526,7 @@
 @media (max-width: 968px) {
   .vault-disclaimer {
     padding: 0 var(--spacing-2xl);
-    margin-top: var(--spacing-5xl);
+    margin-top: 0;
   }
 }
 
@@ -1978,11 +2052,13 @@
   transition: opacity var(--transition-base), visibility var(--transition-base);
   padding: var(--spacing-4xl);
   cursor: pointer;
+  pointer-events: none;
 }
 
 .coming-soon-overlay.active {
   opacity: 1;
   visibility: visible;
+  pointer-events: auto;
 }
 
 .coming-soon-image-wrapper {
@@ -1992,7 +2068,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: default;
+  cursor: pointer;
+  pointer-events: auto;
 }
 
 .coming-soon-image {
@@ -2002,6 +2079,7 @@
   object-fit: contain;
   border-radius: 13.249px;
   display: block;
+  cursor: auto;
 }
 
 /* Coming Soon Popup Responsive */
@@ -2048,11 +2126,13 @@
   transition: opacity var(--transition-base), visibility var(--transition-base);
   padding: var(--spacing-4xl);
   cursor: pointer;
+  pointer-events: none;
 }
 
 .warrior-reward-overlay.active {
   opacity: 1;
   visibility: visible;
+  pointer-events: auto;
 }
 
 .warrior-reward-image-wrapper {
@@ -2062,7 +2142,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: default;
+  cursor: pointer;
+  pointer-events: auto;
 }
 
 .warrior-reward-image {
@@ -2072,6 +2153,7 @@
   object-fit: contain;
   border-radius: 13.249px;
   display: block;
+  cursor: auto;
 }
 
 /* Warrior Reward Popup Responsive */

@@ -21,13 +21,15 @@ button, a, .coin-card, .mover-card, .tab-btn {
 /* ========== HERO SECTION ========== */
 .coin-radar-banner {
   width: 60%;
-  margin: 0 auto;
+   
   padding: var(--spacing-lg) 0;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: var(--shadow-lg);
+  margin-bottom: var(--spacing-7xl);
+  margin-top: var(--spacing-4xl);
 }
 
 .coin-radar-banner::before {
@@ -1100,7 +1102,11 @@ button, a, .coin-card, .mover-card, .tab-btn {
   }
 
   .movers-container {
-    padding: 20px;
+    padding: 0px;
+  }
+  
+  .coin-card-chart {
+    height: 85px;
   }
 
   .movers-title {

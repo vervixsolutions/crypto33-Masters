@@ -51,8 +51,16 @@
     <!-- Vault Main Section -->
     <section class="vault-main-section">
         <!-- Background Image -->
-        <div class="vault-background">
-            <img src="assets/images/backgrounds/vault-background.png" alt="Vault Background" class="vault-bg-image">
+       
+        
+        <!-- Glowing Frame Element (Left Side Under Header) -->
+        <div class="vault-glowing-frame">
+            <img src="assets/images/vault/Frame 8995.png" alt="Glowing Frame" class="vault-glowing-frame-image">
+        </div>
+        
+        <!-- Glowing Frame Element 2 (Right Side) -->
+        <div class="vault-glowing-frame-2">
+            <img src="assets/images/vault/Frame 8997.png" alt="Glowing Frame 2" class="vault-glowing-frame-image-2">
         </div>
         
         <!-- Decorative Elements -->
@@ -75,54 +83,6 @@
             </div>
             <div class="vault-decorative-btc-main">
                 <img src="assets/images/decorative/decorative-btc-main.png" alt="" class="vault-decorative-layer">
-            </div>
-        </div>
-        
-        <!-- Geometric Decorative Element (428:2220) -->
-        <div class="vault-decorative-element vault-decorative-geo" data-node-id="428:2220">
-            <div class="vault-decorative-geo-group">
-                <div class="vault-decorative-geo-subgroup">
-                    <div class="vault-decorative-geo-layer1">
-                        <img src="assets/images/decorative/decorative-geo-layer1.png" alt="" class="vault-decorative-layer">
-                    </div>
-                    <div class="vault-decorative-geo-layer2">
-                        <img src="assets/images/decorative/decorative-geo-layer2.png" alt="" class="vault-decorative-layer">
-                    </div>
-                </div>
-                <img src="assets/images/decorative/decorative-geo-base.png" alt="" class="vault-decorative-layer vault-decorative-geo-base">
-            </div>
-            <div class="vault-decorative-geo-group vault-decorative-geo-group-2">
-                <div class="vault-decorative-geo-subgroup">
-                    <div class="vault-decorative-geo-layer1">
-                        <img src="assets/images/decorative/decorative-geo-layer1.png" alt="" class="vault-decorative-layer">
-                    </div>
-                    <div class="vault-decorative-geo-layer2">
-                        <img src="assets/images/decorative/decorative-geo-layer2.png" alt="" class="vault-decorative-layer">
-                    </div>
-                </div>
-                <img src="assets/images/decorative/decorative-geo-base.png" alt="" class="vault-decorative-layer vault-decorative-geo-base">
-            </div>
-            <div class="vault-decorative-geo-group vault-decorative-geo-group-3">
-                <div class="vault-decorative-geo-subgroup">
-                    <div class="vault-decorative-geo-layer1">
-                        <img src="assets/images/decorative/decorative-geo-layer1.png" alt="" class="vault-decorative-layer">
-                    </div>
-                    <div class="vault-decorative-geo-layer2">
-                        <img src="assets/images/decorative/decorative-geo-layer2.png" alt="" class="vault-decorative-layer">
-                    </div>
-                </div>
-                <img src="assets/images/decorative/decorative-geo-base.png" alt="" class="vault-decorative-layer vault-decorative-geo-base">
-            </div>
-            <div class="vault-decorative-geo-group vault-decorative-geo-group-4">
-                <div class="vault-decorative-geo-subgroup">
-                    <div class="vault-decorative-geo-layer1">
-                        <img src="assets/images/decorative/decorative-geo-alt-layer1.png" alt="" class="vault-decorative-layer">
-                    </div>
-                    <div class="vault-decorative-geo-layer2">
-                        <img src="assets/images/decorative/decorative-geo-alt-layer2.png" alt="" class="vault-decorative-layer">
-                    </div>
-                </div>
-                <img src="assets/images/decorative/decorative-geo-alt-base.png" alt="" class="vault-decorative-layer vault-decorative-geo-base">
             </div>
         </div>
         
@@ -516,7 +476,7 @@
                             </ul>
                         </div>
                         <div class="vault-upgrade-right">
-                            <a href="#" class="vault-upgrade-button">
+                            <a href="signup.html" class="vault-upgrade-button">
                                 <span class="vault-upgrade-button-text">Upgrade to Sovereign →</span>
                             </a>
                         </div>
@@ -747,7 +707,7 @@
                 </ul>
             </div>
             <div class="mission-briefing-actions">
-                <button class="mission-btn-start">Start Mission</button>
+                <a href="signup.html" class="mission-btn-start" style="text-decoration: none; display: flex; align-items: center; justify-content: center;">Start Mission</a>
                 <button class="mission-btn-complete">Mark As Complete</button>
             </div>
         </div>
@@ -869,11 +829,17 @@
             }
 
             comingSoonOverlay.addEventListener('click', function(e) {
-                // Close if clicking on the overlay background (not on the image)
-                if (e.target === comingSoonOverlay) {
-                    closeComingSoonPopup();
-                }
+                // Close on any click on overlay
+                closeComingSoonPopup();
             });
+            
+            // Prevent closing when clicking on image itself (optional)
+            const comingSoonImage = comingSoonOverlay.querySelector('.coming-soon-image');
+            if (comingSoonImage) {
+                comingSoonImage.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                });
+            }
 
             document.addEventListener('keydown', function(e) {
                 if (e.key === 'Escape' && comingSoonOverlay.classList.contains('active')) {
@@ -902,11 +868,17 @@
             }
 
             warriorRewardOverlay.addEventListener('click', function(e) {
-                // Close if clicking on the overlay background (not on the image)
-                if (e.target === warriorRewardOverlay) {
-                    closeWarriorRewardPopup();
-                }
+                // Close on any click on overlay
+                closeWarriorRewardPopup();
             });
+            
+            // Prevent closing when clicking on image itself (optional)
+            const warriorRewardImage = warriorRewardOverlay.querySelector('.warrior-reward-image');
+            if (warriorRewardImage) {
+                warriorRewardImage.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                });
+            }
 
             document.addEventListener('keydown', function(e) {
                 if (e.key === 'Escape' && warriorRewardOverlay.classList.contains('active')) {

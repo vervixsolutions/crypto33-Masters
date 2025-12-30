@@ -5,7 +5,9 @@
 /* ========== COIN RADAR BANNER ========== */
 .coin-radar-banner {
   width: 60%;
-  margin: 0 auto;
+   
+  margin-bottom: var(--spacing-7xl);
+  margin-top: var(--spacing-4xl);
   padding: var(--spacing-lg) 0;
   position: relative;
   display: flex;
@@ -78,19 +80,34 @@
 .training-background-wrapper {
   
   width: 100%;
-  background-image: url('../assets/Rectangle 4165.png');
-  background-size: cover;
-  background-repeat: no-repeat;
   position: relative;
   border-left: var(--border-width-base) solid var(--color-border-white);
   border-right: var(--border-width-base) solid var(--color-border-white);
+}
+
+/* Background Image with Opacity Control */
+.training-background-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../images/training/f85cd323d27b45f08d08c2dd78a460d3995cad55 (1).jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 7%; /* Horizontal: 50% (center), Vertical: 20% (top se adjust karo) */
+  background-attachment: scroll;
+  opacity: 0.2;
+  z-index: -1;
+  pointer-events: none;
 }
 
 /* ========== TRAINING PROGRESS SECTION ========== */
 .training-progress-section {
   width: 100%;
   background-color: transparent;
-  padding: 48px 0 0 0;
+  
   display: flex;
   justify-content: center;
 }
@@ -105,7 +122,7 @@
   width: 100%;
   max-width: var(--container-lg);
   height: 197px;
-  background-image: url('../assets/4bad277c6aa23dc6977ba1c4cf914b053f0f6699.png');
+  background-image: url('../images/training/Rectangle 6.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

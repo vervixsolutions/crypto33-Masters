@@ -455,7 +455,9 @@
   .page-banner-text {
     font-size: var(--font-size-4xl);
     letter-spacing: 0.6px;
-    white-space: nowrap;
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
 }
 
@@ -468,7 +470,9 @@
   .page-banner-text {
     font-size: var(--font-size-3xl);
     letter-spacing: 0.4px;
-    white-space: nowrap;
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
 }
 
@@ -480,7 +484,9 @@
   .page-banner-text {
     font-size: var(--font-size-2xl);
     letter-spacing: 0.2px;
-    white-space: nowrap;
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
 }
 

@@ -2,6 +2,101 @@
    FROG BREAKER XP PAGE STYLES
    ============================================ */
 
+/* ========== HERO AND PILLARS WRAPPER ========== */
+.frog-breaker-xp__hero-pillars-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: visible;
+}
+
+/* ========== ANIMATED BACKGROUND ========== */
+.frog-breaker-xp__animated-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  pointer-events: none;
+  overflow: visible;
+}
+
+/* Position animated background to start from hero section bottom and end at pillars bottom */
+/* Hero section should be below animated background so background is visible on top */
+.frog-breaker-xp__hero-section {
+  position: relative;
+  z-index: 1;
+}
+
+.frog-breaker-xp__bg-image {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.6);
+  width: 100%;
+  height: 100%;
+  min-height: 1000px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  animation: fadeInOut 4s ease-in-out infinite;
+}
+
+.frog-breaker-xp__bg-image--1 {
+  background-image: url('../images/frog-breaker-xp/Property 1=full.png');
+  animation-delay: 0s;
+}
+
+.frog-breaker-xp__bg-image--2 {
+  background-image: url('../images/frog-breaker-xp/Property 1=low.png');
+  animation-delay: 2s;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Ensure header and footer are above background */
+body .header {
+  position: relative;
+  z-index: 100;
+  background-color: var(--color-bg-primary);
+}
+
+body .footer {
+  position: relative;
+  z-index: 100;
+  background-color: var(--color-bg-primary);
+}
+
+/* Other sections should be above animated background */
+.frog-breaker-xp__progress-section {
+  position: relative;
+  z-index: 15;
+  background-color: transparent;
+}
+
+.frog-breaker-xp__pillars-section,
+.frog-breaker-xp__series-section,
+.frog-breaker-xp__supplement-section,
+.frog-breaker-xp__disclaimer-section {
+  position: relative;
+  z-index: 15;
+  background-color: transparent;
+}
+
 /* ========== PAGE CONTAINER ========== */
 .frog-breaker-xp__container {
   max-width: var(--container-xl);
@@ -14,14 +109,15 @@
 .frog-breaker-xp__progress-section {
   width: 100%;
   position: relative;
-  z-index: var(--z-sticky);
+  z-index: 2;
+  background-color: transparent;
 }
 
 /* ========== HERO SECTION ========== */
 .frog-breaker-xp__hero-section {
   width: 100%;
   padding-top: var(--spacing-7xl);
-  background-color: var(--color-bg-primary);
+  background-color: transparent;
   position: relative;
 }
 
@@ -29,8 +125,9 @@
 .frog-breaker-xp__pillars-section {
   width: 100%;
   padding-top: var(--spacing-7xl);
-  background-color: var(--color-bg-primary);
+  background-color: transparent;
   position: relative;
+  padding-bottom: var(--spacing-7xl);
 }
 
 .pillars-grid {
@@ -66,7 +163,7 @@
 /* ========== SUPPLEMENT STACK SECTION ========== */
 .frog-breaker-xp__supplement-section {
   width: 100%;
-  background-color: var(--color-bg-primary);
+  background-color: transparent;
   position: relative;
 }
 
@@ -132,7 +229,9 @@
   line-height: 1.71;
   margin: 0;
   padding: 0;
-  white-space: nowrap;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .supplement-stack-card__description {
@@ -174,11 +273,33 @@
   }
 }
 
+@media (max-width: 1400px) {
+  /* Tablet: Make background wrap the whole card */
+  .supplement-stack-card__background {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+}
+
 @media (max-width: 968px) {
   .supplement-stack-card {
     height: auto;
     min-height: 569px;
     max-width: 100%;
+  }
+  
+  /* Mobile: Make background wrap the whole card */
+  .supplement-stack-card__background {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
   }
   
   .protocols-grid {
@@ -203,6 +324,12 @@
   .supplement-stack-card__content {
     padding: 20px;
   }
+  
+  .supplement-stack-card__title {
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
 }
 
 @media (max-width: 850px) {
@@ -222,9 +349,9 @@
 /* ========== SERIES SECTION ========== */
 .frog-breaker-xp__series-section {
   width: 100%;
-  padding-top: var(--spacing-7xl);
+  padding-top: 0px;
   padding-bottom: var(--spacing-7xl);
-  background-color: var(--color-bg-primary);
+  background-color: transparent;
   position: relative;
 }
 
@@ -269,7 +396,7 @@
 .frog-breaker-xp__disclaimer-section {
   width: 100%;
   padding: var(--spacing-4xl) 0;
-  background-color: var(--color-bg-primary);
+  background-color: transparent;
   position: relative;
 }
 
@@ -321,7 +448,7 @@
   }
   
   .frog-breaker-xp__series-section {
-    padding-top: var(--spacing-6xl);
+    padding-top: 0px;
     padding-bottom: var(--spacing-6xl);
   }
 }
@@ -337,8 +464,13 @@
     padding-top: var(--spacing-5xl);
   }
   
-  .frog-breaker-xp__series-section {
+  .frog-breaker-xp__pillars-section {
     padding-top: var(--spacing-5xl);
+    padding-bottom: var(--spacing-5xl);
+  }
+  
+  .frog-breaker-xp__series-section {
+    padding-top: 0px;
     padding-bottom: var(--spacing-5xl);
   }
 }
@@ -346,6 +478,66 @@
 @media (max-width: 480px) {
   .frog-breaker-xp__container {
     padding: 0 var(--spacing-md);
+  }
+  
+  .frog-breaker-xp__hero-section {
+    padding-top: var(--spacing-4xl);
+  }
+  
+  .frog-breaker-xp__pillars-section {
+    padding-top: var(--spacing-4xl);
+    padding-bottom: var(--spacing-4xl);
+  }
+  
+  .frog-breaker-xp__series-section {
+    padding-top: 0px;
+    padding-bottom: var(--spacing-4xl);
+  }
+}
+
+/* ========== RESPONSIVE ANIMATED BACKGROUND ========== */
+/* Maintain animated image position across all screen sizes */
+@media (max-width: 1200px) {
+  .frog-breaker-xp__bg-image {
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.6);
+    width: 100%;
+    height: 100%;
+    min-height: 1000px;
+  }
+}
+
+@media (max-width: 968px) {
+  .frog-breaker-xp__bg-image {
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.6);
+    width: 100%;
+    height: 100%;
+    min-height: 1000px;
+  }
+}
+
+@media (max-width: 768px) {
+  .frog-breaker-xp__bg-image {
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.6);
+    width: 100%;
+    height: 100%;
+    min-height: 1000px;
+  }
+}
+
+@media (max-width: 480px) {
+  .frog-breaker-xp__bg-image {
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.6);
+    width: 100%;
+    height: 100%;
+    min-height: 1000px;
   }
 }
 

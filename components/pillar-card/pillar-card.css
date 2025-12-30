@@ -3,7 +3,7 @@
    ============================================ */
 
 .pillar-card {
-  width: 631px;
+  width: 656px;
   height: 222px;
   position: relative;
   border-radius: 20px;
@@ -42,7 +42,7 @@
   left: 0;
   width: 100%;
   height: 492.97%;
-  background-image: url('../../../assets/images/frog-breaker-xp/pillar-1-background.png');
+  background-image: url('./../../assets/images/frog-breaker-xp/pillar-1-background.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -61,7 +61,7 @@
   left: -9.76%;
   width: 109.76%;
   height: 260.2%;
-  background-image: url('../../../assets/images/frog-breaker-xp/pillar-4-background.png');
+  background-image: url('./../../assets/images/frog-breaker-xp/pillar-4-background.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -191,6 +191,25 @@
   .pillar-card {
     height: auto;
     min-height: 192px;
+  }
+  
+  /* Fix background image cropping on mobile */
+  .pillar-card--highlighted .pillar-card__background::before {
+    background-size: cover;
+    background-position: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .pillar-card--blue .pillar-card__background::before {
+    background-size: cover;
+    background-position: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
   
   .pillar-card__content {

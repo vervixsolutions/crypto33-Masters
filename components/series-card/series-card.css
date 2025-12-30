@@ -41,7 +41,7 @@
   left: -1.37%;
   width: 102.74%;
   height: 121.79%;
-  background-image: url('../../../assets/images/frog-breaker-xp/series-sugar-background.png');
+  background-image: url('./../../assets/images/frog-breaker-xp/series-sugar-background.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -64,7 +64,7 @@
   left: 0;
   width: 107.67%;
   height: 127.64%;
-  background-image: url('../../../assets/images/frog-breaker-xp/series-alcohol-background.png');
+  background-image: url('./../../assets/images/frog-breaker-xp/series-alcohol-background.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -87,7 +87,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('../../../assets/images/frog-breaker-xp/series-warrior-background.png');
+  background-image: url('./../../assets/images/frog-breaker-xp/series-warrior-background.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -184,6 +184,30 @@
   .series-card {
     height: auto;
     min-height: 233.559px;
+  }
+  
+  /* Fix background image cropping on mobile */
+  .series-card--sugar .series-card__background::before {
+    background-size: cover;
+    background-position: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .series-card--alcohol .series-card__background::before {
+    background-size: cover;
+    background-position: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .series-card--warrior .series-card__background::before {
+    background-size: cover;
+    background-position: center;
   }
   
   .series-card__content {

@@ -33,7 +33,7 @@
         <div class="header-container">
             <div class="logo">
                 <a href="index.html">
-                    <img src="assets/images/logos/main-logo-2.png" alt="Crypto33 Mastery Logo">
+                    <img src="assets/images/logos/logo-2.png" alt="Crypto33 Mastery Logo">
                 </a>
             </div>
             <button class="mobile-menu-toggle" aria-label="Toggle menu">
@@ -42,11 +42,11 @@
                 <span></span>
             </button>
             <nav class="navigation">
-                <a href="#" class="nav-link">FOG BREAKER XP</a>
-                <a href="#" class="nav-link">Healing Blueprint</a>
-                <a href="#" class="nav-link">Mini Series</a>
-                <a href="" class="nav-link">Supplement Stack</a>
-                <a href="" class="nav-link active"> Tracker</a>
+                <a href="#hero" class="nav-link active">FOG BREAKER XP</a>
+                <a href="#healing-blueprint" class="nav-link">Healing Blueprint</a>
+                <a href="#mini-series" class="nav-link">Mini Series</a>
+                <a href="#supplement-stack" class="nav-link">Supplement Stack</a>
+                <a href="#supplement-stack" class="nav-link"> Tracker</a>
                  
             </nav>
             <a href="signup.html" class="cta-button">
@@ -57,7 +57,7 @@
     </header>
     
     <!-- XP Progress Bar Section -->
-    <section class="frog-breaker-xp__progress-section">
+    <section id="progress" class="frog-breaker-xp__progress-section">
         <div class="xp-progress-bar">
             <div class="xp-progress-bar__content">
                 <div class="xp-progress-bar__text">
@@ -78,29 +78,37 @@
         </div>
     </section>
 
-    <!-- Hero/Intro Section -->
-    <section class="frog-breaker-xp__hero-section">
-        <div class="frog-breaker-xp__container">
-            <div class="hero-intro-card">
-                <div class="hero-intro-card__background">
-                    <!-- Background image added via CSS -->
-                </div>
-                <div class="hero-intro-card__content">
-                    <p class="hero-intro-card__subtitle">Fog Breaker XP</p>
-                    <h2 class="hero-intro-card__title">Break the Fog. Reclaim the Fire.</h2>
-                    <p class="hero-intro-card__description">Your blueprint for total biological recovery — gene-based healing, detox, food tracking, and lifestyle support. Built from real-life recovery, not pharma band-aids.</p>
-                    <ul class="hero-intro-card__bullets">
-                        <li>Full 5-pillar recovery program in one place.</li>
-                        <li>XP healing series for sugar, alcohol, mindset, and more.</li>
-                        <li>Tracks progress, XP, badges, and supplement stacks per blueprint.</li>
-                    </ul>
+    <!-- Hero and Pillars Wrapper -->
+    <div class="frog-breaker-xp__hero-pillars-wrapper">
+        <!-- Hero/Intro Section -->
+        <section id="hero" class="frog-breaker-xp__hero-section">
+            <div class="frog-breaker-xp__container">
+                <div class="hero-intro-card">
+                    <div class="hero-intro-card__background">
+                        <!-- Background image added via CSS -->
+                    </div>
+                    <div class="hero-intro-card__content">
+                        <p class="hero-intro-card__subtitle">Fog Breaker XP</p>
+                        <h2 class="hero-intro-card__title">Break the Fog. Reclaim the Fire.</h2>
+                        <p class="hero-intro-card__description">Your blueprint for total biological recovery — gene-based healing, detox, food tracking, and lifestyle support. Built from real-life recovery, not pharma band-aids.</p>
+                        <ul class="hero-intro-card__bullets">
+                            <li>Full 5-pillar recovery program in one place.</li>
+                            <li>XP healing series for sugar, alcohol, mindset, and more.</li>
+                            <li>Tracks progress, XP, badges, and supplement stacks per blueprint.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- The 5 Pillar Healing Blueprint Section -->
-    <section class="frog-breaker-xp__pillars-section">
+        <!-- Animated Background Container -->
+        <div class="frog-breaker-xp__animated-bg">
+            <div class="frog-breaker-xp__bg-image frog-breaker-xp__bg-image--1"></div>
+            <div class="frog-breaker-xp__bg-image frog-breaker-xp__bg-image--2"></div>
+        </div>
+
+        <!-- The 5 Pillar Healing Blueprint Section -->
+        <section id="healing-blueprint" class="frog-breaker-xp__pillars-section">
         <div class="frog-breaker-xp__container">
             <div class="section-header">
                 <div class="section-header__content">
@@ -204,10 +212,11 @@
                 </div>
             </div>
         </div>
-    </section>
+        </section>
+    </div>
 
     <!-- Healing Mini-Series Library Section -->
-    <section class="frog-breaker-xp__series-section">
+    <section id="mini-series" class="frog-breaker-xp__series-section">
         <div class="frog-breaker-xp__container">
             <div class="section-header">
                 <div class="section-header__content">
@@ -269,7 +278,7 @@
     </section>
 
     <!-- Supplement Stack & Affiliate Protocols Section -->
-    <section class="frog-breaker-xp__supplement-section">
+    <section id="supplement-stack" class="frog-breaker-xp__supplement-section">
         <div class="frog-breaker-xp__container">
             <div class="supplement-stack-wrapper">
                 <div class="supplement-stack-card">
@@ -402,7 +411,7 @@
     </section>
 
     <!-- Disclaimer Section -->
-    <section class="frog-breaker-xp__disclaimer-section">
+    <section id="disclaimer" class="frog-breaker-xp__disclaimer-section">
         <div class="frog-breaker-xp__container">
             <div class="disclaimer-card">
                 <p class="disclaimer-text">Fog Breaker XP is not medical advice. We are not doctors. This system is based on real-life recovery and does not replace individualized care. Use at your own risk.</p>
@@ -455,6 +464,102 @@
     </footer>
 
     <script src="assets/js/main.js"></script>
+    <script>
+        // Position animated background to start from hero top and end at pillars bottom
+        document.addEventListener('DOMContentLoaded', function() {
+            const heroSection = document.querySelector('.frog-breaker-xp__hero-section');
+            const animatedBg = document.querySelector('.frog-breaker-xp__animated-bg');
+            const wrapper = document.querySelector('.frog-breaker-xp__hero-pillars-wrapper');
+            
+            if (heroSection && animatedBg && wrapper) {
+                function updateBackgroundPosition() {
+                    // Start from top of hero section (top: 0) and cover entire wrapper height
+                    animatedBg.style.top = '0px';
+                    animatedBg.style.height = wrapper.offsetHeight + 'px';
+                    
+                    // Maintain image position on all screen sizes
+                    const bgImages = animatedBg.querySelectorAll('.frog-breaker-xp__bg-image');
+                    bgImages.forEach(img => {
+                        // Keep the same position (55% top, 50% left, scale 0.6) on all devices
+                        img.style.top = '55%';
+                        img.style.left = '50%';
+                        img.style.transform = 'translate(-50%, -50%) scale(0.6)';
+                    });
+                }
+                
+                // Update on load
+                updateBackgroundPosition();
+                
+                // Update on resize
+                window.addEventListener('resize', updateBackgroundPosition);
+            }
+
+            // Active navigation link based on scroll position
+            const sections = [
+                { id: 'hero', linkSelector: 'a[href="#hero"]' },
+                { id: 'healing-blueprint', linkSelector: 'a[href="#healing-blueprint"]' },
+                { id: 'mini-series', linkSelector: 'a[href="#mini-series"]' },
+                { id: 'supplement-stack', linkSelector: 'a[href="#supplement-stack"]' }
+            ];
+
+            const navLinks = document.querySelectorAll('.navigation .nav-link');
+            
+            function updateActiveNav() {
+                const scrollPosition = window.scrollY + 150; // Offset for header height
+                
+                // Find which section is currently in view
+                let activeSection = 'hero'; // Default to hero
+                
+                sections.forEach(section => {
+                    const element = document.getElementById(section.id);
+                    if (element) {
+                        const sectionTop = element.offsetTop;
+                        const sectionHeight = element.offsetHeight;
+                        
+                        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                            activeSection = section.id;
+                        }
+                    }
+                });
+
+                // Remove active class from all links
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                });
+
+                // Add active class to the appropriate link
+                // For supplement-stack, prioritize "Supplement Stack" link over "Tracker"
+                if (activeSection === 'supplement-stack') {
+                    const allSupplementLinks = document.querySelectorAll('a[href="#supplement-stack"]');
+                    // Find the "Supplement Stack" link (not "Tracker")
+                    allSupplementLinks.forEach(link => {
+                        const linkText = link.textContent.trim();
+                        if (linkText !== 'Tracker' && !linkText.includes('Tracker')) {
+                            link.classList.add('active');
+                        }
+                    });
+                } else {
+                    // For other sections, activate the matching link
+                    const activeLink = document.querySelector(`a[href="#${activeSection}"]`);
+                    if (activeLink) {
+                        activeLink.classList.add('active');
+                    }
+                }
+            }
+
+            // Update on scroll (with throttling for performance)
+            let scrollTimeout;
+            window.addEventListener('scroll', function() {
+                if (scrollTimeout) {
+                    clearTimeout(scrollTimeout);
+                }
+                scrollTimeout = setTimeout(updateActiveNav, 100);
+            });
+            
+            // Update on load
+            updateActiveNav();
+        });
+    </script>
 </body>
 </html>
 

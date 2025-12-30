@@ -17,7 +17,7 @@
   width: 100%;
   height: 100%;
   z-index: var(--z-base);
-  background-image: url('../../../assets/images/frog-breaker-xp/tracker-card-background.png');
+  background-image: url('./../../assets/images/frog-breaker-xp/tracker-card-background.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -112,7 +112,7 @@
 }
 
 .tracker-card--loyalty .tracker-card__background {
-  background-image: url('../../../assets/images/frog-breaker-xp/loyalty-unlocks-background.png');
+  background-image: url('./../../assets/images/frog-breaker-xp/loyalty-unlocks-background.png');
 }
 
 .tracker-card--loyalty .tracker-card__content {
@@ -144,9 +144,41 @@
     max-width: 560.189px;
   }
   
+  /* Center align text on tablet */
   .tracker-card__content {
-    padding-left: var(--spacing-4xl);
-    padding-right: var(--spacing-4xl);
+    padding: var(--spacing-4xl) var(--spacing-3xl);
+    align-items: center;
+    text-align: center;
+  }
+  
+  .tracker-card__title {
+    text-align: center;
+    width: 100%;
+  }
+  
+  .tracker-card__subtitle {
+    text-align: center;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .tracker-card__bullets {
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .tracker-card__xp-info {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Loyalty variant tablet */
+  .tracker-card--loyalty .tracker-card__content {
+    padding: var(--spacing-4xl) var(--spacing-3xl);
+    align-items: center;
+    text-align: center;
   }
 }
 
@@ -155,33 +187,151 @@
     width: 100%;
     max-width: 560.189px;
     height: auto;
-    min-height: 258.736px;
+    min-height: 220px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
   
+  /* Fix background image cropping on mobile */
+  .tracker-card__background {
+    background-size: contain;
+    background-position: center;
+  }
+  
+  /* Center align text on mobile - optimized padding and spacing for both cards */
   .tracker-card__content {
-    padding: var(--spacing-4xl) var(--spacing-3xl);
+    padding: var(--spacing-2xl) var(--spacing-lg);
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
+    align-self: center;
   }
   
   .tracker-card__title {
-    font-size: 13px;
+    font-size: 12px;
+    text-align: center;
+    width: 100%;
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    margin-bottom: var(--spacing-xs);
+    line-height: 1.2;
+    align-self: center;
   }
   
   .tracker-card__subtitle {
-    font-size: 8.5px;
+    font-size: 8px;
+    text-align: center;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: var(--spacing-sm);
+    line-height: 1.3;
+    align-self: center;
+  }
+  
+  .tracker-card__bullets {
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    margin-bottom: var(--spacing-sm);
+    gap: 2px;
+    display: flex;
+    flex-direction: column;
   }
   
   .tracker-card__bullets li {
-    font-size: 8.5px;
+    font-size: 8px;
     white-space: normal;
+    text-align: center;
+    line-height: 1.3;
+    align-self: center;
+    width: 100%;
   }
   
+  /* Smaller XP info box on mobile */
   .tracker-card__xp-info {
-    width: 100%;
-    max-width: 316.098px;
+    width: auto;
+    max-width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    align-items: center;
+    padding: 5px var(--spacing-xs);
+    min-height: 24px;
+    height: auto;
+    align-self: center;
   }
   
   .tracker-card__xp-info p {
+    font-size: 7px;
+    text-align: center;
+    line-height: 1.2;
+    padding: 0;
+  }
+  
+  /* Loyalty variant mobile - same fixes with align-items center */
+  .tracker-card--loyalty .tracker-card__content {
+    padding: var(--spacing-2xl) var(--spacing-lg);
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
+    align-self: center;
+  }
+  
+  .tracker-card--loyalty .tracker-card__title {
+    font-size: 12px;
+    text-align: center;
+    width: 100%;
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    margin-bottom: var(--spacing-xs);
+    line-height: 1.2;
+    align-self: center;
+  }
+  
+  .tracker-card--loyalty .tracker-card__subtitle {
     font-size: 8px;
+    text-align: center;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: var(--spacing-sm);
+    line-height: 1.3;
+    align-self: center;
+  }
+  
+  .tracker-card--loyalty .tracker-card__bullets {
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    margin-bottom: var(--spacing-sm);
+    gap: 2px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .tracker-card--loyalty .tracker-card__bullets li {
+    font-size: 8px;
+    white-space: normal;
+    text-align: center;
+    line-height: 1.3;
+    align-self: center;
+    width: 100%;
   }
 }
 

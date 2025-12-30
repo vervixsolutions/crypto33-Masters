@@ -5,11 +5,11 @@
 
 .gauge-container {
   position: absolute;
-  left: 50%;
+  left: 60%;
   top: 50%;
   transform: translate(-11%, -50%);
-  width: 550px;
-  height: 550px;
+  width: 400px;
+  
   max-width: 100%;
   display: flex;
   align-items: center;
