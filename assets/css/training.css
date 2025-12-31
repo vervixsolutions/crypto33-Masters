@@ -1328,6 +1328,7 @@
   .coin-radar-banner {
     width: 80%;
     padding: var(--spacing-md) 0;
+    margin-bottom: var(--spacing-4xl);
   }
   
   .banner-text {
@@ -1528,6 +1529,7 @@
   .coin-radar-banner {
     width: 90%;
     padding: var(--spacing-sm) 0;
+    margin-bottom: var(--spacing-4xl);
   }
   
   .banner-text {
@@ -1542,6 +1544,7 @@
   .coin-radar-banner {
     width: 95%;
     padding: var(--spacing-sm) 0;
+    margin-bottom: var(--spacing-4xl);
   }
   
   .banner-text {

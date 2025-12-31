@@ -797,13 +797,13 @@
                 </nav>
                 
                 <div class="footer-social">
-                    <a href="#" class="social-icon" aria-label="Facebook">
+                    <a href="https://facebook.com" target="_blank" class="social-icon" aria-label="Facebook">
                         <img src="assets/images/icons/FB icon.svg" alt="Facebook">
                     </a>
-                    <a href="#" class="social-icon" aria-label="Instagram">
+                    <a href="https://instagram.com" target="_blank" class="social-icon" aria-label="Instagram">
                         <img src="assets/images/icons/IG icon.svg" alt="Instagram">
                     </a>
-                    <a href="#" class="social-icon" aria-label="X (Twitter)">
+                    <a href="https://twitter.com" target="_blank" class="social-icon" aria-label="X (Twitter)">
                         <img src="assets/images/icons/X icon.svg" alt="X">
                     </a>
                 </div>
@@ -814,10 +814,10 @@
             <div class="footer-right">
                 <h3 class="footer-title">Crypto33</h3>
                 <ul class="footer-links">
-                    <li><a href="#" class="footer-link">• All Rights Reserved</a></li>
-                    <li><a href="#" class="footer-link">• Terms</a></li>
-                    <li><a href="#" class="footer-link">• Privacy</a></li>
-                    <li><a href="#" class="footer-link">• Affiliate Disclosure</a></li>
+                    <li><a href="index.html" class="footer-link">• All Rights Reserved</a></li>
+                    <li><a href="index.html#terms" class="footer-link">• Terms</a></li>
+                    <li><a href="index.html#privacy" class="footer-link">• Privacy</a></li>
+                    <li><a href="index.html#affiliate" class="footer-link">• Affiliate Disclosure</a></li>
                 </ul>
             </div>
         </div>
@@ -856,6 +856,27 @@
                 header.classList.remove('menu-open');
             });
         });
+
+        document.addEventListener('click', function(event) {
+            const isClickInside = header.contains(event.target);
+            if (!isClickInside && navigation.classList.contains('active')) {
+                navigation.classList.remove('active');
+                mobileMenuToggle.classList.remove('active');
+                header.classList.remove('menu-open');
+            }
+        });
+
+        // CTA button click handler
+        const ctaButton = document.querySelector('.cta-button');
+        if (ctaButton) {
+            ctaButton.addEventListener('click', function() {
+                if (navigation.classList.contains('active')) {
+                    navigation.classList.remove('active');
+                    mobileMenuToggle.classList.remove('active');
+                    header.classList.remove('menu-open');
+                }
+            });
+        }
 
         // Notification tabs functionality
         const notificationTabs = document.querySelectorAll('.notification-tab-btn');

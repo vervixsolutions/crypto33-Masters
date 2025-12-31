@@ -29,9 +29,15 @@
         <img src="assets/images/logos/signup-logo.png" alt="Crypto33 Masters Logo" class="logo-image">
       </a>
       
+      <button class="mobile-menu-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
       <nav class="header-nav">
         <a href="index.html" class="nav-link">Home</a>
-        <a href="#" class="nav-link">Coin Radar</a>
+        <a href="coin-radar.html" class="nav-link">Coin Radar</a>
         <a href="vault.html" class="nav-link">Vault</a>
         <a href="training.html" class="nav-link">Training</a>
         <a href="freedom-hub.html" class="nav-link">Freedom Hub (News)</a>
@@ -248,6 +254,41 @@
       
     </div>
   </footer>
+
+  <script>
+    // Mobile menu toggle
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    const headerNav = document.querySelector('.header-nav');
+    const signupHeader = document.querySelector('.signup-header');
+
+    if (mobileMenuToggle) {
+      mobileMenuToggle.addEventListener('click', function() {
+        headerNav.classList.toggle('active');
+        mobileMenuToggle.classList.toggle('active');
+        signupHeader.classList.toggle('menu-open');
+      });
+
+      // Close menu when clicking nav links
+      const navLinks = document.querySelectorAll('.nav-link');
+      navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+          headerNav.classList.remove('active');
+          mobileMenuToggle.classList.remove('active');
+          signupHeader.classList.remove('menu-open');
+        });
+      });
+
+      // Close menu when clicking outside
+      document.addEventListener('click', function(event) {
+        const isClickInside = signupHeader.contains(event.target);
+        if (!isClickInside && headerNav.classList.contains('active')) {
+          headerNav.classList.remove('active');
+          mobileMenuToggle.classList.remove('active');
+          signupHeader.classList.remove('menu-open');
+        }
+      });
+    }
+  </script>
 
 </body>
 </html>

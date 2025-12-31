@@ -1340,6 +1340,7 @@ body {
     .coin-radar-banner {
         width: 90%;
         padding: 14px 0;
+        margin-bottom: var(--spacing-4xl);
     }
     
     .coin-radar-title {
@@ -1643,6 +1644,7 @@ body {
     .coin-radar-banner {
         width: 95%;
         padding: 12px 0;
+        margin-bottom: var(--spacing-4xl);
     }
     
     .coin-radar-title {
@@ -1658,6 +1660,7 @@ body {
     .coin-radar-banner {
         width: 95%;
         padding: 12px 0;
+        margin-bottom: var(--spacing-4xl);
     }
     
     .coin-radar-title {
@@ -1673,6 +1676,7 @@ body {
     .coin-radar-banner {
         width: 95%;
         padding: 12px 0;
+        margin-bottom: var(--spacing-4xl);
     }
 
     .coin-radar-title {
