@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="assets/css/portfolio-math-popup.css">
     <link rel="stylesheet" href="assets/css/coin-alert-popup.css">
     <link rel="stylesheet" href="assets/css/market-image-popup.css">
+    <link rel="stylesheet" href="assets/css/filter-panel.css">
     <title>Coin Radar - Live Market Heatmap | Crypto33 Masters</title>
 </head>
 <body>
@@ -424,6 +425,7 @@
                         <div class="coin-row-favorite" onclick="event.stopPropagation(); this.classList.toggle('active');">
                             <img src="assets/images/coin-radar/star-icon.svg" alt="Favorite">
                         </div>
+                        <div class="coin-row-action"></div>
                     </div>
 
                     <!-- Ethereum Row -->
@@ -442,6 +444,9 @@
                         </div>
                         <div class="coin-row-favorite" onclick="event.stopPropagation(); this.classList.toggle('active');">
                             <img src="assets/images/coin-radar/star-icon.svg" alt="Favorite">
+                        </div>
+                        <div class="coin-row-action">
+                            <button class="coin-action-btn sell-now-btn" onclick="event.stopPropagation();">Sell Now</button>
                         </div>
                     </div>
 
@@ -462,6 +467,9 @@
                         <div class="coin-row-favorite" onclick="event.stopPropagation(); this.classList.toggle('active');">
                             <img src="assets/images/coin-radar/star-icon.svg" alt="Favorite" class="favorite-outline">
                         </div>
+                        <div class="coin-row-action">
+                            <button class="coin-action-btn sell-now-btn" onclick="event.stopPropagation();">Sell Now</button>
+                        </div>
                     </div>
 
                     <!-- Flux Row -->
@@ -480,6 +488,9 @@
                         </div>
                         <div class="coin-row-favorite" onclick="event.stopPropagation(); this.classList.toggle('active');">
                             <img src="assets/images/coin-radar/star-icon.svg" alt="Favorite" class="favorite-outline">
+                        </div>
+                        <div class="coin-row-action">
+                            <button class="coin-action-btn hold-tight-btn" onclick="event.stopPropagation();">Hold Tight</button>
                         </div>
                     </div>
 
@@ -500,6 +511,7 @@
                         <div class="coin-row-favorite" onclick="event.stopPropagation(); this.classList.toggle('active');">
                             <img src="assets/images/coin-radar/star-icon.svg" alt="Favorite">
                         </div>
+                        <div class="coin-row-action"></div>
                     </div>
                 </div>
 
@@ -659,6 +671,8 @@
     <script src="assets/js/coin-alert-popup.js"></script>
     <script src="assets/js/portfolio-math-popup.js"></script>
     <script src="assets/js/market-image-popup.js"></script>
+    <script src="assets/js/coin-action-buttons.js"></script>
+    <script src="assets/js/filter-panel.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
 </html>

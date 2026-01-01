@@ -1,0 +1,17 @@
+{
+  "name": "crypto33-image-optimizer",
+  "version": "1.0.0",
+  "description": "Image optimization tool for crypto33 project",
+  "main": "optimize-images.js",
+  "scripts": {
+    "optimize": "node optimize-images.js",
+    "optimize:backup": "node optimize-images.js --backup"
+  },
+  "keywords": ["image", "optimization", "compression"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sharp": "^0.33.0"
+  }
+}
+

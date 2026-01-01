@@ -1,0 +1,360 @@
+/* ============================================
+   TRAINING VIDEO IMAGE POPUP
+   ============================================ */
+
+.training-video-image-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 10001;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.training-video-image-overlay.active {
+  display: flex;
+}
+
+.training-video-image-wrapper {
+  position: relative;
+  max-width: 90%;
+  max-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.training-video-image {
+  max-width: 100%;
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+.training-video-image-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  border: 2px solid var(--color-primary);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  color: var(--color-primary);
+  font-size: 32px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10001;
+  transition: all 0.3s ease;
+  line-height: 1;
+  padding: 0;
+}
+
+.training-video-image-close:hover {
+  background: var(--color-primary);
+  color: #000;
+  transform: scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .training-video-image-overlay {
+    padding: 10px;
+  }
+  
+  .training-video-image {
+    max-width: 100%;
+    max-height: 85vh;
+  }
+  
+  .training-video-image-close {
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+  }
+}
+
+/* ============================================
+   REFER A FRIEND IMAGE POPUP
+   ============================================ */
+
+.refer-friend-image-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 10001;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.refer-friend-image-overlay.active {
+  display: flex;
+}
+
+.refer-friend-image-wrapper {
+  position: relative;
+  max-width: 90%;
+  max-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.refer-friend-image {
+  max-width: 100%;
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+.refer-friend-image-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  border: 2px solid var(--color-primary);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  color: var(--color-primary);
+  font-size: 32px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10002;
+  transition: all 0.3s ease;
+  line-height: 1;
+  padding: 0;
+}
+
+.refer-friend-image-close:hover {
+  background: var(--color-primary);
+  color: #000;
+  transform: scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .refer-friend-image-overlay {
+    padding: 10px;
+  }
+  
+  .refer-friend-image {
+    max-width: 100%;
+    max-height: 85vh;
+  }
+  
+  .refer-friend-image-close {
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+  }
+}
+
+/* ============================================
+   WEEK 2 CHALLENGE IMAGE POPUP
+   ============================================ */
+
+.week2-challenge-image-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 10001;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.week2-challenge-image-overlay.active {
+  display: flex;
+}
+
+.week2-challenge-image-wrapper {
+  position: relative;
+  max-width: 90%;
+  max-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.week2-challenge-image {
+  max-width: 100%;
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+.week2-challenge-image-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  border: 2px solid var(--color-primary);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  color: var(--color-primary);
+  font-size: 32px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10002;
+  transition: all 0.3s ease;
+  line-height: 1;
+  padding: 0;
+}
+
+.week2-challenge-image-close:hover {
+  background: var(--color-primary);
+  color: #000;
+  transform: scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .week2-challenge-image-overlay {
+    padding: 10px;
+  }
+  
+  .week2-challenge-image {
+    max-width: 100%;
+    max-height: 85vh;
+  }
+  
+  .week2-challenge-image-close {
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+  }
+}
+
+/* ============================================
+   SOVEREIGN TIER IMAGE POPUP
+   ============================================ */
+
+.sovereign-tier-image-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 10001;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.sovereign-tier-image-overlay.active {
+  display: flex;
+}
+
+.sovereign-tier-image-wrapper {
+  position: relative;
+  max-width: 90%;
+  max-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sovereign-tier-image {
+  max-width: 100%;
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+.sovereign-tier-image-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  border: 2px solid var(--color-primary);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  color: var(--color-primary);
+  font-size: 32px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10002;
+  transition: all 0.3s ease;
+  line-height: 1;
+  padding: 0;
+}
+
+.sovereign-tier-image-close:hover {
+  background: var(--color-primary);
+  color: #000;
+  transform: scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sovereign-tier-image-overlay {
+    padding: 10px;
+  }
+  
+  .sovereign-tier-image {
+    max-width: 100%;
+    max-height: 85vh;
+  }
+  
+  .sovereign-tier-image-close {
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+  }
+}
+

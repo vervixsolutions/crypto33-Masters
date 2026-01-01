@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="assets/css/footer.css">
     <link rel="stylesheet" href="assets/css/utilities.css">
     <link rel="stylesheet" href="assets/css/faith.css">
+    <link rel="stylesheet" href="assets/css/faith-video-popup.css">
     <title>Faith Mini-Series - Crypto33 Masters</title>
 </head>
 <body>
@@ -73,10 +74,10 @@
                     <!-- Progress Bar -->
                     <div class="progress-bar-wrapper">
                         <div class="progress-labels">
-                            <span class="progress-label-left">40% of series watched</span>
+                            <span class="progress-label-left">0% of series watched</span>
                             <span class="progress-label-right">Badge grants bonus XP in your Vault.</span>
                         </div>
-                        <div class="xp-progress-bar">
+                        <div class="xp-progress-bar" data-progress="40">
                             <img src="assets/images/content/faith-xp-progress-bar.png" alt="Progress: 40%" class="xp-bar-image">
                         </div>
                     </div>
@@ -84,7 +85,7 @@
                     <!-- Daily Verse Card -->
                     <div class="daily-verse-card">
                         <p class="daily-verse-label">Daily Verse</p>
-                        <p class="daily-verse-text">John 8:32: Then you will know the truth, and the truth will set you free.</p>
+                        <p class="daily-verse-text" id="daily-verse-text">John 8:32: Then you will know the truth, and the truth will set you free.</p>
                         <button class="next-verse-btn">Next Verse</button>
                     </div>
                 </div>
@@ -110,7 +111,7 @@
                         </div>
                         <h3 class="episode-title">Jesus Wasn't Passive — He Was a Lion</h3>
                         <p class="episode-description">Why a soft, watered-down Jesus picture keeps people weak — and what Scripture actually shows.</p>
-                        <button class="episode-play-btn">
+                        <button class="episode-play-btn" data-episode="1" data-series="Faith Mini-Series" data-title="Jesus Wasn't Passive — He Was a Lion" data-description="Why a soft, watered-down Jesus picture keeps people weak — and what Scripture actually shows." data-verse="Revelation 5:5">
                             <img src="assets/images/icons/faith-play-vector.svg" alt="" class="play-icon">
                             Play Episode
                         </button>
@@ -129,7 +130,7 @@
                         </div>
                         <h3 class="episode-title">Building on Rock, Not Sand</h3>
                         <p class="episode-description">How to build your life, wealth, and health on something that does not move when storms hit.</p>
-                        <button class="episode-play-btn">
+                        <button class="episode-play-btn" data-episode="2" data-series="Faith Mini-Series" data-title="Building on Rock, Not Sand" data-description="How to build your life, wealth, and health on something that does not move when storms hit." data-verse="Matthew 7:24-25">
                             <img src="assets/images/icons/faith-play-vector.svg" alt="" class="play-icon">
                             Play Episode
                         </button>
@@ -148,7 +149,7 @@
                         </div>
                         <h3 class="episode-title">Faith and Wealth: Parable of the Talents</h3>
                         <p class="episode-description">What the Parable of the Talents actually says about risk, stewardship, and multiplication.</p>
-                        <button class="episode-play-btn">
+                        <button class="episode-play-btn" data-episode="3" data-series="Faith Mini-Series" data-title="Faith and Wealth: Parable of the Talents" data-description="What the Parable of the Talents actually says about risk, stewardship, and multiplication." data-verse="Matthew 25:14-30">
                             <img src="assets/images/icons/faith-play-vector.svg" alt="" class="play-icon">
                             Play Episode
                         </button>
@@ -167,7 +168,7 @@
                         </div>
                         <h3 class="episode-title">Ancient Scrolls and Lost Teachings</h3>
                         <p class="episode-description">Why old-world wisdom still beats modern hype — and how to read it with clear eyes.</p>
-                        <button class="episode-play-btn">
+                        <button class="episode-play-btn" data-episode="4" data-series="Faith Mini-Series" data-title="Ancient Scrolls and Lost Teachings" data-description="Why old-world wisdom still beats modern hype — and how to read it with clear eyes." data-verse="Jeremiah 6:16">
                             <img src="assets/images/icons/faith-play-vector.svg" alt="" class="play-icon">
                             Play Episode
                         </button>
@@ -186,7 +187,7 @@
                         </div>
                         <h3 class="episode-title">Healing the Body, Healing the Mind — Christ's Way</h3>
                         <p class="episode-description">Looking at how Jesus healed people completely — body, mind, and spirit together.</p>
-                        <button class="episode-play-btn">
+                        <button class="episode-play-btn" data-episode="5" data-series="Faith Mini-Series" data-title="Healing the Body, Healing the Mind — Christ's Way" data-description="Looking at how Jesus healed people completely — body, mind, and spirit together." data-verse="3 John 1:2">
                             <img src="assets/images/icons/faith-play-vector.svg" alt="" class="play-icon">
                             Play Episode
                         </button>
@@ -205,7 +206,7 @@
                         </div>
                         <h3 class="episode-title">Taking Up the Armor Daily</h3>
                         <p class="episode-description">Practical, daily ways to put on the full armor of God — not just as a verse, but as a lifestyle.</p>
-                        <button class="episode-play-btn">
+                        <button class="episode-play-btn" data-episode="6" data-series="Faith Mini-Series" data-title="Taking Up the Armor Daily" data-description="Practical, daily ways to put on the full armor of God — not just as a verse, but as a lifestyle." data-verse="Ephesians 6:11">
                             <img src="assets/images/icons/faith-play-vector.svg" alt="" class="play-icon">
                             Play Episode
                         </button>
@@ -224,7 +225,7 @@
                         </div>
                         <h3 class="episode-title">Modern Idols and Money Traps</h3>
                         <p class="episode-description">How modern systems quietly turn money, tech, and status into idols — and how to stay free.</p>
-                        <button class="episode-play-btn">
+                        <button class="episode-play-btn" data-episode="7" data-series="Faith Mini-Series" data-title="Modern Idols and Money Traps" data-description="How modern systems quietly turn money, tech, and status into idols — and how to stay free." data-verse="1 John 5:21">
                             <img src="assets/images/icons/faith-play-vector.svg" alt="" class="play-icon">
                             Play Episode
                         </button>
@@ -243,7 +244,7 @@
                         </div>
                         <h3 class="episode-title">True Sovereignty vs Slavery</h3>
                         <p class="episode-description">The difference between living as a free son or daughter vs. living under quiet slavery.</p>
-                        <button class="episode-play-btn">
+                        <button class="episode-play-btn" data-episode="8" data-series="Faith Mini-Series" data-title="True Sovereignty vs Slavery" data-description="The difference between living as a free son or daughter vs. living under quiet slavery." data-verse="Galatians 5:1">
                             <img src="assets/images/icons/faith-play-vector.svg" alt="" class="play-icon">
                             Play Episode
                         </button>
@@ -262,7 +263,7 @@
                         </div>
                         <h3 class="episode-title">Calling Out Wolves in the Flock</h3>
                         <p class="episode-description">How to spot false teachers, fake shepherds, and manipulative leaders using Scripture.</p>
-                        <button class="episode-play-btn">
+                        <button class="episode-play-btn" data-episode="9" data-series="Faith Mini-Series" data-title="Calling Out Wolves in the Flock" data-description="How to spot false teachers, fake shepherds, and manipulative leaders using Scripture." data-verse="Matthew 7:15">
                             <img src="assets/images/icons/faith-play-vector.svg" alt="" class="play-icon">
                             Play Episode
                         </button>
@@ -281,7 +282,7 @@
                         </div>
                         <h3 class="episode-title">How to Be Bold, Not Blind</h3>
                         <p class="episode-description">Boldness without truth becomes noise. Truth without courage stays hidden. You need both.</p>
-                        <button class="episode-play-btn">
+                        <button class="episode-play-btn" data-episode="10" data-series="Faith Mini-Series" data-title="How to Be Bold, Not Blind" data-description="Boldness without truth becomes noise. Truth without courage stays hidden. You need both." data-verse="Acts 4:29">
                             <img src="assets/images/icons/faith-play-vector.svg" alt="" class="play-icon">
                             Play Episode
                         </button>
@@ -300,7 +301,7 @@
                         </div>
                         <h3 class="episode-title">Why Truth Always Wins</h3>
                         <p class="episode-description">History shows: lies can run fast, but truth always outlives them. This episode connects that to today.</p>
-                        <button class="episode-play-btn">
+                        <button class="episode-play-btn" data-episode="11" data-series="Faith Mini-Series" data-title="Why Truth Always Wins" data-description="History shows: lies can run fast, but truth always outlives them. This episode connects that to today." data-verse="John 14:6">
                             <img src="assets/images/icons/faith-play-vector.svg" alt="" class="play-icon">
                             Play Episode
                         </button>
@@ -319,7 +320,7 @@
                         </div>
                         <h3 class="episode-title">Commissioned for More — The Final Stand</h3>
                         <p class="episode-description">A commissioning-style final episode that sends people back into the world with clarity and courage.</p>
-                        <button class="episode-play-btn">
+                        <button class="episode-play-btn" data-episode="12" data-series="Faith Mini-Series" data-title="Commissioned for More — The Final Stand" data-description="A commissioning-style final episode that sends people back into the world with clarity and courage." data-verse="Matthew 28:19-20">
                             <img src="assets/images/icons/faith-play-vector.svg" alt="" class="play-icon">
                             Play Episode
                         </button>
@@ -413,8 +414,146 @@
         </div>
     </footer>
 
+    <!-- Faith Video Popup -->
+    <div class="faith-video-popup-overlay" id="faith-video-popup-overlay">
+        <div class="faith-video-popup-container">
+            <div class="faith-video-popup-header">
+                <div>
+                    <p class="faith-video-popup-series" id="faith-popup-series">Faith Mini-Series • Episode 1</p>
+                    <h2 class="faith-video-popup-title" id="faith-popup-title">Jesus Wasn't Passive — He Was a Lion</h2>
+                </div>
+                <button class="faith-video-popup-close-btn" aria-label="Close popup">close X</button>
+            </div>
+            
+            <div class="faith-video-popup-content">
+                <div class="faith-video-popup-player">
+                    <p class="faith-video-popup-player-placeholder">Video Player / YouTube / Vimeo Embed</p>
+                </div>
+                
+                <p class="faith-video-popup-description" id="faith-popup-description">Why a soft, watered-down Jesus picture keeps people weak — and what Scripture actually shows.</p>
+                <p class="faith-video-popup-devotional">Under the video you can show a short devotional, key points, and the main verse (<span id="faith-popup-verse">Revelation 5:5</span>).</p>
+                
+                <div class="faith-video-popup-footer">
+                    <button class="faith-video-popup-complete-btn" id="faith-popup-complete-btn">Mark as Complete • +50 XP</button>
+                    <p class="faith-video-popup-note">In production this button will update XP, progress, and Vault badges.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- JavaScript -->
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/faith-progress-animation.js"></script>
+    <script>
+        // Faith Video Popup Functionality
+        (function() {
+            const videoPopupOverlay = document.getElementById('faith-video-popup-overlay');
+            const videoPopupCloseBtn = document.querySelector('.faith-video-popup-close-btn');
+            
+            // Popup elements
+            const popupSeries = document.getElementById('faith-popup-series');
+            const popupTitle = document.getElementById('faith-popup-title');
+            const popupDescription = document.getElementById('faith-popup-description');
+            const popupVerse = document.getElementById('faith-popup-verse');
+            const popupCompleteBtn = document.getElementById('faith-popup-complete-btn');
+            
+            function openVideoPopup(episodeData) {
+                if (videoPopupOverlay) {
+                    // Update popup content with episode data
+                    if (popupSeries && episodeData.series && episodeData.episode) {
+                        popupSeries.textContent = episodeData.series + ' • Episode ' + episodeData.episode;
+                    }
+                    if (popupTitle && episodeData.title) {
+                        popupTitle.textContent = episodeData.title;
+                    }
+                    if (popupDescription && episodeData.description) {
+                        popupDescription.textContent = episodeData.description;
+                    }
+                    if (popupVerse && episodeData.verse) {
+                        popupVerse.textContent = episodeData.verse;
+                    }
+                    
+                    videoPopupOverlay.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                }
+            }
+            
+            function closeVideoPopup() {
+                if (videoPopupOverlay) {
+                    videoPopupOverlay.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            }
+            
+            // Use event delegation for all "Play Episode" buttons
+            document.addEventListener('click', function(e) {
+                const button = e.target.closest('.episode-play-btn');
+                if (button) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    const episodeData = {
+                        episode: button.getAttribute('data-episode'),
+                        series: button.getAttribute('data-series'),
+                        title: button.getAttribute('data-title'),
+                        description: button.getAttribute('data-description'),
+                        verse: button.getAttribute('data-verse')
+                    };
+                    
+                    openVideoPopup(episodeData);
+                }
+            });
+            
+            // Close popup handlers
+            if (videoPopupCloseBtn) {
+                videoPopupCloseBtn.addEventListener('click', closeVideoPopup);
+            }
+            
+            if (videoPopupOverlay) {
+                videoPopupOverlay.addEventListener('click', function(e) {
+                    if (e.target === videoPopupOverlay) {
+                        closeVideoPopup();
+                    }
+                });
+            }
+            
+            // Close on Escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && videoPopupOverlay && videoPopupOverlay.classList.contains('active')) {
+                    closeVideoPopup();
+                }
+            });
+            
+            // Mark as Complete button (placeholder functionality)
+            if (popupCompleteBtn) {
+                popupCompleteBtn.addEventListener('click', function() {
+                    console.log('Mark as Complete clicked - Episode:', popupTitle ? popupTitle.textContent : 'Unknown');
+                    // In production, this would update XP, progress, and Vault badges
+                });
+            }
+        })();
+
+        // Daily Verse Cycling Functionality
+        (function() {
+            const verses = [
+                'John 8:32: Then you will know the truth, and the truth will set you free.',
+                'Psalm 27:1: The Lord is my light and my salvation—whom shall I fear?',
+                'Galatians 5:1: It is for freedom that Christ has set us free.'
+            ];
+            
+            let currentVerseIndex = 0;
+            const verseTextElement = document.getElementById('daily-verse-text');
+            const nextVerseBtn = document.querySelector('.next-verse-btn');
+            
+            if (nextVerseBtn && verseTextElement) {
+                nextVerseBtn.addEventListener('click', function() {
+                    // Move to next verse (loop back to 0 after last verse)
+                    currentVerseIndex = (currentVerseIndex + 1) % verses.length;
+                    verseTextElement.textContent = verses[currentVerseIndex];
+                });
+            }
+        })();
+    </script>
 </body>
 </html>
 

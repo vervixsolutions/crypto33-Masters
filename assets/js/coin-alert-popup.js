@@ -121,9 +121,79 @@ class CoinAlertPopup {
 
 // Initialize the alert system
 let coinAlertPopup;
+let popupShownOnScroll = false; // Track if popup has been shown on this page load
+
 document.addEventListener('DOMContentLoaded', () => {
   coinAlertPopup = new CoinAlertPopup();
+  
+  // Show popup when user scrolls 40% down (only once)
+  setupScrollTrigger();
 });
+
+// Show popup when user scrolls 40% down the page
+function setupScrollTrigger() {
+  // Check if popup has been shown before using localStorage
+  const popupShown = localStorage.getItem('coinAlertPopupShown');
+  
+  if (popupShown) {
+    // Popup already shown before, don't show again
+    return;
+  }
+  
+  // Scroll handler function
+  function handleScroll() {
+    // Only trigger once per page load
+    if (popupShownOnScroll) {
+      return;
+    }
+    
+    // Calculate scroll percentage
+    const windowHeight = window.innerHeight;
+    const documentHeight = document.documentElement.scrollHeight;
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const scrollPercentage = (scrollTop / (documentHeight - windowHeight)) * 100;
+    
+    // Show popup when user scrolls 40% down
+    if (scrollPercentage >= 40) {
+      popupShownOnScroll = true;
+      showAutoPopup();
+      
+      // Remove scroll listener after popup is shown
+      window.removeEventListener('scroll', handleScroll);
+    }
+  }
+  
+  // Add scroll event listener
+  window.addEventListener('scroll', handleScroll);
+}
+
+// Show popup automatically on scroll trigger
+function showAutoPopup() {
+  if (!coinAlertPopup) {
+    return;
+  }
+  
+  // Default alert data
+  const defaultAlertData = {
+    name: 'Bitcoin (BTC)',
+    symbol: 'BTC',
+    message: '$BTC is breaking out!',
+    sentiment: '92% Bullish.',
+    icon: 'assets/images/icons/BTC.svg',
+    price: '$97,850'
+  };
+  
+  // Open the popup
+  coinAlertPopup.open(defaultAlertData);
+  
+  // Mark as shown in localStorage
+  localStorage.setItem('coinAlertPopupShown', 'true');
+  
+  // Auto-close after 5 seconds
+  setTimeout(() => {
+    coinAlertPopup.close();
+  }, 5000);
+}
 
 // Helper function to open alert from anywhere
 function openCoinAlert(alertData) {

@@ -1,0 +1,624 @@
+/* Detail Pages Styles */
+
+/* Clickable Info Cards */
+.info-card-link {
+    text-decoration: none;
+    display: block;
+    color: inherit;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card-link:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(247, 147, 26, 0.2);
+}
+
+.info-card-link .info-card {
+    cursor: pointer;
+}
+
+.info-card-link:hover .info-card {
+    border-color: #f7931a;
+}
+
+/* Detail Page Header */
+.detail-page-header {
+    width: 100%;
+    background-color: #000;
+    padding: 60px 0 40px;
+    border-bottom: 1px solid rgba(141, 112, 1, 0.3);
+}
+
+.detail-header-container {
+    max-width: 1285px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 78px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #f7931a;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    margin-bottom: 24px;
+    transition: color 0.3s ease;
+    align-self: flex-start;
+}
+
+.back-link:hover {
+    color: #ffaa3b;
+}
+
+.back-link i {
+    font-size: 12px;
+}
+
+.detail-label {
+    color: #f7931a;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0 0 12px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.detail-title {
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 48px;
+    font-weight: 600;
+    margin: 0 0 16px 0;
+    line-height: 1.2;
+}
+
+.detail-subtitle {
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    margin: 0;
+    line-height: 1.5;
+    opacity: 0.9;
+}
+
+/* Detail Article Section */
+.detail-article-section {
+    width: 100%;
+    background-color: #000;
+    padding: 60px 0 80px;
+}
+
+.detail-article-container {
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 78px;
+    box-sizing: border-box;
+}
+
+.article-header-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.article-date {
+    color: rgba(255, 255, 255, 0.6);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.article-featured-image {
+    width: 100%;
+    margin-bottom: 40px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.article-featured-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.article-content {
+    width: 100%;
+}
+
+.article-intro {
+    margin-bottom: 40px;
+}
+
+.article-lead {
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.6;
+    margin: 0;
+    opacity: 0.95;
+}
+
+.article-body {
+    margin-bottom: 50px;
+}
+
+.article-body h2 {
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    margin: 50px 0 20px 0;
+    line-height: 1.3;
+}
+
+.article-body h2:first-child {
+    margin-top: 0;
+}
+
+.article-body p {
+    color: rgba(255, 255, 255, 0.85);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.7;
+    margin: 0 0 24px 0;
+}
+
+.article-body ul {
+    color: rgba(255, 255, 255, 0.85);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.7;
+    margin: 0 0 24px 0;
+    padding-left: 24px;
+}
+
+.article-body li {
+    margin-bottom: 12px;
+}
+
+/* Perspectives in Detail Pages */
+.detail-perspectives {
+    margin: 50px 0;
+    padding: 30px 0;
+    border-top: 1px solid rgba(141, 112, 1, 0.3);
+    border-bottom: 1px solid rgba(141, 112, 1, 0.3);
+}
+
+/* Article Actions */
+.article-actions {
+    margin: 40px 0;
+    padding: 30px 0;
+}
+
+.share-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.share-label {
+    color: rgba(255, 255, 255, 0.7);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.social-share-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.share-btn {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    padding: 10px 18px;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.share-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.share-btn-instagram {
+    padding: 10px;
+}
+
+.share-icon-img {
+    width: 18px;
+    height: 18px;
+    display: block;
+}
+
+/* Freedom Meter Detail Specific Styles */
+.freedom-meter-detail .freedom-meter-visual-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 60px;
+    padding: 40px;
+    background-color: rgba(13, 11, 3, 0.5);
+    border: 1px solid rgba(141, 112, 1, 0.3);
+    border-radius: 20px;
+    flex-wrap: wrap;
+}
+
+.freedom-meter-large {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.freedom-meter-box.large {
+    width: 200px;
+    height: 200px;
+    padding: 24px;
+}
+
+.freedom-meter-box.large .freedom-meter-label {
+    font-size: 12px;
+    margin-bottom: 16px;
+}
+
+.freedom-meter-box.large .freedom-percentage {
+    font-size: 56px;
+}
+
+.freedom-meter-box.large .freedom-status {
+    font-size: 14px;
+}
+
+.freedom-meter-box.large .freedom-meter-risk {
+    font-size: 10px;
+    margin-top: 16px;
+}
+
+.detail-gauge {
+    position: relative;
+    width: 300px;
+    max-width: 100%;
+}
+
+/* Risk Factors Section */
+.risk-factors-section {
+    margin: 40px 0;
+}
+
+.risk-factor-item {
+    background-color: rgba(13, 11, 3, 0.5);
+    border-left: 4px solid #f7931a;
+    padding: 24px;
+    margin-bottom: 24px;
+    border-radius: 8px;
+}
+
+.risk-factor-item.positive {
+    border-left-color: #4ade80;
+}
+
+.risk-factor-title {
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 0 12px 0;
+}
+
+.risk-factor-item p {
+    color: rgba(255, 255, 255, 0.85);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.recommended-actions-list {
+    list-style: none;
+    padding: 0;
+    margin: 30px 0;
+}
+
+.recommended-actions-list li {
+    background-color: rgba(13, 11, 3, 0.3);
+    border-left: 3px solid #f7931a;
+    padding: 16px 20px;
+    margin-bottom: 16px;
+    border-radius: 6px;
+    color: rgba(255, 255, 255, 0.9);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.recommended-actions-list li strong {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.divider-line {
+    width: 100%;
+    height: 1px;
+    background-color: rgba(141, 112, 1, 0.3);
+    margin: 40px 0;
+}
+
+/* Comments Display Section */
+.comments-display-section {
+    margin: 50px 0;
+    padding-top: 40px;
+    border-top: 1px solid rgba(141, 112, 1, 0.3);
+}
+
+/* Make comment section always visible on detail pages */
+.detail-article-section .inline-comment-section {
+    display: block !important;
+    margin-top: 40px;
+    padding-top: 40px;
+    border-top: 1px solid rgba(141, 112, 1, 0.3);
+}
+
+.comments-section-heading {
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0 0 30px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.comment-item {
+    background-color: rgba(13, 11, 3, 0.5);
+    border: 1px solid rgba(141, 112, 1, 0.2);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: border-color 0.3s ease;
+}
+
+.comment-item:hover {
+    border-color: rgba(141, 112, 1, 0.4);
+}
+
+.comment-header {
+    margin-bottom: 12px;
+}
+
+.comment-author-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.comment-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #f7931a 0%, #ffaa3b 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    flex-shrink: 0;
+}
+
+.comment-author-details {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.comment-author-name {
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.comment-date {
+    color: rgba(255, 255, 255, 0.5);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.comment-text {
+    color: rgba(255, 255, 255, 0.9);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.6;
+    margin: 0 0 12px 0;
+}
+
+.comment-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-top: 8px;
+}
+
+.comment-like-btn {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 6px 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.comment-like-btn:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.3);
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.comment-like-btn.liked {
+    background-color: rgba(247, 147, 26, 0.15);
+    border-color: #f7931a;
+    color: #f7931a;
+}
+
+.comment-like-btn.liked:hover {
+    background-color: rgba(247, 147, 26, 0.25);
+}
+
+.like-icon {
+    font-size: 16px;
+    line-height: 1;
+}
+
+.like-count {
+    font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .detail-header-container,
+    .detail-article-container {
+        padding: 0 50px;
+    }
+
+    .detail-title {
+        font-size: 36px;
+    }
+
+    .detail-subtitle {
+        font-size: 18px;
+    }
+
+    .freedom-meter-visual-section {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .detail-gauge {
+        width: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .detail-page-header {
+        padding: 40px 0 30px;
+    }
+
+    .detail-header-container,
+    .detail-article-container {
+        padding: 0 30px;
+    }
+
+    .detail-title {
+        font-size: 28px;
+    }
+
+    .detail-subtitle {
+        font-size: 16px;
+    }
+
+    .article-lead {
+        font-size: 18px;
+    }
+
+    .article-body h2 {
+        font-size: 24px;
+    }
+
+    .article-body p,
+    .article-body ul {
+        font-size: 15px;
+    }
+
+    .freedom-meter-box.large {
+        width: 160px;
+        height: 160px;
+        padding: 20px;
+    }
+
+    .freedom-meter-box.large .freedom-percentage {
+        font-size: 42px;
+    }
+
+    .detail-gauge {
+        width: 200px;
+    }
+
+    .share-section {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 480px) {
+    .detail-header-container,
+    .detail-article-container {
+        padding: 0 20px;
+    }
+
+    .detail-title {
+        font-size: 24px;
+    }
+
+    .article-featured-image {
+        margin-bottom: 30px;
+    }
+
+    .article-body h2 {
+        font-size: 22px;
+    }
+
+    .freedom-meter-visual-section {
+        padding: 24px;
+    }
+
+    .freedom-meter-box.large {
+        width: 140px;
+        height: 140px;
+        padding: 16px;
+    }
+
+    .freedom-meter-box.large .freedom-percentage {
+        font-size: 36px;
+    }
+}
+

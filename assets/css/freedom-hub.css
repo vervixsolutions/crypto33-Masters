@@ -75,7 +75,7 @@ body {
 .coin-radar-title {
     color: #ffaa3b;
     font-family: 'Montserrat', sans-serif;
-    font-size: 32px;
+    font-size: var(--font-size-6xl);
     font-weight: 500;
     line-height: 1.1;
     margin: 0;
@@ -1045,6 +1045,29 @@ body {
     box-sizing: border-box;
 }
 
+/* Clickable Info Card Links */
+.info-card-link {
+    text-decoration: none;
+    display: block;
+    color: inherit;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 1;
+    max-width: 419px;
+}
+
+.info-card-link:hover {
+    transform: translateY(-4px);
+}
+
+.info-card-link .info-card {
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+.info-card-link:hover .info-card {
+    border-color: #f7931a;
+}
+
 .info-card {
     flex: 1;
     max-width: 419px;
@@ -1312,8 +1335,11 @@ body {
         gap: 20px;
     }
 
-    .info-card {
+    .info-card-link {
         max-width: 100%;
+    }
+
+    .info-card {
         height: auto;
         min-height: 450px;
     }
@@ -1400,9 +1426,12 @@ body {
         padding-right: 30px;
     }
 
-    .info-card {
+    .info-card-link {
         flex: 1 1 calc(50% - 8px);
         max-width: calc(50% - 8px);
+    }
+
+    .info-card {
         height: auto;
         min-height: 470px;
     }
@@ -1595,8 +1624,11 @@ body {
         gap: 20px;
     }
 
-    .info-card {
+    .info-card-link {
         max-width: 100%;
+    }
+
+    .info-card {
         height: auto;
         min-height: 350px;
         padding: 16px;
@@ -1875,6 +1907,10 @@ body {
 
     .info-cards-container {
         gap: 16px;
+    }
+
+    .info-card-link {
+        max-width: 100%;
     }
 
     .info-card {

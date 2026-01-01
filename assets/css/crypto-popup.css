@@ -1,0 +1,293 @@
+/* ============================================
+   CRYPTO POPUP STYLES
+   ============================================ */
+
+.crypto-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.crypto-popup-overlay.active {
+  display: flex;
+}
+
+.crypto-popup-container {
+  position: relative;
+  background-color: #09090b;
+  border: 1px solid #4a4b53;
+  border-radius: 20px;
+  width: 1034px;
+  max-width: 95%;
+  max-height: 90vh;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.crypto-popup-header {
+  position: relative;
+  padding: 26px 41px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.crypto-popup-category-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #191919;
+  border: 1px solid #4a4b53;
+  border-radius: 15px;
+  padding: 6px 12px;
+  height: 30px;
+  width: 104px;
+  box-sizing: border-box;
+}
+
+.crypto-popup-category-icon {
+  width: 17px;
+  height: 17px;
+  object-fit: contain;
+}
+
+.crypto-popup-category-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #8b8b8b;
+  text-transform: uppercase;
+  line-height: 1.1;
+}
+
+.crypto-popup-close-btn {
+  background-color: #191919;
+  border: 1px solid #4a4b53;
+  border-radius: 15px;
+  padding: 0;
+  width: 83.833px;
+  height: 30px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #8b8b8b;
+  text-transform: capitalize;
+  transition: all 0.3s ease;
+}
+
+.crypto-popup-close-btn:hover {
+  background-color: #252525;
+  color: #fff;
+}
+
+.crypto-popup-content {
+  padding: 0 41px 20px;
+}
+
+.crypto-popup-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.3;
+  margin: 0 0 8px 0;
+}
+
+.crypto-popup-description {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: #8b8b8b;
+  line-height: 1.3;
+  margin: 0 0 20px 0;
+}
+
+.crypto-popup-perspectives {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.crypto-popup-perspective-box {
+  flex: 1;
+  min-width: 280px;
+  background-color: #050507;
+  border: 1px solid #4a4b53;
+  border-radius: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.crypto-popup-perspective-box.atlas-truth {
+  background-color: #0d0b03;
+  border: 1px solid #8d7001;
+  border-radius: 12px;
+}
+
+.crypto-popup-perspective-header {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 1.3;
+  margin: 0 0 10px 0;
+}
+
+.crypto-popup-perspective-header.left-spin {
+  color: #8ac7f1;
+}
+
+.crypto-popup-perspective-header.right-spin {
+  color: #f0a781;
+}
+
+.crypto-popup-perspective-header.atlas-truth {
+  color: #f7931a;
+}
+
+.crypto-popup-perspective-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: #8b8b8b;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.crypto-popup-perspective-box.atlas-truth .crypto-popup-perspective-text {
+  color: #ffffff;
+}
+
+.crypto-popup-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #4a4b53;
+}
+
+.crypto-popup-tagline {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  color: #8b8b8b;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.crypto-popup-freedom-score {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.crypto-popup-freedom-score-bar {
+  background-color: #351f04;
+  border-radius: 15px;
+  height: 30px;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  min-width: 268px;
+}
+
+.crypto-popup-freedom-score-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: #c0751b;
+  text-transform: capitalize;
+  line-height: 1.1;
+  white-space: nowrap;
+}
+
+.crypto-popup-compass-icon {
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+}
+
+.crypto-popup-compass-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Politics Popup Danger Zone Styling */
+.politics-danger-zone {
+  background-color: #350404 !important;
+}
+
+.politics-danger-text {
+  color: #c01b1b !important;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .crypto-popup-container {
+    width: 95%;
+    max-width: 95%;
+  }
+  
+  .crypto-popup-perspectives {
+    flex-direction: column;
+  }
+  
+  .crypto-popup-perspective-box {
+    min-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .crypto-popup-container {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 0;
+    max-height: 100vh;
+  }
+  
+  .crypto-popup-header {
+    padding: 20px 20px 0;
+  }
+  
+  .crypto-popup-content {
+    padding: 0 20px 20px;
+  }
+  
+  .crypto-popup-title {
+    font-size: 18px;
+  }
+  
+  .crypto-popup-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  
+  .crypto-popup-freedom-score {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .crypto-popup-freedom-score-bar {
+    min-width: auto;
+    flex: 1;
+  }
+}
+

@@ -14,7 +14,9 @@
     <!-- Main CSS - Imports all styles -->
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/header.css">
     <link rel="stylesheet" href="assets/css/vault.css">
+    <link rel="stylesheet" href="assets/css/training-video-image-popup.css">
     <link rel="stylesheet" href="assets/css/footer.css">
     <title>Crypto33 Vault - Track Your Progress</title>
 </head>
@@ -39,12 +41,11 @@
                 <a href="freedom-hub.html" class="nav-link">FREEDOM HUB (NEWS)</a>
                 <a href="frog-breaker-xp.html" class="nav-link">FOG BREAKER XP</a>
                 <a href="books.html" class="nav-link">BOOKS</a>
-                <a href="signup.html" class="nav-link">LOGIN/JOIN</a>
             </nav>
-            <a href="signup.html" class="cta-button">
-                <span class="full-text">Join the $33 Club — Limited Founding Offer</span>
-                <span class="short-text">Join $33 Club</span>
-            </a>
+            <div class="header-actions">
+                <a href="signup.html" class="btn-login">Login</a>
+                <a href="signup.html" class="btn-upgrade">Upgrade</a>
+            </div>
         </div>
     </header>
     
@@ -131,8 +132,8 @@
                     <div class="vault-progress-section">
                         <div class="vault-progress-bar-container">
                             <div class="vault-progress-bar">
-                                <div class="vault-progress-fill" style="width: 62%;">
-                                    <span class="vault-progress-percentage">62%</span>
+                                <div class="vault-progress-fill" data-progress="62">
+                                    <span class="vault-progress-percentage">0%</span>
                                 </div>
                             </div>
                             
@@ -727,6 +728,38 @@
         </div>
     </div>
     
+    <!-- Training Video Image Popup -->
+    <div class="training-video-image-overlay" id="training-video-image-overlay">
+        <button class="training-video-image-close" aria-label="Close popup">&times;</button>
+        <div class="training-video-image-wrapper">
+            <img src="assets/images/vault/Picture17 2.png" alt="Training Video" class="training-video-image">
+        </div>
+    </div>
+    
+    <!-- Refer a Friend Image Popup -->
+    <div class="refer-friend-image-overlay" id="refer-friend-image-overlay">
+        <button class="refer-friend-image-close" aria-label="Close popup">&times;</button>
+        <div class="refer-friend-image-wrapper">
+            <img src="assets/images/vault/162674633198fb3af558dd9acff5b660f25b42ff.png" alt="Refer a Friend" class="refer-friend-image">
+        </div>
+    </div>
+    
+    <!-- Week 2 Challenge Image Popup -->
+    <div class="week2-challenge-image-overlay" id="week2-challenge-image-overlay">
+        <button class="week2-challenge-image-close" aria-label="Close popup">&times;</button>
+        <div class="week2-challenge-image-wrapper">
+            <img src="assets/images/vault/Picture8 1.png" alt="Week 2 Challenge" class="week2-challenge-image">
+        </div>
+    </div>
+    
+    <!-- Sovereign Tier Image Popup -->
+    <div class="sovereign-tier-image-overlay" id="sovereign-tier-image-overlay">
+        <button class="sovereign-tier-image-close" aria-label="Close popup">&times;</button>
+        <div class="sovereign-tier-image-wrapper">
+            <img src="assets/images/vault/ChatGPT Image Dec 12, 2025, 11_04_22 PM 1.png" alt="Sovereign Tier" class="sovereign-tier-image">
+        </div>
+    </div>
+    
     <script>
         // Mobile menu toggle (reuse from index.html)
         const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
@@ -886,7 +919,216 @@
                 }
             });
         }
+
+        // Training Video Image Popup
+        const trainingVideoImageOverlay = document.getElementById('training-video-image-overlay');
+        const trainingVideoImageClose = document.querySelector('.training-video-image-close');
+        const trainingVideoStartBtn = document.querySelector('#mission-briefing-training-video .mission-btn-start');
+
+        function openTrainingVideoImagePopup() {
+            if (trainingVideoImageOverlay) {
+                trainingVideoImageOverlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeTrainingVideoImagePopup() {
+            if (trainingVideoImageOverlay) {
+                trainingVideoImageOverlay.classList.remove('active');
+                // Only restore overflow if mission briefing popup is not open
+                if (!missionOverlay || !missionOverlay.classList.contains('active')) {
+                    document.body.style.overflow = '';
+                }
+            }
+        }
+
+        // Open popup when clicking "Start Mission" in training video mission
+        if (trainingVideoStartBtn) {
+            trainingVideoStartBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                // Keep mission briefing popup open, just open image popup on top
+                openTrainingVideoImagePopup();
+            });
+        }
+
+        // Close popup handlers
+        if (trainingVideoImageClose) {
+            trainingVideoImageClose.addEventListener('click', closeTrainingVideoImagePopup);
+        }
+
+        if (trainingVideoImageOverlay) {
+            trainingVideoImageOverlay.addEventListener('click', function(e) {
+                if (e.target === trainingVideoImageOverlay) {
+                    closeTrainingVideoImagePopup();
+                }
+            });
+        }
+
+        // Close on Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && trainingVideoImageOverlay && trainingVideoImageOverlay.classList.contains('active')) {
+                closeTrainingVideoImagePopup();
+            }
+        });
+
+        // Refer a Friend Image Popup
+        const referFriendImageOverlay = document.getElementById('refer-friend-image-overlay');
+        const referFriendImageClose = document.querySelector('.refer-friend-image-close');
+        const referFriendStartBtn = document.querySelector('#mission-briefing-refer-friend .mission-btn-start');
+
+        function openReferFriendImagePopup() {
+            if (referFriendImageOverlay) {
+                referFriendImageOverlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeReferFriendImagePopup() {
+            if (referFriendImageOverlay) {
+                referFriendImageOverlay.classList.remove('active');
+                // Only restore overflow if mission briefing popup is not open
+                if (!missionOverlay || !missionOverlay.classList.contains('active')) {
+                    document.body.style.overflow = '';
+                }
+            }
+        }
+
+        // Open popup when clicking "Start Mission" in refer a friend mission
+        if (referFriendStartBtn) {
+            referFriendStartBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                // Keep mission briefing popup open, just open image popup on top
+                openReferFriendImagePopup();
+            });
+        }
+
+        // Close popup handlers
+        if (referFriendImageClose) {
+            referFriendImageClose.addEventListener('click', closeReferFriendImagePopup);
+        }
+
+        if (referFriendImageOverlay) {
+            referFriendImageOverlay.addEventListener('click', function(e) {
+                if (e.target === referFriendImageOverlay) {
+                    closeReferFriendImagePopup();
+                }
+            });
+        }
+
+        // Close on Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && referFriendImageOverlay && referFriendImageOverlay.classList.contains('active')) {
+                closeReferFriendImagePopup();
+            }
+        });
+
+        // Week 2 Challenge Image Popup
+        const week2ChallengeImageOverlay = document.getElementById('week2-challenge-image-overlay');
+        const week2ChallengeImageClose = document.querySelector('.week2-challenge-image-close');
+        const week2ChallengeStartBtn = document.querySelector('#mission-briefing-week2-challenge .mission-btn-start');
+
+        function openWeek2ChallengeImagePopup() {
+            if (week2ChallengeImageOverlay) {
+                week2ChallengeImageOverlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeWeek2ChallengeImagePopup() {
+            if (week2ChallengeImageOverlay) {
+                week2ChallengeImageOverlay.classList.remove('active');
+                // Only restore overflow if mission briefing popup is not open
+                if (!missionOverlay || !missionOverlay.classList.contains('active')) {
+                    document.body.style.overflow = '';
+                }
+            }
+        }
+
+        // Open popup when clicking "Start Mission" in week 2 challenge mission
+        if (week2ChallengeStartBtn) {
+            week2ChallengeStartBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                // Keep mission briefing popup open, just open image popup on top
+                openWeek2ChallengeImagePopup();
+            });
+        }
+
+        // Close popup handlers
+        if (week2ChallengeImageClose) {
+            week2ChallengeImageClose.addEventListener('click', closeWeek2ChallengeImagePopup);
+        }
+
+        if (week2ChallengeImageOverlay) {
+            week2ChallengeImageOverlay.addEventListener('click', function(e) {
+                if (e.target === week2ChallengeImageOverlay) {
+                    closeWeek2ChallengeImagePopup();
+                }
+            });
+        }
+
+        // Close on Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && week2ChallengeImageOverlay && week2ChallengeImageOverlay.classList.contains('active')) {
+                closeWeek2ChallengeImagePopup();
+            }
+        });
+
+        // Sovereign Tier Image Popup
+        const sovereignTierImageOverlay = document.getElementById('sovereign-tier-image-overlay');
+        const sovereignTierImageClose = document.querySelector('.sovereign-tier-image-close');
+        const sovereignTierStartBtn = document.querySelector('#mission-briefing-upgrade-sovereign .mission-btn-start');
+
+        function openSovereignTierImagePopup() {
+            if (sovereignTierImageOverlay) {
+                sovereignTierImageOverlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeSovereignTierImagePopup() {
+            if (sovereignTierImageOverlay) {
+                sovereignTierImageOverlay.classList.remove('active');
+                // Only restore overflow if mission briefing popup is not open
+                if (!missionOverlay || !missionOverlay.classList.contains('active')) {
+                    document.body.style.overflow = '';
+                }
+            }
+        }
+
+        // Open popup when clicking "Start Mission" in sovereign tier mission
+        if (sovereignTierStartBtn) {
+            sovereignTierStartBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                // Keep mission briefing popup open, just open image popup on top
+                openSovereignTierImagePopup();
+            });
+        }
+
+        // Close popup handlers
+        if (sovereignTierImageClose) {
+            sovereignTierImageClose.addEventListener('click', closeSovereignTierImagePopup);
+        }
+
+        if (sovereignTierImageOverlay) {
+            sovereignTierImageOverlay.addEventListener('click', function(e) {
+                if (e.target === sovereignTierImageOverlay) {
+                    closeSovereignTierImagePopup();
+                }
+            });
+        }
+
+        // Close on Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && sovereignTierImageOverlay && sovereignTierImageOverlay.classList.contains('active')) {
+                closeSovereignTierImagePopup();
+            }
+        });
     </script>
+    <script src="assets/js/vault-progress-animation.js"></script>
 </body>
 </html>
 

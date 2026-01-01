@@ -83,12 +83,12 @@
                     <!-- Progress Bar -->
                     <div class="books-progress-bar-wrapper">
                         <div class="books-progress-labels">
-                            <span class="progress-label-left">40% complete</span>
+                            <span class="progress-label-left">0% complete</span>
                             <span class="progress-label-right">Collect all books to unlock a special Vault badge.</span>
                         </div>
                         <div class="books-xp-progress-bar">
                             <div class="books-progress-track"></div>
-                            <div class="books-progress-fill" style="width: 40%;"></div>
+                            <div class="books-progress-fill" data-progress="40" style="width: 0%;"></div>
                         </div>
                     </div>
                 </div>
@@ -182,12 +182,12 @@
                         
                         <div class="sidebar-progress-bar-wrapper">
                             <div class="sidebar-progress-labels">
-                                <span class="progress-label-left">40% complete</span>
+                                <span class="progress-label-left">0% complete</span>
                                 <span class="progress-label-right">Books Collected: 2 of 5</span>
                             </div>
                             <div class="sidebar-xp-progress-bar">
                                 <div class="sidebar-progress-track"></div>
-                                <div class="sidebar-progress-fill" style="width: 40%;"></div>
+                                <div class="sidebar-progress-fill" data-progress="40" style="width: 0%;"></div>
                             </div>
                         </div>
                     </div>
@@ -295,6 +295,7 @@
         </div>
     </footer>
     
+    <script src="assets/js/books-progress-animation.js"></script>
     <script>
         // Mobile menu toggle
         const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');

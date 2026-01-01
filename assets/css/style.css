@@ -307,6 +307,11 @@ body {
     font-weight: 600;
     color: #191A25;
     margin: 0;
+    text-decoration: none;
+}
+
+.see-full-radar-button:hover {
+    background-color: #8a95a8;
 }
 
 
@@ -950,6 +955,8 @@ body {
     letter-spacing: 0.5px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
+    display: inline-block;
 }
 
 .faith-button:hover {
@@ -1309,6 +1316,7 @@ height: 30px;
     gap: 10px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    text-decoration: none;
 }
 
 .vault-button:hover {
@@ -2880,9 +2888,12 @@ margin-top: 5px;
     gap: 8px;
     font-family: 'Montserrat', sans-serif;
     background-color: #e68217;
+    text-decoration: none;
 }
 
- 
+.start-training-button:hover {
+    background-color: #f7931a;
+}
 
 .start-training-button:active {
     transform: translateY(0);
@@ -3102,6 +3113,26 @@ margin-top: 5px;
 
 
 /* info cards */
+.info-card-link {
+    text-decoration: none;
+    display: block;
+    color: inherit;
+    transition: transform 0.3s ease;
+}
+
+.info-card-link:hover {
+    transform: translateY(-4px);
+}
+
+.info-card-link .info-card {
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+.info-card-link:hover .info-card {
+    border-color: #f7931a !important;
+}
+
 .info-card {
     background-color: transparent !important;
     border: 0.794px solid #303241 !important;
@@ -3138,9 +3169,12 @@ margin-top: 5px;
         gap: 12px;
     }
     
-    .info-card {
+    .info-card-link {
         flex: 0 0 calc((100% - 12px) / 2) !important;
         max-width: calc((100% - 12px) / 2) !important;
+    }
+    
+    .info-card {
         height: auto;
         min-height: 380px;
     }
@@ -3200,9 +3234,12 @@ margin-top: 5px;
         gap: 14px;
     }
     
-    .info-card {
+    .info-card-link {
         flex: 0 0 100% !important;
         max-width: 100% !important;
+    }
+    
+    .info-card {
         height: auto;
         min-height: 360px;
     }
@@ -3240,4 +3277,6 @@ margin-top: 5px;
 
 .info-cards-section {
     background-color: var(--color-bg-secondary) !important;
+    padding-top: 0 !important;
+    padding-bottom: var(--spacing-7xl) !important;
 }

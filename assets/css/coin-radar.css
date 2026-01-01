@@ -149,6 +149,7 @@ button, a, .coin-card, .mover-card, .tab-btn {
   display: flex;
   gap: 17px;
   align-items: center;
+  position: relative;
 }
 
 .filter-btn {
@@ -403,7 +404,7 @@ button, a, .coin-card, .mover-card, .tab-btn {
 /* ========== TABLE HEADER ========== */
 .table-header {
   display: grid;
-  grid-template-columns: 40px 150px 80px 100px 200px 150px;
+  grid-template-columns: 40px 150px 80px 100px 200px 150px 80px;
   gap: 20px;
   padding: 0 44px;
   margin-bottom: 10px;
@@ -441,6 +442,10 @@ button, a, .coin-card, .mover-card, .tab-btn {
   grid-column: 7;
 }
 
+.th-action {
+  grid-column: 8;
+}
+
 /* ========== COINS TABLE ========== */
 .coins-table {
   display: flex;
@@ -459,6 +464,7 @@ button, a, .coin-card, .mover-card, .tab-btn {
   padding: 15px 22px;
   transition: background var(--transition-fast), border-color var(--transition-fast);
   cursor: pointer;
+  position: relative;
 }
 
 .coin-row:hover {
@@ -533,6 +539,7 @@ button, a, .coin-card, .mover-card, .tab-btn {
 .coin-row-sentiment img {
   width: 10px;
   height: 10px;
+  flex-shrink: 0;
 }
 
 .coin-row-sentiment.neutral span {
@@ -588,6 +595,60 @@ button, a, .coin-card, .mover-card, .tab-btn {
   opacity: 0.5;
 }
 
+/* Coin Row Action Button */
+.coin-row-action {
+  position: absolute;
+  right: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.coin-action-btn {
+  padding: 6px 16px;
+  border-radius: 6px;
+  font-family: var(--font-primary);
+  font-size: 12px;
+  font-weight: var(--font-weight-semibold);
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  text-transform: capitalize;
+}
+
+.hold-tight-btn {
+  background: rgba(34, 197, 94, 0.15);
+  color: #22c55e;
+  border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+.hold-tight-btn:hover {
+  background: rgba(34, 197, 94, 0.25);
+  border-color: rgba(34, 197, 94, 0.5);
+}
+
+.sell-now-btn {
+  background: rgba(255, 59, 48, 0.15);
+  color: #ff3b30;
+  border: 1px solid rgba(255, 59, 48, 0.3);
+}
+
+.sell-now-btn:hover {
+  background: rgba(255, 59, 48, 0.25);
+  border-color: rgba(255, 59, 48, 0.5);
+}
+
+/* Hide action buttons by default, show when activated */
+.coin-row-action .coin-action-btn {
+  display: none;
+}
+
+.coin-row-action.show-hold-tight .hold-tight-btn,
+.coin-row-action.show-sell-now .sell-now-btn {
+  display: inline-block;
+}
+
 /* ========== POPUP NOTE ========== */
 /* ========== BOTTOM INFO SECTION ========== */
 .bottom-info-section {
@@ -621,6 +682,12 @@ button, a, .coin-card, .mover-card, .tab-btn {
   height: 12px;
   border-radius: 50%;
   display: inline-block;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.circle-indicator:hover {
+  transform: scale(1.2);
 }
 
 .circle-indicator.red {

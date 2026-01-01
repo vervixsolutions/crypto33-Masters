@@ -183,6 +183,7 @@
   background-color: #ffffff;
   border-radius: 39.28px;
   overflow: hidden;
+  --progress-width: 0%;
 }
 
 .xp-progress-bar::before {
@@ -190,10 +191,11 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 40%;
+  width: var(--progress-width);
   height: 100%;
   background: linear-gradient(90deg, #E14B3D 0%, #F3B445 17.79%, #DED588 35.89%, #93D2FC 64.91%);
   border-radius: 39.28px;
+  transition: width 2s ease-out;
 }
 
 .xp-bar-image {

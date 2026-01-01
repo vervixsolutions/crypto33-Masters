@@ -26,6 +26,9 @@
     <!-- Page-specific styles -->
     <link rel="stylesheet" href="assets/css/footer.css">
     <link rel="stylesheet" href="assets/css/frog-breaker-xp.css">
+    <link rel="stylesheet" href="assets/css/sugar-series-popup.css">
+    <link rel="stylesheet" href="assets/css/alcohol-series-popup.css">
+    <link rel="stylesheet" href="assets/css/warrior-series-popup.css">
     <title>Fog Breaker XP - Crypto33 Masters</title>
 </head>
 <body>
@@ -70,8 +73,8 @@
                 </div>
                 <div class="xp-progress-bar__bar-wrapper">
                     <div class="xp-progress-bar__bar">
-                        <div class="xp-progress-bar__fill" style="width: 27%"></div>
-                        <span class="xp-progress-bar__bar-text">XP Progress: 27%</span>
+                        <div class="xp-progress-bar__fill" data-progress="27" style="width: 0%"></div>
+                        <span class="xp-progress-bar__bar-text">XP Progress: 0%</span>
                     </div>
                 </div>
             </div>
@@ -239,7 +242,7 @@
                             <li>Video 4: Rewire cravings with XP brain tools</li>
                             <li>Bonus: XP Checklist</li>
                         </ul>
-                        <button class="series-card__button">Start Series</button>
+                        <button class="series-card__button sugar-series-start-btn">Start Series</button>
                     </div>
                 </div>
                 
@@ -255,7 +258,7 @@
                             <li>Video 4: Real recovery vs supplements scams</li>
                             <li>Bonus: Shareable cheat sheet</li>
                         </ul>
-                        <button class="series-card__button">Start Series</button>
+                        <button class="series-card__button alcohol-series-start-btn">Start Series</button>
                     </div>
                 </div>
                 
@@ -270,7 +273,7 @@
                             <li>Video 3: Daily micro wins + anti-shame systems</li>
                             <li>Bonus: Warrior Badge auto-unlocks</li>
                         </ul>
-                        <button class="series-card__button">Start Series</button>
+                        <button class="series-card__button warrior-series-start-btn">Start Series</button>
                     </div>
                 </div>
             </div>
@@ -464,6 +467,7 @@
     </footer>
 
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/xp-progress-animation.js"></script>
     <script>
         // Position animated background to start from hero top and end at pillars bottom
         document.addEventListener('DOMContentLoaded', function() {
@@ -558,8 +562,192 @@
             
             // Update on load
             updateActiveNav();
+
+            // Sugar Series Image Popup
+            const sugarSeriesOverlay = document.getElementById('sugar-series-image-overlay');
+            const sugarSeriesClose = document.querySelector('.sugar-series-image-close');
+            const sugarSeriesStartBtn = document.querySelector('.sugar-series-start-btn');
+
+            function openSugarSeriesPopup() {
+                if (sugarSeriesOverlay) {
+                    sugarSeriesOverlay.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                }
+            }
+
+            function closeSugarSeriesPopup() {
+                if (sugarSeriesOverlay) {
+                    sugarSeriesOverlay.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            }
+
+            // Open popup when clicking "Start Series" button on Sugar Series card
+            if (sugarSeriesStartBtn) {
+                console.log('Sugar Series button found, attaching event listener');
+                sugarSeriesStartBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    console.log('Sugar Series button clicked');
+                    openSugarSeriesPopup();
+                });
+            } else {
+                console.error('Sugar Series button not found');
+            }
+
+            if (!sugarSeriesOverlay) {
+                console.error('Sugar Series overlay not found');
+            }
+
+            // Close popup handlers
+            if (sugarSeriesClose) {
+                sugarSeriesClose.addEventListener('click', closeSugarSeriesPopup);
+            }
+
+            if (sugarSeriesOverlay) {
+                sugarSeriesOverlay.addEventListener('click', function(e) {
+                    if (e.target === sugarSeriesOverlay) {
+                        closeSugarSeriesPopup();
+                    }
+                });
+            }
+
+            // Close on Escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && sugarSeriesOverlay && sugarSeriesOverlay.classList.contains('active')) {
+                    closeSugarSeriesPopup();
+                }
+            });
+
+            // Alcohol Series Image Popup
+            const alcoholSeriesOverlay = document.getElementById('alcohol-series-image-overlay');
+            const alcoholSeriesClose = document.querySelector('.alcohol-series-image-close');
+            const alcoholSeriesStartBtn = document.querySelector('.alcohol-series-start-btn');
+
+            function openAlcoholSeriesPopup() {
+                if (alcoholSeriesOverlay) {
+                    alcoholSeriesOverlay.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                }
+            }
+
+            function closeAlcoholSeriesPopup() {
+                if (alcoholSeriesOverlay) {
+                    alcoholSeriesOverlay.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            }
+
+            // Open popup when clicking "Start Series" button on Alcohol Series card
+            if (alcoholSeriesStartBtn) {
+                console.log('Alcohol Series button found, attaching event listener');
+                alcoholSeriesStartBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    console.log('Alcohol Series button clicked');
+                    openAlcoholSeriesPopup();
+                });
+            } else {
+                console.error('Alcohol Series button not found');
+            }
+
+            // Close popup handlers
+            if (alcoholSeriesClose) {
+                alcoholSeriesClose.addEventListener('click', closeAlcoholSeriesPopup);
+            }
+
+            if (alcoholSeriesOverlay) {
+                alcoholSeriesOverlay.addEventListener('click', function(e) {
+                    if (e.target === alcoholSeriesOverlay) {
+                        closeAlcoholSeriesPopup();
+                    }
+                });
+            }
+
+            // Close on Escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && alcoholSeriesOverlay && alcoholSeriesOverlay.classList.contains('active')) {
+                    closeAlcoholSeriesPopup();
+                }
+            });
+
+            // Warrior Series Image Popup
+            const warriorSeriesOverlay = document.getElementById('warrior-series-image-overlay');
+            const warriorSeriesClose = document.querySelector('.warrior-series-image-close');
+            const warriorSeriesStartBtn = document.querySelector('.warrior-series-start-btn');
+
+            function openWarriorSeriesPopup() {
+                if (warriorSeriesOverlay) {
+                    warriorSeriesOverlay.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                }
+            }
+
+            function closeWarriorSeriesPopup() {
+                if (warriorSeriesOverlay) {
+                    warriorSeriesOverlay.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            }
+
+            // Open popup when clicking "Start Series" button on Warrior Series card
+            if (warriorSeriesStartBtn) {
+                console.log('Warrior Series button found, attaching event listener');
+                warriorSeriesStartBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    console.log('Warrior Series button clicked');
+                    openWarriorSeriesPopup();
+                });
+            } else {
+                console.error('Warrior Series button not found');
+            }
+
+            // Close popup handlers
+            if (warriorSeriesClose) {
+                warriorSeriesClose.addEventListener('click', closeWarriorSeriesPopup);
+            }
+
+            if (warriorSeriesOverlay) {
+                warriorSeriesOverlay.addEventListener('click', function(e) {
+                    if (e.target === warriorSeriesOverlay) {
+                        closeWarriorSeriesPopup();
+                    }
+                });
+            }
+
+            // Close on Escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && warriorSeriesOverlay && warriorSeriesOverlay.classList.contains('active')) {
+                    closeWarriorSeriesPopup();
+                }
+            });
         });
     </script>
+
+    <!-- Sugar Series Image Popup -->
+    <div class="sugar-series-image-overlay" id="sugar-series-image-overlay">
+        <div class="sugar-series-image-wrapper">
+            <button class="sugar-series-image-close" aria-label="Close popup">&times;</button>
+            <img src="assets/images/frog-breaker-xp/Picture4 1.png" alt="Sugar Mini Series" class="sugar-series-image">
+        </div>
+    </div>
+
+    <!-- Alcohol Series Image Popup -->
+    <div class="alcohol-series-image-overlay" id="alcohol-series-image-overlay">
+        <div class="alcohol-series-image-wrapper">
+            <button class="alcohol-series-image-close" aria-label="Close popup">&times;</button>
+            <img src="assets/images/frog-breaker-xp/Picture9 1.png" alt="Alcohol Mini Series" class="alcohol-series-image">
+        </div>
+    </div>
+
+    <!-- Warrior Series Image Popup -->
+    <div class="warrior-series-image-overlay" id="warrior-series-image-overlay">
+        <div class="warrior-series-image-wrapper">
+            <button class="warrior-series-image-close" aria-label="Close popup">&times;</button>
+            <img src="assets/images/frog-breaker-xp/Picture17 1.png" alt="Warrior Mindset XP Series" class="warrior-series-image">
+        </div>
+    </div>
 </body>
 </html>
 
