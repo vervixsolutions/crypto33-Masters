@@ -277,18 +277,20 @@
                     </div>
                 </div>
 
-                <!-- Table Header -->
-                <div class="table-header">
-                    <span class="th-coin-name">Coin Name</span>
-                    <span class="th-symbol">Symbol</span>
-                    <span class="th-price">Price</span>
-                    <span class="th-change">24h % Change</span>
-                    <span class="th-sentiment">Bullish/Bearish</span>
-                    <span class="th-badge">Badge</span>
-                </div>
+                <!-- Table Content Wrapper (Animated) -->
+                <div class="table-content-wrapper">
+                    <!-- Table Header -->
+                    <div class="table-header">
+                        <span class="th-coin-name">Coin Name</span>
+                        <span class="th-symbol">Symbol</span>
+                        <span class="th-price">Price</span>
+                        <span class="th-change">24h % Change</span>
+                        <span class="th-sentiment">Bullish/Bearish</span>
+                        <span class="th-badge">Badge</span>
+                    </div>
 
-                <!-- Coin Rows -->
-                <div class="coins-table">
+                    <!-- Coin Rows -->
+                    <div class="coins-table">
                     <!-- Bitcoin Row -->
                     <div class="coin-row" onclick="openPortfolioPopup({name: 'Bitcoin (BTC)', icon: 'assets/images/icons/BTC.svg', livePrice: '$97,850'})" style="cursor: pointer;">
                         <div class="coin-row-number">1</div>
@@ -376,6 +378,7 @@
                         <div class="coin-row-badge"></div>
                     </div>
                 </div>
+                </div>
             </div>
         </section>
 
@@ -392,22 +395,23 @@
                         <button class="table-tab">Losers</button>
                         <button class="table-tab">24h Vol</button>
                         <button class="table-tab">Market Cap</button>
-                        <button class="visit-coingecko-btn">Visit CoinGecko</button>
                     </div>
                 </div>
 
-                <!-- Table Header -->
-                <div class="table-header">
-                    <span class="th-coin-name">Coin Name</span>
-                    <span class="th-symbol">Symbol</span>
-                    <span class="th-price">Price</span>
-                    <span class="th-change">24h % Change</span>
-                    <span class="th-sentiment">Bullish/Bearish</span>
-                    <span class="th-favorites">Favorites</span>
-                </div>
+                <!-- Table Content Wrapper (Animated) -->
+                <div class="table-content-wrapper">
+                    <!-- Table Header -->
+                    <div class="table-header">
+                        <span class="th-coin-name">Coin Name</span>
+                        <span class="th-symbol">Symbol</span>
+                        <span class="th-price">Price</span>
+                        <span class="th-change">24h % Change</span>
+                        <span class="th-sentiment">Bullish/Bearish</span>
+                        <span class="th-favorites">Favorites</span>
+                    </div>
 
-                <!-- Coin Rows -->
-                <div class="coins-table">
+                    <!-- Coin Rows -->
+                    <div class="coins-table">
                     <!-- Bitcoin Row -->
                     <div class="coin-row" onclick="openPortfolioPopup({name: 'Bitcoin (BTC)', icon: 'assets/images/icons/BTC.svg', livePrice: '$97,850'})" style="cursor: pointer;">
                         <div class="coin-row-number">1</div>
@@ -514,8 +518,13 @@
                         <div class="coin-row-action"></div>
                     </div>
                 </div>
+                </div>
+            </div>
+        </section>
 
-                <!-- Bottom Info Section -->
+        <!-- Bottom Info Section (Always Visible) -->
+        <section class="bottom-info-section-wrapper">
+            <div class="container">
                 <div class="bottom-info-section">
                     <!-- Disclaimer -->
                     <p class="disclaimer-text">
@@ -530,9 +539,6 @@
                             Click these circles to view "Sell Now" & "Hold Tight pop-ups
                         </p>
                     </div>
-
-                    <!-- Popup Button -->
-                    <button class="popup-btn" onclick="openCoinAlert({name: 'Bitcoin (BTC)', symbol: 'BTC', message: '$BTC is breaking out!', sentiment: '92% Bullish.', icon: 'assets/images/icons/BTC.svg', price: '$97,850'})">CLICK ME TO SEE POP UP</button>
                 </div>
             </div>
         </section>
@@ -673,6 +679,7 @@
     <script src="assets/js/market-image-popup.js"></script>
     <script src="assets/js/coin-action-buttons.js"></script>
     <script src="assets/js/filter-panel.js"></script>
+    <script src="assets/js/coin-radar-tabs.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
 </html>

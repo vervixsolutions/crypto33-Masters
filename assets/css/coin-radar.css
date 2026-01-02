@@ -130,7 +130,7 @@ button, a, .coin-card, .mover-card, .tab-btn {
   color: #666873;
   cursor: pointer;
   padding: 0;
-  transition: color var(--transition-fast);
+  transition: none;
   text-transform: capitalize;
 }
 
@@ -139,10 +139,12 @@ button, a, .coin-card, .mover-card, .tab-btn {
   background: var(--color-bg-tertiary);
   padding: 9px 12px;
   border-radius: 8px;
+  transition: none;
 }
 
 .tab-btn:hover {
   color: var(--color-primary);
+  transition: none;
 }
 
 .search-filter-wrapper {
@@ -206,6 +208,9 @@ button, a, .coin-card, .mover-card, .tab-btn {
 /* ========== TOP 4 COIN CARDS ========== */
 .top-coins-section {
   padding: 25px 0 40px;
+  transition: opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1), 
+              transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: opacity, transform;
 }
 
 .coin-cards-grid {
@@ -341,6 +346,19 @@ button, a, .coin-card, .mover-card, .tab-btn {
 /* ========== COINS TABLE SECTION ========== */
 .coins-table-section {
   padding: 25px 0;
+  transition: none;
+}
+
+/* Table Content Wrapper - Only this animates */
+.table-content-wrapper {
+  transition: opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1), 
+              transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: opacity, transform;
+}
+
+.table-header,
+.coins-table {
+  transition: none !important;
 }
 
 .table-tabs {
@@ -366,7 +384,7 @@ button, a, .coin-card, .mover-card, .tab-btn {
   color: #666873;
   cursor: pointer;
   padding: 0;
-  transition: color var(--transition-fast);
+  transition: none;
   text-transform: capitalize;
 }
 
@@ -375,10 +393,12 @@ button, a, .coin-card, .mover-card, .tab-btn {
   background: var(--color-bg-tertiary);
   padding: 9px 12px;
   border-radius: 8px;
+  transition: none;
 }
 
 .table-tab:hover {
   color: var(--color-primary);
+  transition: none;
 }
 
 .visit-coingecko-btn {
@@ -649,7 +669,11 @@ button, a, .coin-card, .mover-card, .tab-btn {
   display: inline-block;
 }
 
-/* ========== POPUP NOTE ========== */
+/* ========== BOTTOM INFO SECTION WRAPPER ========== */
+.bottom-info-section-wrapper {
+  padding: 25px 0;
+}
+
 /* ========== BOTTOM INFO SECTION ========== */
 .bottom-info-section {
   display: flex;

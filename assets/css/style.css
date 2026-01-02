@@ -1153,8 +1153,7 @@ height: 30px;
     height: 100%;
     border-radius: 20px;
     background: linear-gradient(90deg, #F7931A 0%, #7A1A00 100%);
-     
-    transition: width 0.3s ease;
+    transition: width 2s cubic-bezier(0.4, 0, 0.2, 1); /* Smooth animation when width changes */
 }
 
 .progress-labels {

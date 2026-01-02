@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="assets/css/comment-section.css">
     <link rel="stylesheet" href="assets/css/atlas-jr-popup.css">
     <link rel="stylesheet" href="assets/css/crypto-popup.css">
+    <link rel="stylesheet" href="assets/css/notification-popup.css">
     <title>Freedom Hub - Crypto33</title>
 </head>
 <body>
@@ -591,9 +592,9 @@
                 </p>
 
                 <div class="actions">
-                    <button class="btn-action">View Details</button>
-                    <button class="btn-action">Read Rules</button>
-                    <button class="btn-action">Appeal</button>
+                    <button class="btn-action" data-action="view-details" data-tab="info">View Details</button>
+                    <button class="btn-action" data-action="read-rules" data-tab="info">Read Rules</button>
+                    <button class="btn-action" data-action="appeal" data-tab="info">Appeal</button>
                 </div>
             </div>
         </div>
@@ -630,9 +631,9 @@
                 </p>
 
                 <div class="actions">
-                    <button class="btn-action">View Details</button>
-                    <button class="btn-action">Read Rules</button>
-                    <button class="btn-action">Appeal</button>
+                    <button class="btn-action" data-action="view-details" data-tab="warning">View Details</button>
+                    <button class="btn-action" data-action="read-rules" data-tab="warning">Read Rules</button>
+                    <button class="btn-action" data-action="appeal" data-tab="warning">Appeal</button>
                 </div>
             </div>
         </div>
@@ -670,9 +671,9 @@
                 </p>
 
                 <div class="actions">
-                    <button class="btn-action">View Details</button>
-                    <button class="btn-action">Read Rules</button>
-                    <button class="btn-action">Appeal</button>
+                    <button class="btn-action" data-action="view-details" data-tab="final">View Details</button>
+                    <button class="btn-action" data-action="read-rules" data-tab="final">Read Rules</button>
+                    <button class="btn-action" data-action="appeal" data-tab="final">Appeal</button>
                 </div>
             </div>
         </div>
@@ -707,9 +708,9 @@
                 </p>
 
                 <div class="actions">
-                    <button class="btn-action">View Details</button>
-                    <button class="btn-action">Read Rules</button>
-                    <button class="btn-action">Appeal</button>
+                    <button class="btn-action" data-action="view-details" data-tab="restricted">View Details</button>
+                    <button class="btn-action" data-action="read-rules" data-tab="restricted">Read Rules</button>
+                    <button class="btn-action" data-action="appeal" data-tab="restricted">Appeal</button>
                 </div>
             </div>
         </div>
@@ -747,14 +748,25 @@
                 </p>
 
                 <div class="actions">
-                    <button class="btn-action">View Details</button>
-                    <button class="btn-action">Read Rules</button>
-                    <button class="btn-action">Appeal</button>
+                    <button class="btn-action" data-action="view-details" data-tab="banned">View Details</button>
+                    <button class="btn-action" data-action="read-rules" data-tab="banned">Read Rules</button>
+                    <button class="btn-action" data-action="appeal" data-tab="banned">Appeal</button>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+<!-- Notification Action Popup -->
+<div class="notification-popup-overlay" id="notificationPopup">
+    <div class="notification-popup-container">
+        <button class="notification-popup-close" aria-label="Close popup">&times;</button>
+        <div class="notification-popup-content">
+            <h2 class="notification-popup-title" id="popupTitle"></h2>
+            <div class="notification-popup-body" id="popupBody"></div>
+        </div>
+    </div>
+</div>
 
     <!-- Atlas Jr. Popup -->
     <div class="atlas-jr-popup-overlay" id="atlasJrPopup">
@@ -1393,6 +1405,139 @@
                     initCountryPopup();
                 }, 100); // Small delay to ensure everything is ready
             }
+        })();
+    </script>
+    
+    <!-- Notification Popup JavaScript -->
+    <script>
+        // Notification Action Popup Functionality
+        (function() {
+            const popupOverlay = document.getElementById('notificationPopup');
+            const popupTitle = document.getElementById('popupTitle');
+            const popupBody = document.getElementById('popupBody');
+            const popupClose = document.querySelector('.notification-popup-close');
+            const actionButtons = document.querySelectorAll('.btn-action');
+
+            // Content data for each tab and action
+            const popupContent = {
+                'info': {
+                    'view-details': {
+                        title: 'Info Notice - View Details',
+                        body: '<p><strong>Notice Type:</strong> Information</p><p><strong>Strike Count:</strong> 1/3</p><p><strong>Reason:</strong> Personal Attack / Disrespectful Language</p><p><strong>Date Issued:</strong> ' + new Date().toLocaleDateString() + '</p><p><strong>Details:</strong> This is an informational notice regarding a violation of community guidelines. Please review the rules and ensure future comments are respectful and constructive.</p><p><strong>Next Steps:</strong> Continue participating in discussions while maintaining respectful communication. No further action is required at this time.</p>'
+                    },
+                    'read-rules': {
+                        title: 'Community Rules',
+                        body: '<p><strong>Our Community Guidelines:</strong></p><ul><li><strong>Respect All Views:</strong> Engage in civil discourse and respect differing opinions.</li><li><strong>No Personal Attacks:</strong> Avoid ad hominem attacks, insults, or harassment.</li><li><strong>No Spam:</strong> Do not post repetitive, off-topic, or promotional content.</li><li><strong>No Threats:</strong> Threats of violence or harm are strictly prohibited.</li><li><strong>Stay On Topic:</strong> Keep discussions relevant to the article or topic at hand.</li><li><strong>Fact-Based:</strong> Support claims with evidence when possible.</li></ul><p>Violations may result in warnings, restrictions, or bans depending on severity and frequency.</p>'
+                    },
+                    'appeal': {
+                        title: 'Appeal Information Notice',
+                        body: '<p><strong>Appeal Process:</strong></p><p>If you believe this notice was issued in error, you may submit an appeal. Appeals are reviewed by our moderation team within 48 hours.</p><p><strong>To Appeal:</strong></p><ul><li>Explain why you believe the notice was incorrect</li><li>Provide context for your comment if applicable</li><li>Demonstrate understanding of community guidelines</li></ul><p><strong>Note:</strong> This is an informational notice (Strike 1/3). No immediate action is required, but please review the community rules to avoid future violations.</p>'
+                    }
+                },
+                'warning': {
+                    'view-details': {
+                        title: 'Community Warning - View Details',
+                        body: '<p><strong>Warning Type:</strong> Community Warning</p><p><strong>Strike Count:</strong> 1/3</p><p><strong>Reason:</strong> Personal Attack / Disrespectful Language</p><p><strong>Date Issued:</strong> ' + new Date().toLocaleDateString() + '</p><p><strong>Details:</strong> This warning has been issued due to a violation of our community guidelines. Your comment contained language that was disrespectful or constituted a personal attack.</p><p><strong>Impact:</strong> This is your first warning. Continued violations may result in restrictions or account suspension.</p><p><strong>Next Steps:</strong> Please review the community rules and ensure all future contributions are respectful and constructive.</p>'
+                    },
+                    'read-rules': {
+                        title: 'Community Rules',
+                        body: '<p><strong>Our Community Guidelines:</strong></p><ul><li><strong>Respect All Views:</strong> Engage in civil discourse and respect differing opinions.</li><li><strong>No Personal Attacks:</strong> Avoid ad hominem attacks, insults, or harassment.</li><li><strong>No Spam:</strong> Do not post repetitive, off-topic, or promotional content.</li><li><strong>No Threats:</strong> Threats of violence or harm are strictly prohibited.</li><li><strong>Stay On Topic:</strong> Keep discussions relevant to the article or topic at hand.</li><li><strong>Fact-Based:</strong> Support claims with evidence when possible.</li></ul><p><strong>Warning System:</strong> Warnings count toward your strike total. Three strikes may result in account restrictions or bans.</p>'
+                    },
+                    'appeal': {
+                        title: 'Appeal Community Warning',
+                        body: '<p><strong>Appeal Process:</strong></p><p>If you believe this warning was issued incorrectly, you may submit an appeal. Appeals are reviewed within 48 hours.</p><p><strong>To Appeal:</strong></p><ul><li>Explain why you believe the warning was incorrect</li><li>Provide context for your comment</li><li>Show understanding of why the comment may have been flagged</li><li>Commit to following community guidelines</li></ul><p><strong>Current Status:</strong> Warning (Strike 1/3). One more violation may result in a final warning.</p>'
+                    }
+                },
+                'final': {
+                    'view-details': {
+                        title: 'Final Warning - View Details',
+                        body: '<p><strong>Warning Type:</strong> Final Warning</p><p><strong>Strike Count:</strong> 1/3</p><p><strong>Reason:</strong> Personal Attack / Disrespectful Language</p><p><strong>Date Issued:</strong> ' + new Date().toLocaleDateString() + '</p><p><strong>Details:</strong> This is your final warning before account restrictions. Your behavior has violated community guidelines multiple times.</p><p><strong>Impact:</strong> Any further violations will result in account restrictions or a permanent ban.</p><p><strong>Next Steps:</strong> Immediately review and adhere to all community rules. Consider taking a break from commenting if you are unable to maintain respectful discourse.</p>'
+                    },
+                    'read-rules': {
+                        title: 'Community Rules - Final Warning',
+                        body: '<p><strong>Our Community Guidelines:</strong></p><ul><li><strong>Respect All Views:</strong> Engage in civil discourse and respect differing opinions.</li><li><strong>No Personal Attacks:</strong> Avoid ad hominem attacks, insults, or harassment.</li><li><strong>No Spam:</strong> Do not post repetitive, off-topic, or promotional content.</li><li><strong>No Threats:</strong> Threats of violence or harm are strictly prohibited.</li><li><strong>Stay On Topic:</strong> Keep discussions relevant to the article or topic at hand.</li><li><strong>Fact-Based:</strong> Support claims with evidence when possible.</li></ul><p><strong>⚠️ FINAL WARNING:</strong> This is your final warning. Any further violations will result in account restrictions or a permanent ban. Please review these rules carefully and ensure all future contributions comply.</p>'
+                    },
+                    'appeal': {
+                        title: 'Appeal Final Warning',
+                        body: '<p><strong>Appeal Process:</strong></p><p>You may appeal this final warning, but please note that appeals for final warnings are reviewed more strictly.</p><p><strong>To Appeal:</strong></p><ul><li>Provide a detailed explanation of why the warning was incorrect</li><li>Show clear understanding of community guidelines</li><li>Demonstrate commitment to following rules going forward</li><li>Explain any extenuating circumstances</li></ul><p><strong>⚠️ IMPORTANT:</strong> This is your final warning (Strike 1/3). Any further violations will result in immediate account restrictions or a permanent ban, regardless of appeal status.</p>'
+                    }
+                },
+                'restricted': {
+                    'view-details': {
+                        title: 'Account Restricted - View Details',
+                        body: '<p><strong>Status:</strong> Account Restricted</p><p><strong>Strike Count:</strong> 1/3</p><p><strong>Reason:</strong> Personal Attack / Disrespectful Language</p><p><strong>Date Issued:</strong> ' + new Date().toLocaleDateString() + '</p><p><strong>Restrictions:</strong> Your account has been restricted due to repeated violations of community guidelines.</p><p><strong>Current Limitations:</strong></p><ul><li>Comment posting is limited</li><li>Some features may be unavailable</li><li>Continued violations may result in a permanent ban</li></ul><p><strong>Next Steps:</strong> Review community rules and wait for the restriction period to end, or submit an appeal if you believe this was issued in error.</p>'
+                    },
+                    'read-rules': {
+                        title: 'Community Rules - Restricted Account',
+                        body: '<p><strong>Our Community Guidelines:</strong></p><ul><li><strong>Respect All Views:</strong> Engage in civil discourse and respect differing opinions.</li><li><strong>No Personal Attacks:</strong> Avoid ad hominem attacks, insults, or harassment.</li><li><strong>No Spam:</strong> Do not post repetitive, off-topic, or promotional content.</li><li><strong>No Threats:</strong> Threats of violence or harm are strictly prohibited.</li><li><strong>Stay On Topic:</strong> Keep discussions relevant to the article or topic at hand.</li><li><strong>Fact-Based:</strong> Support claims with evidence when possible.</li></ul><p><strong>🔒 RESTRICTED ACCOUNT:</strong> Your account is currently restricted. Please review these rules carefully. Restrictions may be lifted after a review period, or you may appeal if you believe this was issued in error.</p>'
+                    },
+                    'appeal': {
+                        title: 'Appeal Account Restriction',
+                        body: '<p><strong>Appeal Process:</strong></p><p>You may appeal your account restriction. Appeals are reviewed within 72 hours.</p><p><strong>To Appeal:</strong></p><ul><li>Provide a detailed explanation of why the restriction was incorrect</li><li>Show clear understanding of community guidelines</li><li>Demonstrate commitment to following rules</li><li>Explain any extenuating circumstances</li><li>Request specific restoration of privileges</li></ul><p><strong>Current Status:</strong> Account Restricted (Strike 1/3). Restrictions may be temporary or permanent depending on the severity of violations.</p>'
+                    }
+                },
+                'banned': {
+                    'view-details': {
+                        title: 'Account Banned - View Details',
+                        body: '<p><strong>Status:</strong> Account Banned</p><p><strong>Strike Count:</strong> 1/3</p><p><strong>Reason:</strong> Personal Attack / Disrespectful Language</p><p><strong>Date Issued:</strong> ' + new Date().toLocaleDateString() + '</p><p><strong>Ban Details:</strong> Your account has been permanently banned due to severe or repeated violations of community guidelines.</p><p><strong>Impact:</strong></p><ul><li>All account access is revoked</li><li>You cannot post comments or interact with the community</li><li>Previous content may be removed</li></ul><p><strong>Next Steps:</strong> You may submit an appeal, but bans are typically permanent. Appeals are reviewed on a case-by-case basis.</p>'
+                    },
+                    'read-rules': {
+                        title: 'Community Rules - Banned Account',
+                        body: '<p><strong>Our Community Guidelines:</strong></p><ul><li><strong>Respect All Views:</strong> Engage in civil discourse and respect differing opinions.</li><li><strong>No Personal Attacks:</strong> Avoid ad hominem attacks, insults, or harassment.</li><li><strong>No Spam:</strong> Do not post repetitive, off-topic, or promotional content.</li><li><strong>No Threats:</strong> Threats of violence or harm are strictly prohibited.</li><li><strong>Stay On Topic:</strong> Keep discussions relevant to the article or topic at hand.</li><li><strong>Fact-Based:</strong> Support claims with evidence when possible.</li></ul><p><strong>🚫 BANNED ACCOUNT:</strong> Your account has been permanently banned. This typically occurs after multiple severe violations. You may appeal, but bans are rarely reversed.</p>'
+                    },
+                    'appeal': {
+                        title: 'Appeal Account Ban',
+                        body: '<p><strong>Appeal Process:</strong></p><p>You may appeal your account ban, though bans are typically permanent and appeals are rarely successful.</p><p><strong>To Appeal:</strong></p><ul><li>Provide a comprehensive explanation of why the ban was incorrect</li><li>Show full understanding of community guidelines</li><li>Demonstrate genuine remorse and commitment to change</li><li>Explain any extenuating circumstances</li><li>Provide evidence if you believe the ban was based on false information</li></ul><p><strong>⚠️ IMPORTANT:</strong> Account Banned (Strike 1/3). Bans are typically permanent. Appeals are reviewed within 7-14 business days, and successful appeals are rare.</p>'
+                    }
+                }
+            };
+
+            function openPopup(tab, action) {
+                const content = popupContent[tab] && popupContent[tab][action];
+                if (content) {
+                    popupTitle.textContent = content.title;
+                    popupBody.innerHTML = content.body;
+                    popupOverlay.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                }
+            }
+
+            function closePopup() {
+                popupOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+
+            // Add click handlers to all action buttons
+            actionButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const action = this.getAttribute('data-action');
+                    const tab = this.getAttribute('data-tab');
+                    if (action && tab) {
+                        openPopup(tab, action);
+                    }
+                });
+            });
+
+            // Close popup handlers
+            if (popupClose) {
+                popupClose.addEventListener('click', closePopup);
+            }
+
+            if (popupOverlay) {
+                popupOverlay.addEventListener('click', function(e) {
+                    if (e.target === popupOverlay) {
+                        closePopup();
+                    }
+                });
+            }
+
+            // Close on Escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && popupOverlay && popupOverlay.classList.contains('active')) {
+                    closePopup();
+                }
+            });
         })();
     </script>
     

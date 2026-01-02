@@ -15,12 +15,12 @@
   position: absolute;
   top: 0;
   left: 50%;
-  transform: translateX(-51%) scaleY(-2);
-  width: 2534px;
+  transform: translateX(-50%);
+  width: 2734px;
   height: 100%;
   z-index: 0;
   pointer-events: none;
-  opacity: 0.65;
+  opacity: 0.8;
 }
 
 .faith-bg-texture {
@@ -28,6 +28,24 @@
   height: 100%;
   object-fit: cover;
   object-position: center;
+}
+
+/* Fix double scrollbar - ensure body/html don't have conflicting overflow */
+body.faith-page-body {
+  overflow-x: hidden;
+  overflow-y: auto;
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+html {
+  overflow-x: hidden;
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+  max-width: 100% !important;
 }
 
 /* Ensure header and footer are isolated from background */
@@ -55,7 +73,43 @@
 .footer {
   position: relative;
   z-index: 10;
-  background-color: var(--color-bg-primary);
+  background-color: #0d121f;
+}
+  gap: var(--spacing-xl);
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 auto;
+}
+
+.faith-page .footer-social {
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: center;
+  align-items: center;
+}
+
+.faith-page .social-link {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.faith-page .social-link:hover {
+  transform: scale(1.1);
+  background-color: rgba(247, 147, 26, 0.1);
+}
+
+.faith-page .social-link img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  display: block;
 }
 
 /* ========== HERO SECTION ========== */

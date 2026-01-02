@@ -51,10 +51,10 @@ class CoinAlertPopup {
   attachEventListeners() {
     // Close button
     document.addEventListener('click', (e) => {
-      if (e.target.classList.contains('alert-close-btn') || 
-          e.target.classList.contains('coin-alert-overlay')) {
+      if (e.target.classList.contains('alert-close-btn')) {
         this.close();
       }
+      // Don't close on overlay click since it's transparent now
     });
 
     // See Details link
@@ -107,38 +107,49 @@ class CoinAlertPopup {
       detailsLink.setAttribute('data-coin-price', alertData.price || '$97,850');
     }
 
-    // Show overlay
-    overlay.classList.add('active');
-    document.body.style.overflow = 'hidden';
+    // Remove closing class if it exists
+    overlay.classList.remove('closing');
+    
+    // Show overlay - use requestAnimationFrame to ensure smooth animation
+    requestAnimationFrame(() => {
+      overlay.classList.add('active');
+    });
   }
 
   close() {
     const overlay = document.querySelector('.coin-alert-overlay');
-    overlay.classList.remove('active');
-    document.body.style.overflow = '';
+    
+    // Add closing class for slide down animation
+    overlay.classList.add('closing');
+    
+    // Remove active class after animation completes
+    setTimeout(() => {
+      overlay.classList.remove('active', 'closing');
+    }, 800); // Match CSS transition duration
   }
 }
 
 // Initialize the alert system
 let coinAlertPopup;
-let popupShownOnScroll = false; // Track if popup has been shown on this page load
 
 document.addEventListener('DOMContentLoaded', () => {
   coinAlertPopup = new CoinAlertPopup();
   
-  // Show popup when user scrolls 40% down (only once)
+  // Show popup when user scrolls 30% down the page (first time only)
   setupScrollTrigger();
 });
 
-// Show popup when user scrolls 40% down the page
+// Show popup when user scrolls 30% down the page (first time only)
 function setupScrollTrigger() {
-  // Check if popup has been shown before using localStorage
-  const popupShown = localStorage.getItem('coinAlertPopupShown');
+  // Check if popup has been shown before using sessionStorage
+  const popupShown = sessionStorage.getItem('coinAlertPopupShownOnScroll');
   
   if (popupShown) {
-    // Popup already shown before, don't show again
+    // Popup already shown on this session, don't show again
     return;
   }
+  
+  let popupShownOnScroll = false; // Track if popup has been shown on this page load
   
   // Scroll handler function
   function handleScroll() {
@@ -153,8 +164,8 @@ function setupScrollTrigger() {
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     const scrollPercentage = (scrollTop / (documentHeight - windowHeight)) * 100;
     
-    // Show popup when user scrolls 40% down
-    if (scrollPercentage >= 40) {
+    // Show popup when user scrolls 30% down
+    if (scrollPercentage >= 30) {
       popupShownOnScroll = true;
       showAutoPopup();
       
@@ -186,13 +197,13 @@ function showAutoPopup() {
   // Open the popup
   coinAlertPopup.open(defaultAlertData);
   
-  // Mark as shown in localStorage
-  localStorage.setItem('coinAlertPopupShown', 'true');
+  // Mark as shown in sessionStorage
+  sessionStorage.setItem('coinAlertPopupShownOnScroll', 'true');
   
-  // Auto-close after 5 seconds
+  // Auto-close after 3 seconds
   setTimeout(() => {
     coinAlertPopup.close();
-  }, 5000);
+  }, 3000);
 }
 
 // Helper function to open alert from anywhere
