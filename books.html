@@ -20,7 +20,6 @@
     <link rel="stylesheet" href="assets/css/footer.css">
     <link rel="stylesheet" href="assets/css/utilities.css">
     <link rel="stylesheet" href="assets/css/books.css">
-    <link rel="stylesheet" href="assets/css/books-popup.css">
     <title>Crypto33 Books - Freedom Library</title>
 </head>
 <body>
@@ -111,9 +110,12 @@
                     </ul>
                     
                     <div class="book-action-buttons">
-                        <button class="book-btn book-btn-outline" data-popup-type="preview-crypto33">Preview</button>
-                        <button class="book-btn book-btn-primary" data-popup-type="buy-crypto33">Buy Now</button>
-                        <button class="book-btn book-btn-vault" data-popup-type="vault-crypto33">Add to Vault</button>
+                        <button class="book-btn book-btn-outline">Preview</button>
+                        <button class="book-btn book-btn-primary">Buy Now</button>
+                        <button class="book-btn book-btn-vault">
+                            <span class="button-text">Add to Vault</span>
+                            <span class="tick-icon">✓</span>
+                        </button>
                     </div>
                 </div>
                 
@@ -141,9 +143,12 @@
                                 <p class="book-card-description">One man's journey from burnout to breakthrough — reclaim your health.</p>
                                 
                                 <div class="book-action-buttons book-action-buttons-small">
-                                    <button class="book-btn book-btn-outline book-btn-small" data-popup-type="preview-fog-to-fire">Preview</button>
-                                    <button class="book-btn book-btn-primary book-btn-small" data-popup-type="buy-fog-to-fire">Buy Now</button>
-                                    <button class="book-btn book-btn-vault book-btn-small" data-popup-type="vault-fog-to-fire">Add to Vault</button>
+                                    <button class="book-btn book-btn-outline book-btn-small">Preview</button>
+                                    <button class="book-btn book-btn-primary book-btn-small">Buy Now</button>
+                                    <button class="book-btn book-btn-vault book-btn-small">
+                                        <span class="button-text">Add to Vault</span>
+                                        <span class="tick-icon">✓</span>
+                                    </button>
                                 </div>
                             </div>
                             <div class="book-card-image">
@@ -158,7 +163,7 @@
                                 <p class="book-card-description">Health XP Series, Warrior Mindset, and more. Use this space to tease upcoming releases and gather waitlist signups.</p>
                                 
                                 <div class="book-action-buttons book-action-buttons-small">
-                                    <button class="book-btn book-btn-waitlist book-btn-small" data-popup-type="join-waitlist">Join Waitlist</button>
+                                    <button class="book-btn book-btn-waitlist book-btn-small">Join Waitlist</button>
                                 </div>
                             </div>
                             <div class="book-card-image">
@@ -296,21 +301,7 @@
         </div>
     </footer>
 
-    <!-- Books Popup -->
-    <div class="books-popup-overlay" id="booksPopup">
-        <div class="books-popup-content">
-            <button class="books-popup-close-btn" aria-label="Close popup">&times;</button>
-            <div class="books-popup-header">
-                <div class="books-popup-icon" id="booksPopupIcon">📚</div>
-                <h2 class="books-popup-title" id="booksPopupTitle"></h2>
-                <p class="books-popup-subtitle" id="booksPopupSubtitle"></p>
-            </div>
-            <div class="books-popup-body" id="booksPopupContent"></div>
-        </div>
-    </div>
-    
     <script src="assets/js/books-progress-animation.js"></script>
-    <script src="assets/js/books-popup.js"></script>
     <script>
         // Mobile menu toggle
         const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
@@ -352,6 +343,17 @@
                 mobileMenuToggle.classList.remove('active');
                 header.classList.remove('menu-open');
             }
+        });
+
+        // Add to Vault button functionality
+        const vaultButtons = document.querySelectorAll('.book-btn-vault');
+        vaultButtons.forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                if (!this.classList.contains('book-btn-vault--added')) {
+                    this.classList.add('book-btn-vault--added');
+                }
+            });
         });
     </script>
 </body>

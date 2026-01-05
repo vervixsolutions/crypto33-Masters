@@ -394,10 +394,49 @@
   background-color: #214737;
   border: 1px solid #19734d;
   color: #0cea8d;
+  position: relative;
+  overflow: hidden;
 }
 
 .book-btn-vault:hover {
   background-color: #2a5a44;
+}
+
+/* Tick icon styles for vault button */
+.book-btn-vault .tick-icon {
+  display: inline-block;
+  font-size: 16px;
+  line-height: 1;
+  opacity: 0;
+  transform: scale(0) rotate(-180deg);
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.book-btn-vault.book-btn-vault--added .tick-icon {
+  opacity: 1;
+  transform: scale(1) rotate(0deg);
+}
+
+.book-btn-vault.book-btn-vault--added .button-text {
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.3s ease;
+}
+
+.book-btn-vault .button-text {
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.book-btn-vault.book-btn-vault--added {
+  background-color: #19734d;
+  border-color: #0cea8d;
+  pointer-events: none;
+}
+
+/* Small button tick icon adjustment */
+.book-btn-small .tick-icon {
+  font-size: 14px;
 }
 
 .book-btn-waitlist {
